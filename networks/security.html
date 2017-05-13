@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel=stylesheet type="text/css" href="../ZimStyles.css" title="General">
+<title> Computer Security </title>
+</head>
+
+<body>
+<div align="center">
+<h2>Computer Security</h2>
+
+<!--- NAVIGATION BAR --->
+<a href=#malware>Malware</a> &nbsp; | &nbsp;
+<a href=#soceng>Social Engineering</a> &nbsp; | &nbsp;
+<a href=#firewall>Firewall</a> &nbsp; | &nbsp;
+<a href=#crypto>Crytography</a> &nbsp; | &nbsp;
+<a href=#backup>Backups</a> &nbsp; | &nbsp;
+<a href=#access>Access<a/>
+</div>
+
+<p>
+<br />
+<a name="malware"><b>Malware
+</b></a>
+<br />
+ &quot;malicious software&quot; is any software program developed for the purpose of causing harm to a computer system, similar to a virus or trojan horse. Malware can be classified based on how it is executed, how it spreads, and/or what it does. The classification is not perfect, however, in the sense that the groups often overlap and the difference is not always obvious.
+</p>
+<p>
+
+<ul>
+<b>Virus</b>
+<br />
+Viruses have used many sorts of hosts. When computer viruses first originated, common targets were executable files that are part of application programs and the boot sectors of floppy disks, and later documents that can contain macro scripts; more recently, most viruses have embedded themselves in e-mail as attachments, depending on a curious user opening the viral attachment. In the case of executable files, the infection routine of the virus arranges that when the host code is executed, the viral code gets executed as well. Normally, the host program keeps functioning after it is infected by the virus. Some viruses overwrite other programs with copies of themselves, however, which destroys these files. Viruses spread across computers when the software or document they attached themselves to is transferred from one computer to the other.
+<br />
+<br />
+
+<b>
+Worms
+</b>
+<br />
+Computer worms are similar to viruses but are stand-alone software and thus do not require host files (or other types of host code) to spread themselves. They do modify their host operating system, however, at least to the extent that they are started as part of the boot process. To spread, worms either exploit some vulnerability of the target system or use some kind of social engineering to trick users into executing them.
+
+<br />
+<br />
+<b>
+Wabbit
+</b>
+<br />
+A third, uncommon, type of self-replicating malware is the wabbit. Unlike viruses, wabbits do not infect host programs or documents. Unlike worms, wabbits do not use network functionality in order to spread to other computers. An example of a simple wabbit is a fork bomb.
+
+<br />
+<br />
+<b>
+Trojan
+</b>
+<br />
+A trojan horse program is a harmful piece of software that is disguised as legitimate software. Trojan horses cannot replicate themselves, in contrast to viruses or worms. A trojan horse can be deliberately attached to otherwise useful software by a programmer, or it can be spread by tricking users into believing that it is useful. To complicate matters, some trojan horses can spread or activate other malware, such as viruses. These programs are called 'droppers'. A common aftermath is the Trojan attracting a large amount of adware/spyware, causing lots of popups and web browser instability.
+
+<br />
+<br />
+<b>
+Backdoor
+</b>
+<br />
+A backdoor is a piece of software that allows access to the computer system bypassing the normal authentication procedures. Based on how they work and spread, there are two groups of backdoors. The first group works much like a Trojan, i.e., they are manually inserted into another piece of software, executed via their host software and spread by their host software being installed. The second group works more like a worm in that they get executed as part of the boot process and are usually spread by worms carrying them as their payload. The term Ratware has arisen to describe backdoor malware that turns computers into zombies for sending spam.
+<br />
+<br />
+
+<b>
+Spyware
+</b>
+<br />
+Spyware is a piece of software that collects and sends information (such as browsing patterns in the more benign cases or credit card numbers in more malicious cases) about users or, more precisely, the results of their computer activity, typically without explicit notification. They usually work and spread like Trojan horses. The category of spyware is sometimes taken to include adware of the less-forthcoming sort.
+
+<br />
+<br />
+<b>
+Adware
+</b>
+<br /> 
+Adware or advertising-supported software is any computer program or software package in which advertisements or other marketing material are included with or automatically loaded by the software and displayed or played back after installation or in which information about the computer or its users activities is uploaded automatically when the user has not requested it. These applications often present banner ads in pop-up windows or through a bar that appears on a computer screen.
+
+<br />
+<br />
+<b>
+Exploit
+</b>
+<br />
+An exploit is a piece of software that attacks a particular security vulnerability. Exploits are not necessarily malicious in intent — they are often devised by security researchers as a way of demonstrating that a vulnerability exists. However, they are a common component of malicious programs such as network worms.
+
+<br />
+<br />
+<b>
+Rootkit
+</b>
+<br />
+A rootkit is software inserted onto a computer system after an attacker has gained control of the system. Rootkits often include functions to hide the traces of the attack, as by deleting log entries or cloaking the attacker's processes. Rootkits may also include backdoors, allowing the attacker to easily regain access later; or exploit software to attack other systems. Because they often hook into the operating system at the kernel level to hide their presence rootkits can be very hard to detect. The consensus of computer security experts is that if your system has been compromised by a rootkit you should wipe your hard drives and reinstall the operating system since you can never know if you have successfully removed all traces of the rootkit.
+
+<br />
+<br />
+<b>
+Key Logger
+</b>
+<br />
+A keylogger is software that copies a computer user's keystrokes to a file, which it may send to a hacker at a later time. Often the keylogger will only &quot;awaken&quot; when a computer user connects to a secure website, such as a bank. It then logs the keystrokes, which may include account numbers, PIN numbers and passwords, before they are encrypted by the secure website.
+
+<br />
+<br />
+<b>
+Dialers
+</b>
+<br />
+A dialer is a program that either replaces the phone number in a modem's dial-up connection with a long-distance number, often out of the country, in order to run up phone charges on pay-per-dial numbers, or dials out at night to send keylogger or other information to a hacker.
+
+<br />
+<br />
+<b>
+Parasite
+</b>
+<br />
+Refers to software that is installed in your computer that you generally do not want and are not even aware of. There are many different types. Parasites can report your Web browsing habits to a marketing company over the Internet (spyware) or change your browser settings to point to a specific site. They can redirect searches to popular search engines to a site that sells a related product. They can cause you to dial up premium services.
+
+<br />
+<br />
+<b>
+URL injection
+</b>
+<br />
+This software modifies the browser's behavior with respect to some- or all domains. It modifies the url submitted to the server to profit from a given affiliate scheme by the content provider of the given domain. This is often transparent to the user. The author profits at the expense of the user -- often surreptitiously.
+<br />
+<br />
+
+<b>
+Spam
+</b>
+<br />
+E-mail that is not requested. Also known as &quot;unsolicited commercial e-mail&quot; (UCE), &quot;unsolicited bulk e-mail&quot; (UBE), &quot;gray mail&quot; and just plain &quot;junk mail,&quot; the term is both a noun (the e-mail message) and a verb (to send it). Spam is used to advertise products or to broadcast some political or social commentary. Although not technically malware, like malware, spam has become a scourge on the Internet as hundreds of millions of unwanted messages are transmitted daily to almost every e-mail recipient as well as to newsgroups. It takes up IT resources, and everyone's time, and may also contain malware. 
+<br />
+<br />
+<b>
+GAV
+</b><br />
+Gateway Anti Virus, a method that stops viruses from entering a network, usually a part of a network firewall/gateway, blurring the distinction and combinding methods in an attemtp to create a single network security device.
+</ul>
+
+<!--- SOCIAL ENGINEERING --->
+<br />
+<a name="soceng">
+<b>Social Engineering
+</b>
+</a>
+<br />
+In the field of computer security, social engineering is the practice of obtaining confidential information by manipulation of legitimate users. More commonly referred to as a &quot;Con Artist&quot;, a social engineer will commonly use the telephone or Internet to trick people into revealing sensitive information or getting them to do something that is against typical policies. By this method, social engineers exploit the natural tendency of a person to trust his or her word, rather than exploiting computer security holes. It is generally agreed upon that “users are the weak link” in security and this principle is what makes social engineering possible.
+<br />
+<br />
+<ul>
+
+<b>
+Phishing 
+</b><br />
+In computing, phishing is the act of attempting to fraudulently acquire sensitive information, such as passwords and credit card details, by masquerading as a trustworthy person or business with a real need for such information in a seemingly official electronic notification or message (most often an email, or an instant message, with a link to a fake web site). It is a form of social engineering attack.
+<br />
+<br />
+
+<b>
+Identity Theft
+</b>
+<br />
+The use of one person's personal information by another to commit fraud or other crimes. The most common forms of identity theft occur when someone obtains another person's social security number, driver's license number, date of birth, and the like and uses it to open a fraudulent bank, credit card, cellular telephone, or other account, or to obtain false loans. Criminal identity theft, the most common nonfinancial type, occurs when someone gives another's personal information to a law enforcement officer when he or she is arrested. In addition to the financial losses resulting from identity theft, the person whose personal information has been used will have an erroneous credit or criminal history that is often expensive and time-consuming to correct. The occurrence of identity theft increased significantly beginning in the late 1990s due to the computerization of records and the ability to use another's personal information anonymously over the Internet.
+<br />
+<br />
+
+<b>
+Dumpster Diving 
+</b>
+<br />
+Dumpster diving, also known as trashing, is another popular method of social engineering. A huge amount of information can be collected through company dumpsters. 
+<br />
+<br />
+<b>
+Persuasion</b>
+<br />
+The facilitator of a live Computer Security Institute demonstration, neatly illustrated the vulnerability of help desks when he dialed up a phone company, got transferred around, and reached the help desk. ‘Who’s the supervisor on duty tonight?’ ‘Oh, it’s Betty.’ ‘Let me talk to Betty.’ [He’s transferred.] ‘Hi Betty, having a bad day?’ ‘No, why?...Your systems are down.’ She said, ‘my systems aren’t down, we’re running fine.’ He said, ‘you better sign off.’ She signed off. He said, ‘now sign on again.’ She signed on again. He said, ‘we didn’t even show a blip, we show no change.’ He said, ‘sign off again.’ She did. ‘Betty, I’m going to have to sign on as you here to figure out what’s happening with your ID. Let me have your user ID and password.’ So this senior supervisor at the Help Desk tells him her user ID and password.” 
+<br />
+<br />
+Basic methods of persuasion include: impersonation, ingratiation, conformity, diffusion of responsibility, and plain old friendliness. Regardless of the method used, the main objective is to convince the person disclosing the information that the social engineer is in fact a person that they can trust with that sensitive information.
+<br />
+<br />
+<b>Reverse Social Engineering 
+</b>
+<br />
+A final, more advanced method of gaining illicit information is known as “reverse social engineering”. This is when the hacker creates a persona that appears to be in a position of authority so that employees will ask him for information, rather than the other way around.
+<br />
+<br />
+The three parts of reverse social engineering attacks are sabotage, advertising, and assisting. The con sabotages a network, causing a problem arise. That con then advertises that he is the appropriate contact to fix the problem, and then, when he comes to fix the network problem, he requests certain bits of information from the employees and gets what he really came for. They never know it was a con, because their network problem goes away and everyone is happy. 
+</ul>
+
+
+<!--- FIREWALL --->
+
+<br />
+<a name="firewall">
+<b>Firewall
+</b>
+</a>
+<br />
+The primary method for keeping a computer secure from intruders. A firewall allows or blocks traffic into and out of a private network or the user's computer. Firewalls are widely used to give users secure access to the Internet as well as to separate a company's public Web server from its internal network. Firewalls are also used to keep internal network segments secure; for example, the accounting network might be vulnerable to snooping from within the enterprise.
+<br />
+<br />
+In the home, a personal firewall typically comes with or is installed in the user's computer, like Windows Firewall. Advanced personal firewalls also detect outbound traffic to guard against spyware, which could be sending your surfing habits to a Web site. It alerts you when software makes an outbound request for the first time. In an organization, a firewall can be a stand-alone machine or software in a router or server. It can be as simple as a single router that filters out unwanted packets, or it may comprise a combination of routers and servers each performing some type of firewall processing.
+<br />
+<br />
+Following are the different Firewall techniques. Several of them are often used in combination:
+<br />
+<br />
+<ul>
+<b>
+Packet Filter
+</b>
+<br />
+Blocks traffic based on a specific Web address (IP address) or type of application (e-mail, ftp, Web, etc.), which is specified by port number. Packet filtering is typically done in a router, which is known as a &quot;screening router&quot;.
+<br />
+<br />
+<b>
+Proxy Server
+</b>
+<br />
+Serves as a relay between two networks, breaking the connection between the two. Also typically caches Web pages.
+<br />
+<br />
+<b>
+NAT:
+</b>
+<br />
+Network Address Translation. Use this service if you want to connect a private address space to the public Internet. You can add NAT service to a router or server that is connected to both your network and the Internet. The NAT service then listen for private address requests for Internet access. It will map a public address to the private address for the duration of the session. It is great at both saving IP addresses and adding network security. NAT is usually used as a router service, but is also built into software solutions like Windows Internet Connection Sharing (ICS).
+<br />
+<br />
+<b>
+Stateful Inspection
+</b>
+<br />
+Tracks the transaction to ensure that inbound packets were requested by the user. Generally can examine multiple layers of the protocol stack, including the data, if required, so blocking can be made at any layer or depth.
+<br />
+<br />
+<b>IPsec
+</b>
+<br />
+IP Security. IP encryption at the network layer, compared to other encryption methods such as SSL, which works on the Transport or TCP Layer. Network layer encryption is more secure, but also more complex, slower, and cannot utilize TCP packet reliability.
+<br />
+<br />
+<b>
+IPS
+</b><br />
+Intrusion Prevention Service, a method of preventing unwanted data from entering a private network, usually added as a firewall service.
+<br />
+<br />
+<b>
+IDS
+</b><br />
+Intrusion Detection Service, a method of alerting technicians in the even that the firewall notices unwanted data. IDS came about over concerns that IPS would block needed data from the network, preferring manual over automated data blocking or filtering policies.
+<br />
+<br />
+<b>
+DPI
+</b>
+<br />
+Data Packet Inspection, a method of scanning network data. A technology used in IPS, IDS, and Sniffing.
+</ul>
+
+<!--- CRYPTOGRAPHY --->
+<br />
+<a name="crypto">
+<b>Cryptography
+</b>
+</a>
+<br />
+The conversion of data into a secret code for transmission over a public network. The original text, or &quot;plaintext,&quot; is converted into a coded equivalent called &quot;ciphertext&quot; via an encryption algorithm. The ciphertext is decoded (decrypted) at the receiving end and turned back into plaintext.
+<br />
+<br />
+<ul>
+<b>
+Keys
+</b><br />
+The encryption algorithm uses a &quot;key,&quot; which is a binary number that is typically from 40 to 256 bits in length. The greater the number of bits in the key (cipher strength), the more possible key combinations and the longer it would take to break the code. The data are encrypted, or &quot;locked,&quot; by combining the bits in the key mathematically with the data bits. At the receiving end, the key is used to &quot;unlock&quot; the code and restore the original data.
+
+<br />
+<br />
+<b>
+Secret Vs. Public Key
+</b><br />
+Secret key cryptography and public key cryptography are the two major cryptographic architectures.
+<br />
+<br />
+
+<b>
+Secret Keys - Symmetric System
+</b>
+<br />
+The first method uses a secret key, such as the DES and AES algorithms. Both sender and receiver use the same key to encrypt and decrypt. This is the fastest computation method, but getting the secret key to the recipient in the first place is a problem that is often handled by the second method.
+<br />
+<br />
+
+<b>
+Public Keys - Asymmetric System
+</b><br />
+The second method uses a two-part key, such as RSA and El Gamal. Each recipient has a private key that is kept secret and a public key that is published for everyone. The sender looks up or is sent the recipient's public key and uses it to encrypt the message. The recipient uses the private key to decrypt the message and never publishes or transmits the private key to anyone. Thus, the private key is never in transit and remains invulnerable.
+
+<br />
+<br />
+<b>
+AES/RSA
+</b><br />
+Secret key and public key systems are often used together, such as the AES secret key and the RSA public key. The secret key method provides the fastest decryption, and the public key method provides a convenient way to transmit the secret key. This is called a &quot;digital envelope.&quot; For example, the PGP e-mail encryption program uses one of several public key methods to send the secret key along with the message that has been encrypted with that secret key.
+<br />
+<br />
+It has been said that any encryption code can be broken given enough time to compute all permutations. However, if it takes months to break a code, the war could already be lost, or the thief could have long absconded with the money from the forged financial transaction. As computers get faster, to stay ahead of the game, encryption algorithms have to become stronger by using longer keys and more clever techniques.
+<br />
+<br />
+<b>
+IKE
+</b><br /> Internet Key Exchange, a protocol that sets security associations in the IPsec protocol to use cryptography keys.
+</ul>
+
+<!--- BACKUP SECTION --->
+<br />
+<a name="backup">
+<b>Backup Technology
+</b>
+</a>
+<br />
+Backups may not prevent threats from occuring, but they are the best security measure to have to ensure that your data is recoverable from any incident. Events that threaten data can be anything from user error, malware corruption, and intruder theft, to natural desasters like fire. 
+<br />
+<br />
+
+<b>Types of backups</b>
+<ul>
+<b>
+Day-zero
+<br />
+</b>
+Makes a copy of your original system. When your system is first installed, before people have started to use it, back up every file and program on the system.
+<br />
+<br />
+<b>
+Full
+</b>
+<br />
+Makes a copy of every file on your computer to the backup device. This method is similar to a day-zero backup, except that you do it on a regular basis, including any data users have added.
+<br />
+<br />
+<b>
+Incremental
+</b>
+<br />
+Makes a copy to the backup device of only those items in a filesystem that have been modified after a particular event (such as application of a vendor patch) or date (such as the date of the last full backup).
+<br />
+<br />
+</ul>
+
+<b>Retention schedule</b>
+<br />
+<ul>
+<b>
+Monthly
+</b>
+<br />
+Every fourth Friday, full backups, labeled with Month and Year, and kept forever.
+<br />
+<br />
+
+<b>Weekly</b>
+<br />
+Full backups, kept on three tape sets, labeled Friday week #1 through #3, which are recycled each Month. The fourth Friday becomes the Monthly Backup. Set on a schedule to start every Friday at 6:00pm.
+<br />
+<br />
+
+<b>Daily</b>
+<br />
+Incremental backups, labeled Monday through Thrusday, overwritten each week. Set on a schedule to start at 6:00pm.
+<br />
+<br />
+</ul>
+
+<b>Backup Media</b>
+<br />
+While there are thousands of possibilities, the majority of backup media falls into two catagories, Magnetic or Optical.
+<br />
+<ul>
+
+<b>Magnetic</b>
+<br />
+Floppy Disk: 8 inch (250KB to .5MB), 5.25 inch (360KB to 1.2MB), and 3.25 inch(400KB to 1.4MB).
+<br />
+Hard Disk: Mirrored internally as in a RAID, or externally as in Firewire or USB2 drives.
+<br/ >
+Data Tape: This is the most common type of backup media. There are several different types of Data Tapes.
+<br />
+<br />
+<ul>
+<b>AIT</b> Advanced Intelligent Tape, 8mm cassettes that can hold up to 100GB of data. Created by Sony for use in Sony drives.
+<br />
+<b>DLT</b> Digital Linear Tape, half inch tape in cassettes that can hold up to 40GB of data. Once of the fastest tape formats, achieving transfer rates of 2.5 MBPS. Originally developed by DEC, currently a market standard.
+<br />
+<b>LTO</b> Linear Tape Open is an open format that is designed to enable compatibility between different media. The LTO Ultrium cartridge has a capacity of up to 800GB.
+<br />
+<b>QIC</b> Quarter Inch Cartridge, pronounced quick, are a popular choice for PCs because they use the exsisting floppy disk controller.
+<br />
+<b>DDS</b>
+<br />Digital Data Storage developed from DAT (Digital Audio Tape) 4mm tape cassettes, is the most popular backup media, and it comes in the following forms:
+
+	DDS1: up to 2GB native and 4GB compressed.<br />
+	DDS2: up to 4GB native and 8GB compressed.<br />
+	DDS3: up to 12GB native and 24GB compressed.<br />
+	DDS4: up to 20GB native and 40GB compressed.<br />
+	DDS5: up to 36GB native and 72GB compressed.<br />
+<br />
+</ul>
+
+<b>Optical</b>
+<br />
+CD-R: Write once recordable CD, stores between 650MB and 800MB.
+<br />
+CD-RW: Re Writeable, multi write CD. Data can be written, the erased, then re-written to. Advances will soon enable CD-RWs to append information in a standard way, like a magnetic disk.
+<br />
+<br />
+DVD-R: Write once DVD, stores 4.7GB of data, supported by Panasonic, Toshiba, Apple, Hitachi, NEC, Pioneer, Samsung and Sharp.
+<br />
+DVD-RW: Re Writeable DVD, supported by Panasonic, Toshiba, Apple, Hitachi, NEC, Pioneer, Samsung and Sharp.
+<br />
+DVD+R: Write once DVD, supported by Philips, Sony, Hewlett-Packard, Dell, Ricoh, Yamaha and others.
+<br />
+DVD+RW: Re Writeable DVD, supported by Philips, Sony, Hewlett-Packard, Dell, Ricoh, Yamaha and others.
+<br />
+DVD-RAM: Can be recorded and erased repeatedly but are only compatible with devices manufactured by the companies that support the DVD-RAM format. They are typically housed in cartridges. 
+<br />
+</ul>
+
+<!--- ACCESS SECTION --->
+<a name=access>
+<br />
+<b>
+Access
+</b>
+</a>
+<br />
+Various names and technologies are used for this category such as: Identity Systems, Access Security, Authentication systems, Access Protection, etc. What we are talking about here are technologies that grant access to resources. The resources can be anything from workstations and servers to files and printers. What gets access can be users or even other programs such as backup systems or internet service.
+<br />
+<br />
+<ul>
+<b>
+Authentication
+</b><br />
+A way to ensure users are who they say they are. This is usually done with a user name and password.
+<br />
+<br />
+<b>
+Directory Services
+</b>
+<br />
+A central authority that can securely authenticate resources and manage identities and relationships between them. This allows network users to logon once, and access anything on the network that they have authorization to.
+<br />
+<br />
+<b>
+X.500 
+</b>
+<br />
+A set of network standards covering directory services, jointly developed with ISO as part of the Open Systems Interconnect protocols.
+<br />
+<br />
+<b>
+LDAP
+</b>
+<br />
+Lightweight Directory Access Protocol, based on X.500 standards.
+<br />
+<br />
+<b>
+Active Directory 
+</b>
+<br />
+An implementation of LDAP by Microsoft for use in Windows environments, maintained in a central database. It was first released in Windows 2000. Earlier versions of Windows used NetBIOS to communicate, whereas Active Directory is integrated with TCP/IP and DNS.
+<br />
+<br />
+<b>
+Novell Directory Services (NDS)
+</b>
+<br />
+Currently called eDirectory, was released in 1993 by Novell. eDirectory runs on most server platforms, including Windows NT, 2000, 2003, and Unix Solaris, Linux, HP, AIX, and Novell's own NetWare. It has been proven to scale to over 1 billion objects.  
+<br />
+<br />
+<b>
+Kerberos
+</b>
+<br />
+A network authentication protocol developed by MIT, designed to provide strong authentication for client/server applications by using secret-key cryptography.
+<br />
+<br />
+<b>
+Digital Certificates
+</b>
+<br /> Also known as Public Certificate, or Identity Certificate, uses a digital signature to bind together a public key with an identity, such as the name and address of a business or individual. 
+<br />
+<br />
+<b>
+Digital Signatures
+</b>
+<br />
+A method for authenticating information, just as a signature on paper, but using public key cryptography, that is currently legally binding in many countries including the United States.
+<br />
+<br />
+<b>
+Biometrics 
+</b>
+<br />
+The science and technology of authentication by measuring the subject person's physiological or behavioral features, such as fingerprints, eye retinas and irises, voice patterns, facial patterns, and hand measurements.
+<br />
+<br />
+</ul>
+
+<!--- TCP Ports Section --->
+<a name="ports">
+<b>TCP/IP Ports</b>
+</a>  
+<br />
+TCP/IP is the language of the internet, which exchanges messages through things called &quot;Ports&quot;. 
+A hardware port is an electrically wired outlet on a piece of equipment into which a plug or cable connects, and networked software ports basically work the same way. Ports are identified doorways for communicating between computer systems. The security problem is that if unregistered ports are open on a system, unauthorized access can be gained to that system. One of the things firewalls try to do is lock down all the unregistered ports. Some ports are registered to use only a particular kind of communication, which make them much safer to use. The ports listed below are commonly known registered ports.   
+<br />
+<br />
+<ul>
+20 FTP data (File Transfer Protocol) <br />
+21 FTP (File Transfer Protocol) <br />
+22 SSH (Secure Shell) <br />
+23 Telnet <br />
+25 SMTP (Send Mail Transfer Protocol)<br /> 
+43 whois <br />
+53 DNS (Domain Name Service)<br /> 
+68 DHCP (Dynamic Host Control Protocol)<br /> 
+79 Finger <br />
+80 HTTP (HyperText Transfer Protocol)<br /> 
+110 POP3 (Post Office Protocol, version 3) <br />
+115 SFTP (Secure File Transfer Protocol) <br />
+119 NNTP (Network New Transfer Protocol) <br />
+123 NTP (Network Time Protocol) <br />
+137 NetBIOS-ns <br />
+138 NetBIOS-dgm <br />
+139 NetBIOS <br />
+143 IMAP (Internet Message Access Protocol) <br />
+161 SNMP (Simple Network Management Protocol) <br />
+194 IRC (Internet Relay Chat) <br />
+220 IMAP3 (Internet Message Access Protocol 3)<br /> 
+389 LDAP (Lightweight Directory Access Protocol) <br />
+443 SSL (Secure Socket Layer) <br />
+445 SMB (NetBIOS over TCP) <br />
+666 Doom <br />
+993 SIMAP (Secure Internet Message Access Protocol)<br /> 
+995 SPOP (Secure Post Office Protocol) <br />
+<br />
+<br />
+1243 SubSeven (Trojan - security risk!)<br /> 
+1352 Lotus Notes <br />
+1433 Microsoft SQL Server<br /> 
+1494 Citrix ICA Protocol <br />
+1521 Oracle SQL <br />
+1604 Citrix ICA / Microsoft Terminal Server <br /> 
+2049 NFS (Network File System) <br />
+3306 mySQL <br />
+4000 ICQ <br />
+5010 Yahoo! Messenger <br />
+5190 AOL Instant Messenger <br />
+5632 PCAnywhere <br />
+5800 VNC <br />
+5900 VNC <br />
+6000 X Windowing System <br />
+6699 Napster <br />
+6776 SubSeven (Trojan - security risk!)<br /> 
+7070 RealServer / QuickTime <br />
+7778 Unreal <br />
+8080 HTTP <br />
+26000 Quake <br />
+27010 Half-Life <br />
+27960 Quake III<br /> 
+31337 BackOrifice (Trojan - security risk!)<br /> 
+<br />
+</ul>
+</body>
+</html>
