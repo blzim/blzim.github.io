@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trivia!</title>
+
+<link rel="stylesheet" type="text/css" href="ZimStyles.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){$("#a1").toggle();});
+$("#b2").click(function(){$("#a2").toggle();});
+$("#b3").click(function(){$("#a3").toggle();});
+$("#b4").click(function(){$("#a4").toggle();});
+});
+</script>
+<script type="text/javascript" src="./randomPage.js"></script>
+</head>
+<body>
+<h2>
+Which celebrity married for the seventh time on Michael Jacksons ranch in 1991?
+</h2>
+<p>
+<p>
+<button id="b1" class="button">Larry King
+</button>
+<span id="a1" style="display:none;">nope.
+</span>
+<p>
+<p>
+<button id="b2" class="button">Zsa Zsa Gabor
+</button>
+<span id="a2" style="display:none;">nope.
+</span>
+<p>
+<p>
+<button id="b3" class="button">Elizabeth Taylor
+</button>
+<span id="a3" style="display:none;"><b>CORRECT!</b> &nbsp;
+</span>
+<p>
+<p>
+<button id="b4" class="button">Lana Turner
+</button>
+<span id="a4" style="display:none;">nope.
+</span>
+<p>
+<p>
+<form>
+<input type="button" class="button" value="NEXT" onClick="javascript:randomlinks();">
+</form>
+<p>
+<a href="../index.html"><button class="button">QUIT</button></a>
+
+</body>
+</html>
