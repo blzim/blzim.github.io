@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hardware</title>
+<link rel="stylesheet" type="text/css" href="../ZimStyles.css">
+</head>
+
+<body>
+<p><b>The Bus</b><br />
+<br />
+Although Computer Buses are broken into two types, local and peripheral, they both 
+perform the same function, to create a common pathway, or channel, between multiple devices. 
+</p>
+
+<p>The computer's internal bus is known as the local bus, or processor bus. It provides a parallel data transfer 
+path between the CPU and main memory and to the peripheral buses. Peripheral Buses are expansion boards 
+(cards, adapters, etc.)that plug into the computer's bus. Signals and data pass between the peripheral device and 
+memory. A 16-bit bus transfers two bytes at a time over 16 wires; a 32-bit bus uses 32 wires, etc. The bus is comprised 
+of two parts: the address bus and the data bus. Addresses are sent over the address bus to signal a memory location, and 
+the data is transferred over the data bus to that location. Various buses have been used in the PC, including the 
+ISA, EISA, Micro Channel, VL-bus and PCI bus. Less common peripheral buses are NuBus, TURBOchannel, VMEbus, 
+MULTIBUS and STD bus.
+</p>
+
+<p><b>Popular Peripheral Buses:</b></p>
+<p>
+<b>ISA</b> (Industry Standard Architecture) <br /> 
+Pronounced "eye-suh." An expansion bus commonly used in PCs. It accepts the plug-in boards that control the
+video display, disks and other peripherals. Most PCs today use the ISA and PCI buses and have a combination of 
+ISA and PCI slots.</p>
+
+
+<p><b>PCI</b>(Peripheral Component Interconnect)<br />
+A peripheral bus commonly used in PC. It was designed primarily by Intel and first appeared on PCs in late 1993. 
+PCI provides a high-speed data path between the CPU and peripheral devices (video, disk, network, etc.). 
+There are typically three or four PCI slots on the motherboard. In a Pentium PC, there is generally a mix of PCI 
+and ISA slots or PCI and EISA slots. Early on, the PCI bus was known as a "local bus."</p>
+<p>
+PCI runs at 33MHz, supports 32- and 64-bit data paths and bus mastering. The number of peripheral devices the 
+bus can handle is based on loads, which have to do with inductance, capacitance and other electrical characteristics. 
+Normally there are 10 loads per bus. The PCI chipset uses three, leaving seven for peripherals. Controllers built onto 
+the motherboard use one load, whereas controllers that plug into an expansion slot use 1.5 loads.</p>
+<p>
+PCI provides "plug and play" capability, automatically configuring the PCI cards at startup. When PCI is used with 
+the ISA bus, the only thing that is generally required is to indicate in the CMOS memory which IRQs are already in use 
+by ISA cards. PCI takes care of the rest. PCI allows IRQs to be shared, which helps to solve the problem of limited IRQs 
+available on a PC. For example, if there were only one IRQ left over after ISA devices were given their required IRQs, 
+all PCI devices could share it. In a PCI-only machine, there cannot be insufficient IRQs, as all can be shared.</p>
+
+<img src="Image10.gif"><br />
+
+Except for ISA and AGP, all the other boards in this illustration have given way to PCI. 
+Although most PC motherboards still have ISA slots, they too will give way to PCI. The PCI bus provides a wider 
+bandwidth than the traditional ISA bus, allowing peripherals to transfer data at higher speed. Portable computers 
+like Laptops use a card bus in place of PCI. </p>
+
+<p>
+<b>PCMCIA or PC CARD</b><br />
+PCMCIA stands for Personal Computer Memory Card International Association 
+An international standards body and trade association that was founded in 1989 to establish a standard for connecting 
+peripherals to portable computers or LAPTOPS. The PC Card is a credit-card sized, removable module for portable 
+computers standardized by PCMCIA. PC Cards are also known as "PCMCIA cards." PC Cards are 16-bit devices that are used 
+to attach modems, network adapters, sound cards, radio transceivers, solid state disks and hard disks to a portable computer.
+The PC Card is a "plug and play" device, which is configured automatically by the Card Services software.</p>
+
+<p>All PC Cards are 85.6 mm long by 54 mm wide (3.37"x 2.126") and use a 68-pin connector.<br /></p>
+
+<IMG SRC="Image11.gif"></p>
+
+<p>The original Type I card is 3.3 mm thick and is typically used to hold memory.<br />
+Type II cards (5.0 mm thick) are commonly used for memory, modems and LAN adapters in laptops.
+<br />Type III cards (10.5 mm thick) are used to hold a hard disk, wireless transceiver or other peripheral that needs 
+more space. 
+<br />The Type III slot can hold two Type II cards. Toshiba introduced a 16 mm Type IV card, but this has not been 
+officially adopted by the PCMCIA. Smaller cards will work in a Type IV slot.
+
+<p><B>CardBus</B><br />
+In early 1995, PCMCIA introduced the 32-bit CardBus standard. Although electrically different, the CardBus is 
+architecturally identical to the PCI bus. The CardBus supports bus mastering and accommodates cards operating at 
+different voltages. Its advanced power management features allows the computer to take advantage of CardBus cards 
+designed to idle or turn off in order to increase battery life. The CardBus specification allows data transfer up to 
+132 Mbytes/sec over a 33MHz, 32-bit data path.</p>
+
+<B><p>Card and Socket Services</B><br />
+In order to use a PC Card slot in the computer, Card and Socket services must be loaded, typically at system startup. 
+Card and Socket Services software is generally included with laptops that have PC Card slots. It also comes packaged 
+with PC Cards. Card Services manage system resources required by the PC Card, and, on PCs, determines which IRQs and 
+memory and I/O addresses are assigned. They also manage hot swapping and pass changes in events to higher-level drivers 
+written for specific cards.</FONT>
+
+<p><B>USB </B><br />
+(Universal Serial Bus) A hardware interface for low-speed peripherals such as the keyboard, 
+mouse, joystick, scanner, printer and telephony devices. It also supports MPEG-1 and MPEG-2 digital video. USB has a 
+maximum bandwidth of 1.5 Mbytes/sec, and up to 127 devices can be attached. Peripherals can be plugged in and unplugged 
+without turning the system off. USB ports began to appear on PCs in 1997, and Windows 98 fully supports it.
+The devices are plugged directly into a four-pin USB socket on the PC or into a multi-port hub that plugs into the PC or 
+into a device that also functions as a hub for other devices. USB ports on the PC and hubs use a rectangular Type A socket. 
+All cables that are permanently attached to the device have a Type A plug.Devices that use a separate cable have a square 
+Type B socket, and the cable that connects them has both a Type A and a Type B plug.</p>
+
+
+<IMG SRC="Image12.gif"><p>
+
+<B><p>USB Connections</B><br />
+The thin, rectangular A connectors are on the PC and hub. 
+Type B connectors are used on peripherals that have cables which are not permanently attached.</p>
+
+<IMG SRC="Image13.gif"></p>
+
+<p>USB connections resolve IRQ conflicts, a common cause of installation problems.</p>
+
+<A HREF="page4.html"> Page4 </A>
+
+</body>
+</html>
