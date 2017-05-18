@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trivia!</title>
+
+<link rel="stylesheet" type="text/css" href="ZimStyles.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){$("#a1").toggle();});
+$("#b2").click(function(){$("#a2").toggle();});
+$("#b3").click(function(){$("#a3").toggle();});
+$("#b4").click(function(){$("#a4").toggle();});
+});
+</script>
+<script type="text/javascript" src="./randomPage.js"></script>
+</head>
+<body>
+<h2>Who in 2008 was denied parole, again, for the murder of John Lennon? 
+</h2>
+<p>
+<p>
+<button id="b1" class="button">Mark Chapman
+</button>
+<span id="a1" style="display:none;"><b>CORRECT!</b> &nbsp;
+</span>
+<p>
+<p>
+<button id="b2" class="button">Ted Bundy
+</button>
+<span id="a2" style="display:none;">nope. He was an American serial killer, kidnapper, rapist, burglar, and necrophile who confessed to 30 homicides, mostly women. Not John Lennon. 
+</span>
+<p>
+<p>
+<button id="b3" class="button">John Wayne Gacy
+</button>
+<span id="a3" style="display:none;">nope. He was an American serial killer and rapist, tortured and murdered at least 33 teenage boys between 1972 and 1978. Not John Lennon.
+</span>
+<p>
+<p>
+<button id="b4" class="button">Gary Ridgway
+</button>
+<span id="a4" style="display:none;">nope. He was the American serial killer known as the Green River Killer of Washington. He was convicted of 49 homicides, but not John Lennon.
+</span>
+<p>
+<p>
+<form>
+<input type="button" class="button" value="NEXT" onClick="javascript:randomlinks();">
+</form>
+<p>
+<a href="../index.html"><button class="button">QUIT</button></a>
+
+</body>
+</html>
