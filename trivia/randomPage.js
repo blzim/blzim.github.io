@@ -1,5 +1,5 @@
 function randomlinks(){
-    var myrandom=Math.round(Math.random()*750)
+    var myrandom=Math.round(Math.random()*780)
     var links=new Array()
 	links[0]="trivia.html"
 	links[1]="trivia0001.html"
@@ -752,6 +752,36 @@ function randomlinks(){
 	links[748]="trivia748.html"
 	links[749]="trivia749.html"
 	links[750]="trivia750.html"
+	links[751]="trivia751.html"
+	links[752]="trivia752.html"
+	links[753]="trivia753.html"
+	links[754]="trivia754.html"
+	links[755]="trivia755.html"
+	links[756]="trivia756.html"
+	links[757]="trivia757.html"
+	links[758]="trivia758.html"
+	links[759]="trivia759.html"
+	links[760]="trivia760.html"
+	links[761]="trivia761.html"
+	links[762]="trivia762.html"
+	links[763]="trivia763.html"
+	links[764]="trivia764.html"
+	links[765]="trivia765.html"
+	links[766]="trivia766.html"
+	links[767]="trivia767.html"
+	links[768]="trivia768.html"
+	links[769]="trivia769.html"
+	links[770]="trivia770.html"
+	links[771]="trivia771.html"
+	links[772]="trivia772.html"
+	links[773]="trivia773.html"
+	links[774]="trivia774.html"
+	links[775]="trivia775.html"
+	links[776]="trivia776.html"
+	links[777]="trivia777.html"
+	links[778]="trivia778.html"
+	links[779]="trivia779.html"
+	links[780]="trivia780.html"
 
     window.location=links[myrandom]
 }
