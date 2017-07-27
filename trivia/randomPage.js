@@ -1,5 +1,5 @@
 function randomlinks(){
-    var myrandom=Math.round(Math.random()*900)
+    var myrandom=Math.round(Math.random()*910)
     var links=new Array()
 	links[0]="trivia.html"
 	links[1]="trivia0001.html"
@@ -902,6 +902,16 @@ function randomlinks(){
 	links[898]="trivia898.html"
 	links[899]="trivia899.html"
 	links[900]="trivia900.html"
+	links[901]="trivia901.html"
+	links[902]="trivia902.html"
+	links[903]="trivia903.html"
+	links[904]="trivia904.html"
+	links[905]="trivia905.html"
+	links[906]="trivia906.html"
+	links[907]="trivia907.html"
+	links[908]="trivia908.html"
+	links[909]="trivia909.html"
+	links[910]="trivia910.html"
 	
     window.location=links[myrandom]
 }
