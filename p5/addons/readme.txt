@@ -1,1 +1,1 @@
-This is where the P5 app files go.
+This is where the extra P5 app addons go.
