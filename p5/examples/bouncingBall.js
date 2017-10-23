@@ -1,8 +1,8 @@
 var ball = {
 	x: 300,
 	y: 200,
-	xspeed: 4,
-	yspeed: -3
+	xspeed: 8,
+	yspeed: -6
 }
 
 function setup() {
