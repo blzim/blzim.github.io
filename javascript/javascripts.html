@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo 1: Write Date() to id demo1 in a button using innerHTML</h2>
+<button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">
+Date</button>
+
+<p id="demo1"></p>
+
+<hr>
+
+<h2>Demo 2: Replace text in id demo2 using innerHTML</h2>
+
+<p id="demo2">JavaScript can replace this text.</p>
+
+<button type="button" onclick='document.getElementById("demo2").innerHTML = "The string in innerHTML"'>Replace text above</button>
+
+<hr>
+
+<p>
+<h2>Demo 3: Input with a form and write the form value to id demo3</h2>
+
+<script>
+function outputname() {
+var x,y;
+x=document.getElementById("form1");
+y=x.elements["name"].value;
+document.getElementById("demo3").innerHTML="Hello "+y+"<br>";
+document.getElementById("demo3").innerHTML+=y +" is a very good tutor. <br>";
+}
+</script>
+
+<form id="form1">
+Name: <input name="name" type="text">
+</form>
+<button onclick="outputname()">Submit</button>
+
+<p id="demo3"></p>
+
+<hr>
+<h2>Demo 4: Another form like demo3 but the script and form are better.<br>
+The form id is not needed and the button is a form input type.</h2> 
+
+<script>
+function writeName(){
+var welcomeMsg = document.getElementById('demo4');
+var name = document.getElementById('name');
+welcomeMsg.innerHTML = "Welcome "+name.value+"!<br>";
+}
+</script>
+
+<form>
+Name: <input type="text" id="name"> <input type="button" value="Submit" onclick="writeName();">
+</form>
+
+<p id="demo4"></p>
+
+
+</body>
+</html>

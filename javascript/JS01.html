@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript Examples</title>
+</head>
+<h2>Javascript Examples</h2>
+<br>
+<body style="background-color:black; font-family:verdana; font-size:150%; color:blue; padding: 50px;">
+	<script>
+		// This is a javascript comment, it should not appear on screen.
+		document.write("Hello world! Print to screen using document.write(\"string\") <br>")
+		var words = "This is "
+		var morewords = "a concatenated sentence, by adding two variables. <br>"
+		document.write(words + morewords, "<br>")
+	</script>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+Date and Time</button>
+<p id="demo"></p>
+
+<p>In this case JavaScript changes the src (source) attribute of an image by using an id name.</p>
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+<br>
+<p id="quiz">Who invented JavaScript?</p>
+<button type="button" onclick="answer1()">Bob Metcalf</button>
+<button type="button" onclick="answer2()">Brendan Eich</button>
+<button type="button" onclick="answer1()">Vint Cerf</button>
+<button type="button" onclick="reset()">View Question</button>
+<script>
+function answer1() {
+    document.getElementById("quiz").innerHTML = "Incorrect.";
+}
+function answer2() {
+    document.getElementById("quiz").innerHTML = "Correct!";
+}
+function reset() {
+    document.getElementById("quiz").innerHTML = "Who invented JavaScript?";
+}
+</script>
+<br>
+
+</body>
+</html>
