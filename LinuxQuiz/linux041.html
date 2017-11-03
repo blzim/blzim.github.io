@@ -11,7 +11,6 @@ $("#b1").click(function(){$("#a1").toggle();});
 $("#b2").click(function(){$("#a2").toggle();});
 $("#b3").click(function(){$("#a3").toggle();});
 $("#b4").click(function(){$("#a4").toggle();});
-$("#b5").click(function(){$("#a5").toggle();});
 });
 </script>
 <script type="text/javascript" src="./randomPage.js"></script>
@@ -19,26 +18,20 @@ $("#b5").click(function(){$("#a5").toggle();});
 <body>
 <b>
 What is the difference between the i and a commands of the vi editor?
-A. i (interactive) requires the user to explicitly switch between vi modes whereas a (automatic) switches modes automatically.
-B. i (insert) inserts text before the current cursor position whereas a (append) inserts text after the cursor.
-C. i (independent rows) starts every new line at the first character whereas a (aligned rows) keeps the indentation of the previous line.
-D. i (interrupt) temporarily suspends editing of a file to the background whereas a (abort) terminates editing.
 </b>
 <p>
-<button id="b1" class="button"></button>
+<button id="b1" class="button">i (interactive) requires the user to explicitly switch between vi modes whereas a (automatic) switches modes automatically.</button>
 <span id="a1" style="display:none;">nope.</span>
 <p>
-<button id="b2" class="button"></button>
+<button id="b2" class="button">i (insert) inserts text before the current cursor position whereas a (append) inserts text after the cursor.</button>
 <span id="a2" style="display:none;"><b>CORRECT!</b></span>
 <p>
-<button id="b3" class="button"></button>
+<button id="b3" class="button">i (independent rows) starts every new line at the first character whereas a (aligned rows) keeps the indentation of the previous line.</button>
 <span id="a3" style="display:none;">nope.</span>
 <p>
-<button id="b4" class="button"></button>
+<button id="b4" class="button">i (interrupt) temporarily suspends editing of a file to the background whereas a (abort) terminates editing.</button>
 <span id="a4" style="display:none;">nope.</span>
-<p>
-<button id="b5" class="button"></button>
-<span id="a5" style="display:none;">nope.</span>
+
 <form>
 <input type="button" class="button" value="NEXT" onClick="javascript:randomlinks(); return false;">
 </form>
