@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Quiz</title>
+<link rel="stylesheet" type="text/css" href="ZimStyles.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){$("#a1").toggle();});
+$("#b2").click(function(){$("#a2").toggle();});
+$("#b3").click(function(){$("#a3").toggle();});
+$("#b4").click(function(){$("#a4").toggle();});
+$("#b5").click(function(){$("#a5").toggle();});
+});
+</script>
+<script type="text/javascript" src="./randomPage.js"></script>
+</head>
+<body>
+<b>
+In the vi editor, how can commands such as moving the cursor or copying lines into the buffer be issued
+multiple times or applied to multiple rows?
+A. By using the command :repeat followed by the number and the command.
+B. By specifying the number right in front of a command such as 4l or 2yj.
+C. By selecting all affected lines using the shift and cursor keys before applying the command.
+D. By issuing a command such as :set repetition=4 which repeats every subsequent command 4 times.
+Correct Answer: B
+</b>
+<p>
+<button id="b1" class="button"></button>
+<span id="a1" style="display:none;"><b>CORRECT!</b></span>
+<p>
+<button id="b2" class="button"></button>
+<span id="a2" style="display:none;"><b>CORRECT!</b></span>
+<p>
+<button id="b3" class="button"></button>
+<span id="a3" style="display:none;">nope.</span>
+<p>
+<button id="b4" class="button"></button>
+<span id="a4" style="display:none;"><b>CORRECT!</b></span>
+<p>
+<button id="b5" class="button"></button>
+<span id="a5" style="display:none;">nope.</span>
+<form>
+<input type="button" class="button" value="NEXT" onClick="javascript:randomlinks(); return false;">
+</form>
+<p>
+<a href="../index.html"><button class="button">QUIT</button></a>
+
+</body>
+</html>
