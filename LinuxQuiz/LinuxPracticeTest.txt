@@ -1,0 +1,646 @@
+106 linux questions from https://www.practicequiz.com/lpi-certification-comptia-linux+-practice-test/
+
+1. John needs to view the list of files and directories within the /office directory, including the files in subdirectories. Which of the following commands should he use?
+A. ls /office
+B. ls -l /office
+C. ls -f /office
+!D. ls -R /office
+
+2. Which of the following is an advantage of using a graphical text editor in Linux?
+A. Ease of use in an emergency repair situation
+!B. Easier to use than a text-based editor
+C. Ease of use to create an emergency boot diskette
+D. Ability to use and work on Microsoft Word files
+
+3.Which of the following is a fork of GNU Emacs?
+A. gemacs
+B. emacs -gui
+!C. xemacs
+D. emacs -x
+
+4. Which of the following desktop environments uses gedit as the default graphical text editor?
+A. Sawfish
+B. KDE
+!C. GNOME
+D. ICE
+
+5. Which of the following commands should you use to view the last few lines of your /var/xinetd.log file?
+A. cat /var/xinetd.log |more
+B. head /var/xinetd.log
+C. less /var/xinetd.log
+!D. tail /var/xinetd.log
+
+6. John wants to develop some computer-aided design applications on the Linux platform. Which of the following Linux distributions is best suited to do this?
+A. Red Hat Desktop
+!B. Red Hat Enterprise Linux WS (Work Station)
+C. Red Hat Enterprise Linux AS (Advanced Server)
+D. Red Hat Enterprise Linux ES (Entry Server)
+
+7. You are installing a new Linux server, which will function as an e-mail server for your small business setup. Which of the following ports should you open on the host firewall?
+A. 110 (POP3)
+B. 20/21 (FTP)
+C. 25 (SMTP)
+!D. 143 (IMAP)
+E. 22/23 (SSH/Telnet)
+
+8. Which of the following partitions is used for virtual memory in a Linux system?
+A. pagefile
+B. /boot
+C. /tmp
+!D. swap
+
+9. Your Linux system uses two SCSI hard disk drives. The first drive is assigned SCSI ID 0 and the second drive is assigned SCSI ID 1. Which of the following is the first partition on the second SCSI drive in the system?
+A. /dev/sda1
+B. /dev/sdc1
+!C. /dev/sdb1
+D. /dev/sdd1
+
+10. John has a system which has 2 GB of RAM installed. How big should his swap partition be?
+A. 256 MB
+B. 1 GB
+C. 512 MB
+!D. 4 GB
+
+11. Which of the following specifies where the operating system and application configuration parameters are stored on a Linux system?
+!A. In the text files
+B. In the Registry
+C. In the .ini files
+D. In the system database
+
+12. Which command will start Quick Emacs from the shell prompt?
+A. Emacs
+!B. qemacs
+C. quickemacs
+D. QuickEmacs
+
+13. Which of the following is an advantage of the vi editor?
+A. It provides a syntax checker.
+B. It provides a menu-driven user interface.
+!C. It is small enough to fit on a floppy disk.
+D. It can be used to edit Microsoft Word files.
+
+14. You are working in the vi normal mode on a file. You locate a word in the file that needs to be deleted and place your cursor at the beginning of that word. Which command should you use to delete this word without deleting the space that follows the word?
+A. dw
+!B. de
+C. d$
+D. dd
+
+15. You have a terminal window open and the current directory is /tmp. Which command should you use to open a file named ofc in the /etc/xinetd.d directory?
+A. vi ofc
+B. vi /tmp/ofc
+!C. vi /etc/xinetd.d/ofc
+D. vi /etc/xinetd.d
+
+16. John has opened a text file named data.txt in the vi editor. He moves the cursor using the arrow keys to a position in the file where he needs to make several changes. However, when he tries to enter text nothing happens. Which of the following could be stopping John from entering text?
+A. The vi editor is in insert mode. He needs to switch to command mode.
+B. The vi editor is in insert mode. He needs to switch to replace mode.
+!C. The vi editor is in command mode. He needs to switch to insert mode.
+D. The text file is corrupt.
+
+17. You are using vi to edit a file in insert mode. You try to use the BACKSPACE key to delete a word. The editor does not respond. Which of the following could be the cause?
+A. You need to switch to normal mode.
+B. You need to switch to replace mode.
+C. You need to switch to command mode.
+D. The BACKSPACE key does not work in the vi editor.
+
+18. You want to install Linux on a workstation. The hard drive has been wiped clean and is ready for the new operating system. You insert your first Linux installation CD-ROM in the drive and boot the system. Instead of starting the installation routine, the screen displays an error message indicating that an operating system couldn’t be found. Which of the following is the most likely cause of this problem?
+
+A. The boot device priority is set incorrectly in the BIOS
+!B. The installation CD-ROM is damaged
+C. The hard drive needs to be replaced
+D. The CD-ROM drive is malfunctioning
+(answer should be A in my opinion).
+
+19. Which of the following specifies the location where you can find the vi symbolic link file on most Linux distributions?
+A. /boot
+!B. /usr/bin
+C. /etc
+D. /var/vi
+
+20. By default, which of the following modes does the vi editor open in?
+!A. Normal mode (vi has 3 modes = insert, normal, visual)
+B. Command mode
+C. Insert mode
+D. Replace mode
+
+21. You have a terminal window open and the current directory is your home directory. You need to create a new file in your home directory named office.txt using the vi editor. Which of the following commands should you use to do this?
+A. vi office.txt -new
+!B. vi office.txt
+C. vi office
+D. vi ~/ office
+
+22. Which of the following files is used to store user passwords on a Linux system that has been configured to use local authentication?
+A. /etc/sales
+!B. /etc/shadow
+C. /etc/passwd
+D. /etc/local/accounts
+
+23. John needs to change the permissions of a file named access.odt such that the file owner can edit the file. The sales staff who are members of the group that owns the file should be able to edit it. The sales staff who are not the owners and do not belong to the owning group can view it, but not modify it. Which of the following commands will help them do this?
+
+A. chmod 555 routine.odt
+!B. chmod 664 routine.odt  4 = read 2 = write 1 = execute, order = owner group other
+C. chmod 777 routine.odt
+D. chmod 644 routine.odt
+
+24. Which of the following software types can be managed with a graphical software utility called YaST?
+A. Text-based script files
+B. Software compiled from downloaded source code
+!C. RPM packages
+D. Programs compiled from source code written by the end user
+
+25. Which of the following does the make install command do when installing an application from source code?
+!A. It copies the binary executable and other files to the appropriate directories in the file system.
+B. It compiles the source code into a binary executable. <-- It is also this!
+C. It checks the local system to verify that the necessary components are available.
+D. It verifies that the installation files have not been corrupted or tampered with.
+(The purpose of the make utility is to determine automatically which pieces of a large program need to be re-compiled, and issue the commands necessary to recompile them.)
+
+26. Which of the following specifies where the RPM Package Manager stores its database of installed packages?
+A. /etc/rpm
+!B. /var/lib/rpm
+C. /var/rpmdb
+D. /tmp/rpm
+
+27. Which of the following commands will display the UID of a user named alicewoods when entered at the shell prompt?
+A. finger alicewoods
+B. UID alicewoods
+!C. id alicewoods
+D. info alicewoods
+
+28. You want to change the owner of a file named /var/opt/confidential from alice (who is a member of the sales group) to john (who is a member of the engineers group). You want to change both user and group owners. Which of the following commands should you use?
+A. chown alice john /var/opt/confidential
+B. chown -u “john” -g “engineers” /var/opt/confidential
+C. chown john /var/opt/confidential
+!D. chown john:engineers /var/opt/confidential
+
+29. You have installed a quota package on your Linux system. Which of the following parameters can you use to set quotas for the file system?
+A. Permissions
+!B. Inodes
+C. Number of Users
+D. Number of Groups
+
+30. Which of the following mount options should you include in the /etc/fstab file to enable quotas (disk size retrictions) when a file system is mounted?
+A. groupquotas=on
+B. fsquota
+!C. grpquota (usrquota = user quota)
+D. userquotas=on
+
+31. You have installed an RPM package file named evolution-2.6.0-41.i586.rpm on your Linux system. Which of the following commands should you use to uninstall this package?
+A. rpm -U evolution
+B. rpm -U -remove evolution
+!C. rpm -e evolution
+D. rpm -i -remove evolution
+
+32. You want to check the list of commands you have executed recently. Which of the following files should you check?
+A. ~/.history
+B. /etc/bash_history
+!C. ~/.bash_history
+D. ~/.bash_commands
+
+33. Which of the following configuration files is read when a non-login bash shell is run?
+A. .bash_profile
+B. .bash_login
+!C. .bashrc
+D. .profile
+
+34. You want to view a list of the aliases currently on your Linux system. Which of the following commands should you issue at the shell prompt?
+A. alias -l
+B. display alias
+!C. alias
+D. show alias
+
+35. John is using a shell session that has a PID of 2700. He runs the su command to change to the root user account. The su process has a PID of 2757. He then runs vi from the shell prompt as a root user. The vi process has a PID of 2957. Which of the following is the PPID of the vi process?
+!A. 2700 (Parent Process ID)
+B. 2757
+C. 2957
+D. 2958
+
+36. Which of the following is the script that will be stored in your file system when you are running Fedora Linux that uses System V init scripts?
+A. /etc/rc.d/init.d
+!B. /etc/init.d
+C. /etc/sysv/init.d
+D. /etc/init.d/rc.d
+
+37. Which of the following process will be created on a Linux system when you enter vi at the shell prompt?
+A. System
+B. Daemon
+!C. User
+D. Init
+
+38. Which of the following file descriptors displays text on the screen after the command has finished processing?
+A. stdin
+!B. stderr
+C. stdscreen
+D. stdoutput
+
+39. Which of the following best defines a zombied process?
+A. A process that has stopped executing as it waits for user input
+!B. A process that has finished executing but whose parent process has not released the child process PID
+C. A process that is traced by another process
+D. A process that has gone to the sleep state and cannot be interrupted
+
+40. Which of the following processes will help you kill a hung process when you know its process name only?
+A. kill
+B. hangup
+!C. killall
+D. killpro
+
+41. You want to configure your X Windows System to display your graphical desktop on a remote Linux system. Which of the following environment variables should you modify?
+!A. DISPLAY
+B. ENV
+C. XWIN
+D. DESKTOP
+
+42. Which of the following must be included at the beginning of every shell script?
+A. #Comment
+B. exit 0
+!C. #!/bin/bash
+D. #begin script
+
+43. Which of the following is the role of the BIOS during a system boot?
+A. Creating an initrd image in a ramdisk
+B. Providing a menu that chooses which operating system to boot
+!C. Locating a bootable storage device
+D. Pointing to the operating system kernel
+
+44. Which of the following shell commands should you use if you want to install GRUB into the first partition on your first SCSI hard disk drive?
+A. grub /dev/sda1
+B. grub-install /dev/sda
+!C. grub-install /dev/sda1
+D. grub /dev/hda1
+
+45. Which of the following should you do after you have finished making changes to the /etc/lilo.conf file?
+!A. Run lilo from the shell prompt
+B. Reboot the system
+C. Change to runlevel 3
+D. Restart the lilo service
+
+46. Which of the following is a location where your Linux bootloader can be stored?
+A. BIOS
+B. initrd image
+!C. MBR of a storage device
+D. System chipset
+
+47. Which of the following files can you use to add commands that you want to be executed every time the system boots?
+A. rc
+B. rc.systinit
+C. boot
+!D. rc.local
+
+48. Which of the following file scan be used to set the default runlevel of a Linux system?
+!A. /etc/inittab
+B. /etc/runlevel.conf
+C. /etc/init.conf
+D. /etc/sysconfig/init
+
+
+49. Which of the following directories contains information about how IRQ channels have been assigned in the system?
+A. /proc/devices
+B. /proc/dma
+!C. /proc/interrupt
+D. /proc/iomem
+
+50. You are configuring a dual-boot configuration with the Windows and Linux operating system. The configuration will use the NTLOADER bootloader. Where should you install the GRUB bootloader?
+A. In the MBR
+!B. In the Linux boot partition
+C. In the Windows boot partition
+D. In the BIOS
+
+51. The CPU registers and the system RAM are saved into a file on the hard drive. Which of the following power management states are these in?
+A. Working
+B. Stand-by
+!C. Hibernation
+D. Ready
+
+52. Which of the following is the location where the kernel modules are stored?
+A. /lib/modules/version/drivers
+B. /boot/
+!C. /lib/modules/version/kernel/ drivers
+D. /usr/modules/version/drivers/ kernel
+
+53. A Linux system uses X Windows as its X Server. Which of the following configuration files is used to configure the X Server service?
+!A. /etc/X11/xorg.conf
+B. /etc/X11/XF86Config
+C. /etc/X11/xwindows.conf
+D. /etc/X11/XFree86.conf
+
+54. Jack has three hard drives in his Linux system available for a RAID array. Which of the following RAID levels can he configure with these drives?
+A. RAID 0+1
+B. RAID 1+0
+!C. RAID 5
+D. RAID 5+1
+
+55. Which of the following commands can be used to switch runlevels while the system is running?
+A. runlevel
+!B. init
+C. chrun
+D. mode
+
+56. Which of the following utilities should you use to configure X Windows on a Fedora Linux system?
+A. xf86config
+B. YaST
+!C. system-config-display
+D. xf86cfg
+
+57. John wants to get more information about the IDE hard drive in his system. Which of the following commands should he use from the shell prompt?
+A. hddump
+!B. hdparm
+C. lsusb
+D. sg_scan
+
+58. Which of the following options should you add to the kernel line in your GRUB configuration file to enable ACPI support in the Linux kernel?
+A. -acpi on
+B. apm=on
+!C. acpi=on
+D. set acpi on
+
+59. Which of the following directories within the /etc/lilo.conf file should be used to specify the menu item that will be automatically loaded if the user does not make a selection?
+A. prompt
+B. image
+!C. default
+D. boot
+
+60. Which of the following files is used to configure the named daemon?
+!A. /etc/named.conf
+B. /var/lib/named/named.conf
+C. /etc/named.d/named.conf
+D. /var/lib/named/localhost.zone
+
+61. Which of the following is the default document root used by the Apache2 Web server?
+A. /tmp
+!B. /srv/www/htdocs
+C. /home/httpd
+D. /var/lib/httpd/htdocs
+
+62. You want to verify that a kernel module has been loaded and an alias is created for a newly installed network board. Which of the following files should you check?
+!A. /etc/modprobe.conf
+B. /etc/sysctl.conf
+C. /etc/drivers
+D. /etc/aliases
+
+63. Which of the following files can be used to enable routing on a Linux system?
+!A. /proc/sys/net/ipv4/ip_forward
+B. /proc/sys/net/ipv4/ip_routing
+C. /etc/sysconfig/network/routes
+D. /etc/ip-forwarding
+
+64. Which of the following commands should you use to add a user named alice to the smbpasswd file?
+A. smbuseradd alice
+B. smbpasswd alice
+!C. smbpasswd -a alice
+D. useradd -a alice
+
+65. You want to view the contents of a NIS map. Which of the following command should you use?
+!A. /usr/bin/ypcat
+B. /bin/ypdomainname
+C. /usr/bin/ypwhich
+D. /usr/sbin/yppoll
+
+66. Which of the following files is used to enable Telnet service on a Linux system?
+A. /etc/telnetd.conf
+B. /etc/telnetd.d/telnet.conf
+!C. /etc/xinetd.d/telnet	(extended internet daemon)
+D. /var/lib/telnet/telnet.conf
+
+67. Which of the following protocols can be used to download e-mail messages from a Mail Delivery Agent?
+A. SMTP
+B. HTTP
+!C. POP3
+D. FTP
+
+68. Which of the following commands should you use to add a default gateway router address of 10.200.100. 54 to your route table?
+!A. route add default gw 10.200.100.54
+B. route 10.200.100.54
+C. netstat -a default 10.200.100.54
+D. gateway 10.200.100.54
+
+
+69. Which of the following commands should you enter into the shell prompt if you want to use your organization’s DHCP server to dynamically assign an IP address to your eth1 network interface?
+A. dhcp eth1
+B. get address dynamic eth1
+!C. dhclient eth1
+D. ip address=dhcp dev=eth1
+
+70. You want to edit the configuration of an internal 56 K modem that you have installed in your Linux system recently so that it works with your ISP. Which of the following files should you edit?
+!A. /etc/sysconfig/network/ifcfg-modem0
+B. /dev/modem0
+C. /etc/sysconfig/modems/ifcfg-modem0
+D. /etc/sysconfig/ppp/ifcfg-modem0
+
+1. Which of the following commands should you use to put a system into the Stand-by mode?
+A. powersave -e 1
+!B. powersave -m (cpufreq or systemctl suspend)
+C. powersave -S
+D. powersave -S1
+
+72. Which of the following options in your eth0 network interface configuration file should you use to get the IP address information dynamically from a DHCP server?
+!A. bootproto
+B. startmode
+C. ipaddr
+D. getdhcp
+
+73. Which of the following directives contains the configuration files that the xinetd daemon uses to manage network daemons?
+A. /var/lib/xinetd.d
+B. /etc/xinetd
+!C. /etc/xinetd.d
+D. /srv/xinetd.d
+
+74. Which of the following shell commands will send an e-mail message to a user named jack?
+!A. mail jack
+B. mail -s -u jack
+C. mail user= jack
+D. mail -s jack
+
+75. You want to view a list of all users who have authenticated to the Linux system, when they are either logged in or out and where they logged in from. Which of the following log files contains this information?
+!A. /var/log/wtmp
+B. /var/log/faillog
+C. /var/log/last
+D. /var/log/login
+
+76. Which of the following commands should be used to switch to the root user account and load root’s environment variables?
+A. su root
+B. su root -e
+!C. su -  (dash invokes a login shell after su which resets most env vars)
+D. su -env
+
+77. You are installing Linux on a system. The Linux installation process continuously locks up. Which of the following should you do first?
+A. Repartition the drive
+B. Enable power management in the BIOS
+!C. Remove all unnecessary hardware
+D. Ensure that the network card is installed prior to the installation
+
+78. Which of the following commands should you use if you need to view the first few lines of the /var/log/boot.msg file?
+A. tail /var/log/messages
+B. grep -l 10 /var/log/boot.msg
+!C. head /var/log/messages
+D. cat /var/log/boot.msg
+
+79. Which of the following commands will load the updatedb process and leave it running even if the user logs out of the shell?
+A. updatedb
+!B. nohup udatedb &
+C. updatedb &
+D. updatedb -nohup
+
+80. Which of the following commands should you use at the shell prompt to initially build Tripwire’s database of critical system files?
+!A. tripwire -init
+B. twinstall.sh
+C. tripwire-check
+D. twprint -mr
+
+81. You want to create a symbolic link in your home directory that will link the manual file to the /usr/test/lts/learning directory. Which of the following commands should you use?
+A. ln /usr/test/lts/learning ~/learning
+B. ln -s ~/learning /usr/test/lts/learning
+!C. ln -s /usr/test/lts/learning ~/learning
+D. ln ~/learning /usr/test/lts/learning
+
+82. Jack is troubleshooting a Linux system that cannot open Web pages from the Internet. He has verified the configuration using ifconfig. He has also checked that the hosts can be pinged on the Internet using IP addresses. Which of the following could be the most likely cause of the problem?
+A. The system is configured with an incorrect default gateway.
+B. The system is configured with an incorrect subnet mask.
+C. A firewall on the network is blocking ICMP traffic.
+!D. The DNS server is down. (he CAN ping, so gate, mask, and ICMP are good.)
+
+83. Jack has installed a new 300GB IDE hard drive in a Linux system. However, his CMOS setup program only detects 160GB. Which of the following is the most likely cause?
+!A. The BIOS firmware is outdated. (CMOS is before kernel, slave is not bootable).
+B. The kernel version is not the latest one.
+C. The kernel module for the new disk is outdated.
+D. The drive is configured to be a slave drive when it should be configured as a master.
+
+84. Which of the following specifies the contents of a DHCPOFFER message?
+A. A request for an IP address from the DHCP client
+B. A discovery packet used to locate the DHCP server
+C. Acceptance of an IP address assignment from the DHCP client
+!D. An IP address assignment proposal from the DHCP server (client = DHCPDISCOVER, server = DHCPOFFER, client = DHCPREQUEST, server = DHCPACK)
+
+85. Jack is using a user account named jackrusl. You want to set password age limits for this user account. The minimum password age should be 5 days and the maximum password age should be 60 days. You also need to warn the user 2 days prior to password expiration. Which of the following command should you use?
+A. usermod -m 1 -M 45 -W 5 jackrusl
+!B. chage -m 1 -M 45 -W 5 jackrusl
+C. useradd -m 1 -M 45 -W 5 jackrusl
+D. change -M 1 -m 45 -W 5 jackrusl
+
+86. You want to configure your Linux firewall to block all network traffic addressed to the Telnet service on the local system. Which of the following commands should you use?
+!A. iptables -t filter -A INPUT -s 0/0 -p tcp -dport 23 -j DROP (telnet default port = 23)
+B. iptables -t filter -A OUTPUT -s 0/0 -p tcp -dport 23 -j DROP
+C. iptables -t filter -A INPUT -s 0/0 -p tcp -dport 80 -j DROP
+D. iptables -t filter -A INPUT -s 0/0 -p tcp -dport 53 -j ACCEPT
+
+87. Jack wants to use a command at the shell prompt to scan his Linux system to determine what services are currently running on it. The IP address of the system is 192.168.10.10. Which of the following commands should he use?
+A. scan 192.168.10.10 -TCP
+B. scan 192.168.10.10 -UDP
+C. nmap 192.168.10.10 -scan
+!D. nmap -sT 192.168.10.10 (scan TCP ports)
+
+88. You want to load the ssh client and connect to an sshd daemon running on a host with an IP address of 192.168.1.25. Your user account jackshw. Which of the following commands should you use?
+A. sshd -l jackshw 192.168.1.25
+B. ssh -u jackshw 192.168.1.25
+!C. ssh -l jackshw 192.168.1.25 (same as ssh jackshw@192.168.1.25)
+D. ssh user= jackshw 192.168.1.25
+
+89. Your system is configured to boot to runlevel 3 by default. You use the startx command to start your graphical environment. Which file should you edit in your home directory to specify your default window manager?
+A. .Xsession
+B. .Xdefaults
+!C. .xinitrc
+D. .Xclients
+
+90. Jack is configuring the /etc/logrotate.d/ntp file to customize logging from the Network Time Protocol daemon on his system. He wants the archived logs to be saved using the current date in the file name extension. Which directive in the ntp file will help him accomplish this?
+A. notifempty
+B. rotate
+!C. dateext (current date in file name extention)
+D. create
+
+91. You need to create a backup of /etc to a removable hard disk drive mounted at /mnt/USB. Which of the following tar commands should you use?
+A. tar -xfv ~/backup.tar /etc
+B. tar -xzf /mnt/USB/backup.tar /etc
+!C. tar -cfv /mnt/USB/backup.tar /etc (-c = create)
+D. tar -cfv /mnt/USB/backup.tar ~/etc
+
+92. You need to format the first partition on the slave drive on the secondary IDE channel using the ext3 file system. Which of the following commands should you use?
+A. mkext3fs /dev/hdd1
+B. mkfs -t ext3 /dev/hda4
+C. mkreiserfs -t ext3 /dev/hdd1
+!D. mkfs -t ext3 /dev/hdd1
+
+93. You have used the rpm command with the -q-requires option to determine the components required by the rpm package. One of the required components is /usr/bin/perl. What command would you enter to find out which RPM package provides this component?
+A. rpm -qs --requires /usr/bin/perl
+B. rpm -qi --requires /usr/bin/perl
+!C. rpm -q --whatprovides /usr/bin/perl
+D. rpm -q --provides perl
+
+94. You need to change the IP address assignment to a permanent, static IP address assignment for the eth0 network interface. The MAC address of the Ethernet interface is 00:0C:28:B1:50:A3. Which of the following commands should you use?
+!A. /etc/sysconfig/network/ifcfg-eth-id-00:0C:28:B1:50:A3 (using MAC don't need port name)
+B. /etc/sysconfig/network/eth0/ifcfg-eth-id-00:0C:28:B1:50:A3
+C. /etc/sysconfig/network/00:0C:28: B1:50:A3/eth0
+D. /etc/sysctl/network/ifcfg-eth-id-00:0C:28:B1:50:A3
+
+95. Which of the following protocols does the Samba service use to communicate with Samba clients?
+A. FTP
+!B. SMB (Server Message Block)
+C. HTTP
+D. NCP
+
+96. Which of the following utilities provides a shell prompt on a remote system?
+A. rsh
+B. rcp
+!C. rlogin
+D. rshell
+
+97. Which of the following commands is used to display the name of the NIS server that a NIS client has been configured to use?
+A. /bin/ypdomainname
+B. /usr/bin/ypcat
+!C. /usr/bin/ypwhich (Yellow Pages)
+D. ypbind
+
+98. Which of the following DNS records is used to map a host name to an IP address?
+A. NS
+B. PTR
+!C. A
+D. MX
+
+99. What of the following IP ports does the Apache 2 Web servers listen to by default?
+!A. 80
+B. 25
+C. 21
+D. 631
+
+50 free exam questions for many exams at DynamicPath
+
+100. Which of the following utilities should you use to view the /var/log/lastlog file?
+A. cat
+!B. lastlog
+C. last
+D. grep
+
+101. Which of the following log files contains a list of failed login attempts?
+A. /var/log/last
+B. /var/log/wtmp
+C. /var/log/login
+!D. /var/log/faillog
+
+102. Which of the following commands should you use to put a system into the Hibernation mode?
+!A. acpitool -S
+B. acpitool -H
+C. acpitool -s
+D. acpitool -S4
+
+103. You need to get specific information about the IDE hard drive in your system. Which of the following commands should you use from the shell prompt?
+A. hddump
+!B. hdparm
+C. lsusb
+D. sg_scan
+
+104. Which of the following should you include at the beginning of every shell script?
+A. #Comment
+B. exit 0
+C. #begin script
+!D. #!/bin/bash
+
+105. Which of the following processes is the grandparent of all processes on a Linux system?
+!A. init
+B. sh
+C. bash
+D. ps
+
+106. Which of the following best defines the role of the Linux file system?
+A. Create automatic backups of system data
+!B. Preserve data integrity
+C. Provide the user with a command-line interface
+D. Provide the user with a graphical user interface
