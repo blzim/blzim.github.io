@@ -1,5 +1,5 @@
 function randomlinks(){
-    var myrandom=Math.round(Math.random()*79)
+    var myrandom=Math.round(Math.random()*99)
     var links=new Array()
 	links[0]="linux000.html"
 	links[1]="linux001.html"
@@ -82,5 +82,25 @@ function randomlinks(){
 	links[78]="linux078.html"
 	links[79]="linux079.html"
 	links[80]="linux080.html"
+	links[81]="linux081.html"
+	links[82]="linux082.html"
+	links[83]="linux083.html"
+	links[84]="linux084.html"
+	links[85]="linux085.html"
+	links[86]="linux086.html"
+	links[87]="linux087.html"
+	links[88]="linux088.html"
+	links[89]="linux089.html"
+	links[90]="linux090.html"
+	links[91]="linux091.html"
+	links[92]="linux092.html"
+	links[93]="linux093.html"
+	links[94]="linux094.html"
+	links[95]="linux095.html"
+	links[96]="linux096.html"
+	links[97]="linux097.html"
+	links[98]="linux098.html"
+	links[99]="linux099.html"
+	links[100]="linux100.html"
     window.location=links[myrandom]
 }
