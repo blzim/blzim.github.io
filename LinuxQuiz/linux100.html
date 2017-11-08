@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Quiz</title>
+<link rel="stylesheet" type="text/css" href="ZimStyles.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){$("#a1").toggle();});
+$("#b2").click(function(){$("#a2").toggle();});
+$("#b3").click(function(){$("#a3").toggle();});
+$("#b4").click(function(){$("#a4").toggle();});
+$("#b5").click(function(){$("#a5").toggle();});
+});
+</script>
+<script type="text/javascript" src="./randomPage.js"></script>
+</head>
+<body>
+<b>
+What is the main difference between the batch and at commands?
+</b>
+<p>
+<button id="b1" class="button">The batch command will run multiple times. The at command will only run once.</button>
+<span id="a1" style="display:none;">nope.</span>
+<p>
+<button id="b2" class="button">The commands of a batch job run sequentially one after another while the commands in at jobs may run in parallel.</button>
+<span id="a2" style="display:none;"><b>CORRECT!</b></span>
+<p>
+<button id="b3" class="button">The at command reads commands from standard input. The batch command requires a command line argument.</button>
+<span id="a3" style="display:none;">nope.</span>
+<p>
+<button id="b4" class="button">The at command e-mails results to the user. The batch command logs results to syslog.</button>
+<span id="a4" style="display:none;">nope.</span>
+<p>
+<button id="b5" class="button">SysV uses at, systemd uses batch.</button>
+<span id="a5" style="display:none;">nope.</span>
+<form>
+<input type="button" class="button" value="NEXT" onClick="javascript:randomlinks(); return false;">
+</form>
+<p>
+<a href="../index.html"><button class="button">QUIT</button></a>
+
+</body>
+</html>

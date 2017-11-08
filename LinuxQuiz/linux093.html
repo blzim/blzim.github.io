@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Quiz</title>
+<link rel="stylesheet" type="text/css" href="ZimStyles.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){$("#a1").toggle();});
+$("#b2").click(function(){$("#a2").toggle();});
+$("#b3").click(function(){$("#a3").toggle();});
+$("#b4").click(function(){$("#a4").toggle();});
+$("#b5").click(function(){$("#a5").toggle();});
+});
+</script>
+<script type="text/javascript" src="./randomPage.js"></script>
+</head>
+<body>
+<b>
+For accessibility assistance, which of the following programs is an on-screen keyboard?
+</b>
+<p>
+<button id="b1" class="button">xkb</button>
+<span id="a1" style="display:none;">nope.</span>
+<p>
+<button id="b2" class="button">atkb</button>
+<span id="a2" style="display:none;">nope.</span>
+<p>
+<button id="b3" class="button">GOK</button>
+<span id="a3" style="display:none;"><b>CORRECT!</b> Gnome Onscreen Keyboard (depreciated)</span>
+<p>
+<button id="b4" class="button">xOSK</button>
+<span id="a4" style="display:none;">nope.</span>
+<p>
+<button id="b5" class="button">atdt</button>
+<span id="a5" style="display:none;">nope. That is a Hayes command for dial tone!</span>
+<form>
+<input type="button" class="button" value="NEXT" onClick="javascript:randomlinks(); return false;">
+</form>
+<p>
+<a href="../index.html"><button class="button">QUIT</button></a>
+
+</body>
+</html>
