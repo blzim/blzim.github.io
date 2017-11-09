@@ -1,1 +1,1 @@
-Technolog timeline data goes here.
+Technology timeline goes here.
