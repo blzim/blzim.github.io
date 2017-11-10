@@ -1,0 +1,94 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<TITLE>vi Commands</TITLE>
+<link rel="stylesheet" type="text/css" href="../ZimStyles.css">
+</HEAD>
+<h1>vi commands</h1>
+<HR>
+
+<P>
+<B><U>OPERATE (enter/exit commands)</U></B>
+<P>
+<B>Enter</B> Vi type <B>vi FILENAME</B><BR>
+<B>Exit</B> without saving type <B>:q</B><BR>
+<B>Exit</B> ignoring and changes made <B>:qa!</B><BR>
+<B>Exit</B> and save <B>:wq </B><BR>
+<B>Save</B> your text to a file by typing <B>:w</B> FILENAME.<BR>
+<B>Save</B> saves the lines # through # in file<B>:#,#</B> FILENAME.<BR>
+<B>Insert</B> a file into the current file <B>:r</B> FILENAME.<BR>
+
+<P>
+<B><U>NAVIGATE</U></B>
+<P>
+<B>Move</B> the cursor in a file <B>h (left); j (down); k (up); L (right)</B><BR>
+<B>Move</B> forward, backward by word <B>w,W</B><BR>
+<B>Move</B> end of a word <B>e, E</B><BR>
+<B>Move</B> forward, backward by sentence <B>),(</B><BR>
+<B>Move</B> forward, backward by paragraph <B>},{</B><BR>
+<B>Move</B> forward, backward by section <B>]],[[</B><BR>
+<B>Move</B> forward, backward by screen <B>CTRL+F, CTRL+B</B><BR>
+<B>Move</B> forward, backward by half screen <B>CTRL+D, CTRL+Y</B><BR>
+<B>Move</B> to the end of the file <B>G</B><BR>
+<B>Move</B> to a line number in a file <B>(line number) G</B><BR>
+<B>Move</B> to a line number in a file <B>:(line #)</B><BR>
+<B>Display</B> your line number location in the file <B>Ctrl-g</B><BR>
+<B>Search</B> FORWARD for a word or phrase <B>/(word)</B><BR>
+<B>Search</B> BACKWARD for a word or phrase <B>?</B><BR>
+<B>Search</B> After a search to find the next occurrence in the same direction <B>n</B><BR>
+<B>Search</B> to find the next occurance in the opposite direction.<B>Shift-N</B><BR>
+
+<P>
+Typing <B>%</B>	while the cursor is on a  (,),[,],{, or }  locates its matching pair.<BR>
+
+<P>
+<B><U>EDIT</U></B><BR>
+<BR>
+<B>Insert</B> text at the cursor while in Normal mode <B>i</B> then type in text.<BR>
+<B>o</B> (Lowercase o) opens a line BELOW the cursor and places the cursor on the open line in Insert mode.<BR>
+<B>O</B> (Captial O)  opens the line ABOVE the line the cursor is on.<BR>
+<B>a</B> to insert text AFTER the character the cursor is on.<BR>
+<B>A</B> automatically appends text to the end of the line.<BR>
+<B>R</B> enters Replace mode until <B>ESC</B> is pressed to exit.<BR>
+<B>:set xxx</B> sets the option "xxx"<BR>
+<B>Change</B> from the cursor to the end of the word <B>cw</B><BR>
+<B>Change</B> to the end of a line <B>c$</B><BR>
+<B>Change</B> format is:[number] c object OR c [number] object.<BR>
+<B>Delete</B> a character under the cursor in Normal mode type <B>x</B><BR>
+<B>Delete</B> from the cursor to the end of a word type <B>dw</B><BR>
+<B>Delete</B> from the cursor to the end of a line type <B>d$</B><BR>
+<B>Delete</B> a whole line type <B>dd</B><BR>
+<B>Execute</B> an external command <B>:!</B> for example :!dir  -  shows a directory listing.<BR>
+<B>Replace</B> deleted text <B>p</B> which puts the deleted text AFTER the cursor.<BR>
+<B>Replace</B> the character under the cursor <B>r</B> and then the character which will replace the original.<BR>
+<B>Substitute</B> a new word for the first old on a line type &nbsp;<B>:s/old/new</B><BR>
+<B>Substitute</B> new for all 'old's on a line type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>:s/old/new/g</B><BR>
+<B>Substitute</B> phrases between two line #'s type &nbsp;&nbsp;&nbsp;&nbsp; <B>#,#s/old/new/g</B><BR>
+<B>Substitute</B> all occurrences in the file type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>:%s/old/new/g</B><BR>
+<B>Substitute</B> with confirmation each time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>:%s/old/new/gc</B><BR>
+<B>Undo</B> previous actions, type <B>u</B> (lowercase u)<BR>
+<B>Undo</B> all the changes on a line type <B>U</B> (capital U)<BR>
+<B>Undo</B> the undo's type <B>CTRL-R</B><BR>
+
+<P>
+<B><U>EXPLANATIONS</U></B>
+<P>
+<B>Normal mode</B> format for a command is: [number] command object OR command [number] object where:<BR>
+<UL>
+      <LI> number - is how many times to repeat the command </LI><BR>
+      <LI> command - is what to do, such as  d  for delete </LI><BR>
+      <LI> object - is what the command should act upon, such as  w (word),$ (to the end of line), etc.</LI><BR>
+      <LI> Pressing <B>ESC</B> will place you in Normal mode or cancel an unwanted command.<BR>
+</UL>
+
+<P>
+<B>Help</B> from within Vi:
+<UL>
+	<LI>type <B>:help</B><BR>
+	<LI>press the <B>F1</B> key (if you have one)<BR>
+	<LI>press the <B>HELP</B> key (if you have one)<BR>
+	<LI>by key word as in <B>:help w</B> or <B>:help c_&lt;T</B> or <B>:help insert-index</B>.
+</UL>
+
+</BODY>
+</HTML>
