@@ -10,9 +10,10 @@
 <h1>Boot Up Process</h1>
 
 <p>
-Two stages: Getting the hardware running, then getting the Operating System running.</p>
+Two stages: Getting the hardware running (firmware), then getting the Operating System running (stored software) usually from USB or Hard Drive. </p>
+<p>In the past the OS was booted from floppy disk and in the future the OS might be stored on something like a solid state drive. With Embedded systems, the OS might be stored directly on the system chip (SoC).</p>
 <p>
-The power supply gets AC power and provides DC power to the system.</p>
+The power supply gets AC power and provides DC power to the parts of the system. System DC voltages are usually 12v, 5v, and 3.3V which are kept separate from each other by power rails.</p>
 <p>
 Power On Self Test (POST). POST checks that the hardware is working correctly. POST will either use a system of beep codes or a display on the motherboard if it runs into errors. The system manufacturer usually provides a table of POST code meanings.</p>
 <p>
