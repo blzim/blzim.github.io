@@ -9,17 +9,23 @@
 <body>
 <h1>Processors</h1>
 <p>
-<img src="cpu_diagram.jpg">
-</p>
-Processors do math using adders and two's compliment to make negative numbers.
-<br>
-This circuit adds binary numbers and carries the remainder off to the next adder.
-<br>
-<br>
-<img src="Fulladder.gif">
-<br>
+<img src="IntelProcessor.jpg"> &nbsp; <img src="cpu_diagram.jpg">
 </p>
 <p>
+Processors do different things inside of one IC (Integrated Circuit) chip.</p><p>
+They fetch instructions from the <b>Memory Interface</b> with the <b>Instruction Fetcher</b>, decode what instructions need math with the <b>Instruction Decoder</b>, temporarily store the data using <b>Registers</b>, do any needed arithmatic with the <b>ALU</b> (Arithmatic Logic Unit) and move results either back to the Registers for more processing or back out into the system memory.
+</p><p>
+This system processor cycle is known as the instruction cycle and is often illustrated in Computer Science books using a diagram like the following:
+</p><p>
+<img src="InstructionCycle.jpg">
+</p><p>
+The ALU does math using circuits called &quot;full adders&quot; and &quot;two's compliment&quot;.
+<br>
+The full adder circuit adds binary numbers and carries the remainder off to the next adder with a series of boolean logic gates.<br>
+(see <a href="binary.html">Digital Logic</a> to learn about binary gates).
+</p><p>
+<img src="Fulladder.gif">
+</p><p>
 <h1>Two's Compliment</h1>
 <br>
 The two's complement of a binary number takes half the bits and treats them like negative values. Using this method, we can use a Full Adder circuit on negative numbers giving us subtraction. Addition in sets = multiplication and subtraction in sets gives us division, giving a full set of mathematics.
