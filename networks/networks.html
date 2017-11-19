@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Introduction to Networks</title>
-<link rel=stylesheet type="text/css" href="../ZimStyles.css" title="General">
+<meta charset="utf-8">
+<title>Networks</title>
+<link rel=stylesheet href="../ZimStyles.css">
 </head>
 
 <body>
 <div align="center">
 <h2>INTRODUCTION TO COMPUTER NETWORKS</h2>
-This page is a brief intro to Networking concepts. If you want to get certified, see <a href="https://certification.comptia.org/home"> CompTIA </a>.
-<br />
-The term &quot;Computer Network&quot; is a really general term that means computers talking to each other, so I have broken it down into the following sections:
-<br />
-<br />
+This page is a brief intro to Networking concepts. If you want to get certified, see <a href="https://certification.comptia.org/home"> CompTIA</a>.
+<br>
+A &quot;Computer Network&quot; is anytime systems are talking to each other. It includes the following sections:
+<br>
+<br>
 <a href=#types>Types</a> &nbsp; | &nbsp;
 <a href=#analogy>Analogy</a> &nbsp; | &nbsp;
-<a href=#components>Components</a> &nbsp; | &nbsp;
+<a href=#nodes>Nodes</a> &nbsp; | &nbsp;
 <a href=#protocols>Protocols</a> &nbsp; | &nbsp;
 <a href=#commands>TCP/IP Commands</a> &nbsp; | &nbsp;
 <a href=#services>Services</a> &nbsp; | &nbsp;
@@ -23,388 +24,368 @@ The term &quot;Computer Network&quot; is a really general term that means comput
 <a href="security.html">Security</a>
 </div>
 
-<br />
-<br />
+<br>
+<br>
 <a name="types"><b>Types of Networks</b></a>
 <ul>
 <img src="nets.gif" align="right" vspace="10" hspace="10" border="1">
 WLAN: Wireless Local Area Network (another form of LAN, but with enough specific terms and technology to rate it's own division)
-<br />
+<br>
 LAN: Local Area Network (home to office sized networks)
-<br />
+<br>
 MAN: Metropolitan Area Network (city sized)
-<br />
+<br>
 WAN: Wide Area Network (country sized)
-<br />
+<br>
 GAN: Global Area Network (the Internet)
-<br />
-<br />
-MANs are pretty rare compared to LANs and WANs. I don't know much about them except that they are commonly used to connect one building to another, so I'll just leave MANs out of this. Defining the difference between LANs and WANs is hard enough.
-<br />
-<br />
+<br>
+<br>
+MANs are pretty rare compared to LANs and WANs. I don't know much about them except that they are older than the internet, and are commonly used to connect one building to another, somtimes without involving an ISP, so I'll just leave MANs out of this. Defining the difference between LANs and WANs is hard enough.
+<br>
+<br>
 A LAN is loosly defined as an office sized collection of connected computers, but is more like any sized private network, even two shared computers at your house.
-<br />
-<br />
-A WAN is what is used to connect LANs together, usually over a phone company's network with data circuit and service names like T1, Frame Relay, ISDN, DSL, VPN.
-<br />
-<br />
-&quot;But wait,&quot; you say, &quot;DSL sounds like how I connect from home to the Internet?&quot;
-<br />
-<br />
-Yeah, it gets hard to divide this stuff when you take a close look. When you connect to the Internet, you are connecting to a WAN, even if it's only temporary, like using a dial up modem, or wirelessly at a Coffee Shop, it's a WAN connection.
-<br />
-<br />
-The Internet is the utimate WAN, or you can think of it as the system that connects WANs, so folks are starting to call it the GAN. Thinking of &quot;the Internet&quot; as a thing by itself can be confusing because it's really a collection of connected WANs. When you connect to &quot;the Internet&quot; what you are doing entering your Internet Service Providers LAN. You might just be passing through their LAN, to other LANs until you finnally reach your requested destination. Even at work, when connecting to the Internet, what you are doing is passing though your company's LAN, then connecting to or through your company's ISP's LAN, then possbily onto the next LAN until you reach your destination. The stuff that allows you to pass between LANs is a WAN.
-<br />
-<br />
-Huh? What if the ISP is just a collection of Routers? Is it still a LAN? Well, a router is just a computer with a special function. That function might be running on special hardware, and with special software, but you can turn a standard PC into a Router. What if that wireless coffee shop mentioned above has a server that you can connect to, but they loose their Internet connection? At the moment they loose their Internet connection, you switched from making a a GAN connection (that is a series of WAN connections) to a LAN connection. If you really want to get into it, you could say that the parts of your computer, the Hard Drive, RAM, Processor, CD/DVD/whatnot are all connected together by a network called a system bus. 
-<br />
-<br />
-That's how flimsy these terms are, so just deal with it and lets move on to a break down of what networks are trying to do.
-<br />
-<br />
+<br>
+<br>
+A WAN is what is used to connect LANs together, usually over a phone company's network with data circuit and service names like T1, Frame Relay, ISDN, DSL, VPN. When you connect to the Internet, you are connecting to a WAN, even if it's only temporary, like using a dial up modem, or wirelessly at a Coffee Shop, it's a WAN connection.
+<br>
+<br>
+The Internet is the utimate WAN, the system that connects WANs, some call it the GAN Global Area Network. When you connect to &quot;the Internet&quot; what you are doing entering your Internet Service Providers LAN. You might just be passing through their LAN, then their WAN, to other WANs or LANs until you finnally reach your requested destination. Even at work, when connecting to the Internet, what you are doing is passing though your company's LAN, then connecting to or through your company's ISP's LAN, then possbily onto the next LAN until you reach your destination.
+<br>
+<br>
+The critical system in all networks is the router. The router is a special function system. That function might be running on special hardware, and with special software, but you can turn a standard PC into a Router. 
 </ul>
 
 <a name="analogy"><b>A Network Analogy</b></a>
 <ul>
-It helps to think of all this network stuff in terms of mailing a letter to a corporation.
-<br />
-<br />
+It helps to think of all the network layers in terms of mailing a letter to a corporation.
+<br>
+<br>
 To mail something, you put your letter in an envelope, address the envelope, and give it to the postman who gives it to the post office. The post office gets the package to the building's mailbox, then someone takes it from the box and gets it to the right person who reads the letter.
-<br />
-<br />
+<br>
+<br>
 The IP part is like the envelope, it's got the address on it, and your data in it. The letter is like your data.
-<br />
-<br />
+<br>
+<br>
 The carrier is like a network protocol (usually Ethernet), it takes your message to the nearest post office. The post office is like a Router, it takes your package wherever it's addressed to.
-<br />
-<br />
+<br>
+<br>
 The carrier (Ethernet) and the Post Office (Router) don't know what's in the envelope, they just know the address.
-<br />
-<br />
+<br>
+<br>
 The building is like a computer. It's the address destination.
-<br />
-<br />
+<br>
+<br>
 The building's mailroom is like TCP, it recieves all mail then makes sure the mail gets to the right person, in this case the person is the application that will read the data.
-<br />
-<br />
+<br>
+<br>
 TCP sorts the mail by type, letters in one bin, boxes in another bin, etc, so the mail bins are like TCP ports. TCP ports identify what kind of data is comming in and sends that to the right application to be processed (read).
-<br />
-<br />
+<br>
+<br>
 Okay so that's the parts of a transmission: Data, IP, Network, TCP, TCP ports, Application. That's WHAT they do. HOW they do this can be confusing, so try using a simple metaphor if you get confused.
-<br />
-<br />
+<br>
+<br>
 <ul>
 <img src="netoverview.png" alt="Delivery Chart" align="center">
 </ul>
-<br />
-<br />
+<br>
+<br>
 </ul>
 
-<a name="components"><b>Network Components</b></a>
-<br />
+<a name="nodes"><b>Network Nodes</b></a>
+<br>
 <ul>
 <img src="topology.gif" alt="Topology" align="right" border="1">
-Devices
-<br />
-I could have just said Computers, but after thinking about servers, desktops, laptops, notebooks, palmtops, and MP3 players, where do you draw the line? What about TVs? Isn't that a TV network? And phones are on a phone network right? But if you use the phone network to connect to the internet, isn't that a computer network? If your phone is using VOIP isn't that a computer network? If you are watching TV on your PC? If your watching a TV program on the Internet? If your listening to the radio on the Internet? If you are browsing the Web over the radio? If you are using your cable modem to your Wi-Fi to do all of the above simultaneuously?!?
-<br />
-<br />
-
-Ummm... okay, so it looks like all electronic devices are turning into computers and all Networks are turning into computer networks, so lets just call this component Devices to keep it simple.
-<br />
-<br />
-
+Nodes
+<br>
+A node is a networking term for any system on the network. Nodes include servers, desktops, laptops, notebooks, palmtops, MP3 players, smart TVs, IP phones. Even non IP phones are often using VOIP at some point between circuits. The new buzz is the IOT or Internet of Things, where sensors in all types of devices, including cars, are accessing networks, and they are all nodes.
+<br>
+<br>
 Topologies
-<br />
-How things are connected (Daisy Chain, Ring, Bus, Star, Mesh, Hybrid, Wireless?, etc.) Wireless may not be a wired topology, but it might be still be considered a broadcast topology. Anyway, the way that the recievers are connected are still within the network topology category.
-<br />
-<br />
+<br>
+How things are connected (Daisy Chain, Ring, Bus, Star, Mesh, Hybrid, Wireless, etc.) Wireless may not be a wired topology, it is broadcast topology and the recievers (referred to as wifi routers or gateways) are connected within the network topology.
+<br>
+<br>
 
 Protocols
-<br />
+<br>
 Rules of communication (Ethernet, USB, Wi-Fi, PPP, TCP/IP, etc.).
-<br />
-<br />
-All of these things together are referred to as the Network Architecture. That's a loose term that just means the hardware and software
-<br />
-<br />
-<br />
+<br>
+<br>
+All of these things together are referred to as the Network Architecture. A general term that includes the hardware and software.
+<br>
+<br>
 </ul>
 <a name="protocols"><b>Protocols</b></a>
 <ul>
 <img src="osi.png" alt="OSI Model" align="right" vspace="10" hspace="10">
 
 The largest and most complicated Network Component to talk about are Protocols so lets break this down.  Protocols are all over the place for everything electronic, and when looking at Network Protocols you get a series of layered protocols that are in use at different stages of sending and recieving data, so it helps to use what's known as the OSI Model to keep track of the stages.
-<br />
-<br />
+<br>
+<br>
 
 The Layers I'll talk about here are Link, Network, Transport, and Application. OSI has 7, but I'm looking at TCP/IP, and these are the only OSI layers TCP/IP uses. The OSI thing was created before TCP/IP was, as a tool for protocol designers to help keep things talking with each other, so I'm not getting into all that, just using it to keep track of our layers.
-<br />
-<br />
+<br>
+<br>
 
 Ethernet, Wi-Fi,and USB are hardware  protocols more officially catagorized as &quot;Data Link&quot; protocols when using the OSI model, and so are in a different protocol category than TCP/IP. There are more hardware protocols than these, there are probably hundreds out there, but these are the most common when talking about Networks (as of 2005).
-<br />
-<br />
+<br>
+<br>
 
 Ethernet is a marketing term used to make IEEE 802.3 easy to pronounce and recognize. It commonly works with &quot;Cat&quot; or catagory cables, which look like fat telephone cables. The standard Ethernet cable now is Cat5, but Cat6 is just around the corner. Ethernet has become the standard LAN protocol, but remember how flimsy the term LAN is?
-<br />
-<br />
+<br>
+<br>
 
 DSL and Cablemodems often have Ethernet ports on them that connect to the Ethernet port on your computer (or the Ethernet port on your Wireless box, unless your wireless service is integrated). In the Office, Ethernet is king. It was designed for Computer Networks since the very early days of getting computers to talk to each other. Not long ago, if you wanted Ethernet, you would have to go out and buy an Ethernet card and install it in your Desktop or Laptop, but just about all systems today have this hardware built right into the motherboard, that's how standard it has become.
-<br />
-<br />
+<br>
+<br>
 
 USB is another common hardware protocol you might see on your computer or your broadband internet connection. USB was designed to connect local computer equipment together like printers and drives, but it is starting to creep into network equipment. You can even find USB to Ethernet converters, in case you don't have an Ethernet port on your system, so it's understandable if you get confused by all of these protocols.
-<br />
-<br />
+<br>
+<br>
 
 PPP is commonly used as a dial-up modem protocol, the protocol that runs the phone port that is probably already built into your system's motherboard too (although it looks like new systems are starting to drop the phone/ppp port). In the home, PPP used to be king, until broadband arrived.
-<br />
-<br />
+<br>
+<br>
 
 Wi-Fi is a marketing term to make the IEEE 802.11 standard easy to pronounce and recognize. It's the standard for Wireless networking, and comes is A,B G and N formats.
-<br />
-<br />
+<br>
+<br>
 
 But here comes something different, TCP/IP. All of the above protocols often carry another protocol the king of king protocols, TCP/IP.
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 </ul>
-<b>What is TCP/IP?
-</b>
-<br />
+<b>TCP/IP</b>
+<br>
 <ul>
 TCP/IP is how the Internet delivers data. The Web, e-mail, text messaging, music, video, voice, etc. all of it is being sent and recieved by TCP/IP. Since the Internet went public, TCP/IP has become the &quot;Network Layer&quot; Protocol of all time. As I mentioned before, the above protocols are offically considered &quot;Data Link&quot; layer protocols. TCP/IP on the other hand is considered a &quot;Network Layer&quot; protocol.
-<br />
-<br />
+<br>
+<br>
 
 Going to the library to pick up a book on TCP/IP is a really good idea as this is a huge topic that I am only going to scratch the surface of.
-<br />
-<br />
+<br>
+<br>
 
 TCP/IP is a collection of 2 separate protocols, Transmission Control Protocol and Internet Protocol.
-<br />
-<br />
+<br>
+<br>
 
 TCP is all local, meaning it all happens inside a computer. It is so different, that it is offically on another layer than IP. TCP's layer is called the &quot;Transport&quot; layer.
-<br />
-<br />
+<br>
+<br>
 
 IP is all external, meaning it all happens between computers, over the network, so it's on the &quot;Network&quot; layer.
-<br />
-<br />
+<br>
+<br>
 
 They were created to do different things, but when put together they solved a lot of problems. That's why it's got such a weird name and that's why you might hear it being called a protocol suite. With all these layers, you'll also hear it being called a protocol stack.
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 </ul>
 
 <b>IP Addressing
 </b>
 <ul>
-<br />
+<br>
 IP addresses, like the computers that were used to create it, are 32 bits. They look something like this: 127.0.0.1
-<br />
-<br />
+<br>
+<br>
 
 They are divided into 2 sections: The Network section (called a Network prefix) and the Computer section (called the Host number). This is so your message can get to the right network, then find the right computer, much like an envelope has a zip code, then goes down to the steet name and house number. But there are more than one kind of IP address.
-<br />
-<br />
+<br>
+<br>
 
 There are 3 main IP types, divided into CLASSES A, B, and C. Class D is a special multi-cast class and I have no idea what the E Class is for.
-<br />
-<br />
+<br>
+<br>
 
 The classes change where the division between the Network and the Host are, but they are all 32 bits total.
-<br />
-<br />
+<br>
+<br>
 
-Class A: 8 bits for Network + 24 bits for host = 32 bits<br />
-Class B: 16 bits for Network + 16 bits for host = 32 bits<br />
-Class C: 24 bits for Network + 8 bits for host = 32 bits<br />
-<br />
-<br />
+Class A: 8 bits for Network + 24 bits for host = 32 bits<br>
+Class B: 16 bits for Network + 16 bits for host = 32 bits<br>
+Class C: 24 bits for Network + 8 bits for host = 32 bits<br>
+<br>
+<br>
 
 Each Class also starts with a different number.
-<br />
-<br />
+<br>
+<br>
 
-Class A: 1 to 126<br />
-Class B: 128 to 191<br />
-Class C: 192 to 223<br />
-<br />
-<br />
+Class A: 1 to 126<br>
+Class B: 128 to 191<br>
+Class C: 192 to 223<br>
+<br>
+<br>
 
 Dot Notation: to make it easier to read, IP addresses are separated into four 8-bit fields (4*8 = 32). Sometimes you'll hear these 8-bit fields referred to as &quot;Octets&quot; oct is another word for 8 (latin I think).
-<br />
-<br />
+<br>
+<br>
 
 8 bits? But IP addresses have no more than 3 numbers per dot, what gives?
-<br />
-<br />
+<br>
+<br>
 
-Bit = Binary digit.<br />
+Bit = Binary digit.<br>
 Binary is a number system where all values are expressed by either a 1 or a 0. Bi is another word for 2 (latin again?).People are used to using the decimal system where you have 10 [yep dec is latin for 10] values (0 to 9). At the end of 9, you move to the next placement to keep going. These placements are in 10s: 1, 10, 100, etc. Binary works the same way, but in 2s: 1, 2, 4, 8, 16, doubling forever.
-<br />
-<br />
+<br>
+<br>
 
 For example, 10 in binary = 2 in decimal. 11 = 3, 100 = 4, 101 = 5, 110 = 6, 111 = 7, 1000 = 8, 1001 = 9, etc.
-<br />
-<br />
+<br>
+<br>
 
 So, if IP addresses are separated into 8-bit fields, what the highest number you can get? 11111111 in binary = 255 in decimal (128+64+32+16+8+4+2+1 = 255).
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 </ul>
 <b>Subnets
 </b>
 <ul>
-<br />
-<br />
+<br>
+<br>
 In the beginning, every host was supposed to have it's own unique IP address. At that time, no one knew the Internet would be so popular. With the huge gaps in the ABC classes, unique IP addresses were getting used up too fast, administrators had to register for another network number whenever they needed a separate network at their organization, and router tables where getting too big to manage. Something had to be done in a hurry.
-<br />
-<br />
+<br>
+<br>
 
 The idea of breaking a network up into subnetworks became the solution. Within a single class address, apply a subnet, and you can break your network up into pieces. Why would you want to do that? Speed and manageability are the main reasons, but their are other reasons like security, safe network product &amp; service testing, and when you change Network media, like going from Ethernet to Fiber Optic.
-<br />
-<br />
+<br>
+<br>
 
 How do you apply a Subnet? With Subnet masks. Subnet masks tell routers where to go. Subnet masks are specially reserved numbers used to tell the router about subnets. If all bits are turned on in an Octet (decimal 255), routers skip to the next section of the address. This helps to keep router tables small and quick.
-<br />
-<br />
+<br>
+<br>
 
 Find out more about this section from a book. Continuing on about this will drag the conversation into Routers and routing protocols and I'll get lost. Whole books out there talk about Subnets, how they work, how to plan for them, etc.
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 </ul>
 <b>
 IP Special Numbers
 </b>
 <ul>
-<br />
+<br>
 255 is a special number, is is reserved for Subnet masks.
-<br />
-<br />
+<br>
+<br>
 
 Some whole IP addresses are reserved for special things.
-<br />
-<br />
+<br>
+<br>
 127.0.0.1 is a special number called a &quot;loopback&quot; that is, it's function is a loopback, but is also has a host name called localhost. All computers that use IP have this number. It is not routable, it is only used as a diagnostic test to make sure that the TCP/IP protocol is working on your system. You can use it by ping 127.0.0.1, if this ping fails, the protocol is not binding to your Network card. This doesn't involve any of your IP settings, so you can tell right away that you need to reinstall your protocol or your Network card, or replace your NIC.
-<br />
-<br />
+<br>
+<br>
 There are also private network addresses. These addresses will route within your network, but not across the public Internet. There is a private address space for each IP class.
-<br />
-<br />
-Class A = 10.0.0.0 to 10.255.255.255 <br />
-Class B = 172.16.0.0 to 172.31.255.255<br />
-Class C = 192.168.0.0 to 192.168.255.255<br />
-<br />
-<br />
+<br>
+<br>
+Class A = 10.0.0.0 to 10.255.255.255 <br>
+Class B = 172.16.0.0 to 172.31.255.255<br>
+Class C = 192.168.0.0 to 192.168.255.255<br>
+<br>
+<br>
 Since these addresses are blocked from Internet use, you do not have to ask a registry service to use them.
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 </ul>
-<b>
-TCP
-</b>
+<b>TCP</b>
 <ul>
 Transmission Control Protocol uses port numbers to identify the kinds of data that pass in and out of the computer. What TCP is doing with these ports is to strip the IP (Network Layer) off and taking it up to the Application layer, which fits in with the mail clerk metaphor opening the mail package and getting the letter to it's destination.  Generally there are 3 types of Ports: well known, registered and private. The most well known ports are:
-<br />
-<br />
+<br>
+<br>
 Port 21 = FTP, Port 23 = Telnet, Port 25 = SMTP, Port 80 = HTTP. There are more common port mappings listed in the 
 <a href="security.html">Security Section</a>.
-<br />
-<br />
+<br>
+<br>
 There are thousands of available ports in TCP. I think the number was a bit over 65,000 ports. Every TCP Applcation needs a port, and unregistered applications are not supposed to be able to use registered and well known ports. It turns out that there is a big security risk with keeping unused TCP ports open on a system. It's kind of like leaving doors to the office unlocked and unattended, so one of the things a firewall does is to lock unused TCP ports and monitor the open ones. TCP is again a big area that deserves a good book, but here is an overview.
-<br />
-<br />
+<br>
+<br>
 In order to make network traffic easier to manage, IP slices up the data into little pieces called packets. A packet is a data unit containing 3 sections: 
 <ul>
 	<li>Header = address info</li>
 	<li>Data = the info being sent, and some info on the sender.</li>
 	<li>Trailer = checksum info, such as how many packets the original message has been broken into.</li>
 </ul>
-<br />
+<br>
 IP sends packets, which may scatter out to finding different paths to your destination, each acting independantly of each other like runners in a race to the finish line. Like a race, it is possible that the runners (or packets) will not make it to the finish line at the same time, or even at all. 
-<br />
-<br />
+<br>
+<br>
 Packets make it much easier for routers to run smoothly. If your message was large, and delivered all in one piece, it might take a router too long to pass it all through, causing data traffic to get backed up. Using plumbing as a metaphor, you can say that packet switching flow is like using a garbage disposal to chop your food up so that it will slip down the drain smoothly and not get stuck in the drain pipe. Network traffic flows fast and relentless like water pipes, so packets are essential in keeping things running. 
-<br />
-<br />
+<br>
+<br>
 The problem is that applications need every bit assembled in order so that they can read it properly. IP is considered a unreliable or connectionless protocol, as it doesn't keep in contact with the packets during their delivery, it just deals the packets out, but it makes sure that the packets have everything they need to get to their destination. These types of stand alone packets are called datagrams.
-<br />
-<br />
+<br>
+<br>
 As independant as datagrams are, they can still get lost or corrupted on their path. This is where TCP comes it. TCP is a reliable protocol that collects the packets, and reads a sequence number in the packets to put them back together in order.  If pieces of the puzzle are missing, TCP will wait for a preset amount of time called the Round Trip Time (RTT), then ask for them to be resent. When all the pieces are in, TCP then reads the checksum data in the packet trailer to make sure the reassembled data did not get corrupted. Once everything is in order, it passes the data to the application.
-<br />
-<br />
+<br>
+<br>
 If uncollected packets were allowed to live forever, the Internet would get flooded with garbage pretty quickly, so packets have something called a time to live (TTL). It's a preassigned number, that gets reduced each time it passes though a router. Once the TTL reaches 0, the last router drops it. You can see TTL in action by pinging a computer that doesn't exsist. You ping packet goes out, then you get a report saying that the packet timed out, instead of a reply. Replys can only come back from connections that exsist.
-<br />
-<br />
+<br>
+<br>
 Keeping packets flowing safely and quickly on a network is part of a Network administrator's job. If data isn't flowing like it should, Administrators can use a tool called a Packet Sniffer to help determine what is going wrong.
-<br />
-<br />
+<br>
+<br>
 Packet Sniffers, also known as Network Analyzers are specialized hardware or PC based Software that reads all network traffic in it's network section or node. Most network monitors use a sniffer on a central network switch. Firewalls also monitor LAN packets, but sniffers are designed for administrators to read, usually containing analysing tools to help the administrator understand and solve various network problems. 
-<br />
-<br />
+<br>
+<br>
 </ul>
 <b>TCP/IP Applications</b>
 <ul>
 File Transfer Protocol: Created before the web for exchanging files, FTP is still commonly used as it handles large file transfers quickly. FTP clients and servers often use download management features that can pause download or upload processes, allowing dial-up users to do things like talk on the phone, then reconnect and resume their file exchange where the left off from. 
-<br />
-<br />
+<br>
+<br>
 TELNET: Created before the web, telnet allows one computer to connect to another. Simliar to an FTP connection, but closer to a remote access connection, telnet is text only, but allows you to run programs on a remote computer. Telnet is not commonly used anymore. It is not considered secure, because the data flow can be captured and viewed by a router or similar network service like a Network Sniffer. A popular secure replacement for Telnet is called SSH, Secure Shell. It's basically an encrypted version of Telnet. 
-<br />
-<br />
+<br>
+<br>
 SMTP: Simple Mail Transfer Protocol: A quick text based e-mail protocol, SMTP is not just used for email, it's also by various network software to send data to other network software.
-<br />
-<br />
+<br>
+<br>
 HTTP: Hyper Text Transport Protocol: Is what the Web uses to send and recieve data. The web browser makes a request to the web server, which returns the requested data back to the browser. The Data can be any type of file. The files are arranged on the browsers screen based on HTML (Hypertext Markup Language) instructions, but HTML is not required for HTTP to work. HTTP will transport just about any kind of computer data. HTML doesn't require HTTP for that matter. You can download HTML files using FTP, or any other transport protocol and display it with your browser, but the combination of HTTP and HTML using URLs is typically what is referred to as theWorld Wide Web.  
-<br />
-<br />
+<br>
+<br>
 HTTPS: A secure version of HTTP using SSL (Secure Socket Layer).
 </ul>
 
 <a name="commands"><b>TCP/IP Commands</b></a>
 <ul>
-<br />
+<br>
 PING:
-<br />
+<br>
 Ping is a TCP/IP command that sends a small &quot;request for reply&quot; to a system. Use ping to troubleshoot IP connections. 
-<br />
-<br />
+<br>
+<br>
 NSLOOKUP:
-<br />
+<br>
 Find the IP address from a name, or find a name from an IP address. Example: nslookup Google.com will return something like 64.233.187.99. If more than on address is returned, it means that more than one computer it sharing that name.
-<br />
-<br />
+<br>
+<br>
 TRACEROUTE:
-<br />
+<br>
 Use this on Unix or Linux to find out what routers are being used to get you to your destination.
-<br />
-<br />
+<br>
+<br>
 TRACERT:
-<br />
+<br>
 Windows version of Traceroute, which first returns what DNS server you are using, then returns what DNS info that server has on the address or name that you entered.
-<br />
-<br />
+<br>
+<br>
 HOSTNAME:
-<br />
+<br>
 Enter hostname to resolve your computer's host name. Pinging &quot; localhost &quot; will also resolve your hostname. For that reason, many people forget about the &quot;hostname&quot; command.
-<br />
-<br />
+<br>
+<br>
 ARP:
-<br />
+<br>
 Address Resolution Protocol resolved IP addresses to NIC addresses. It's not commonly used, but if you type in arp -a, you can get a list of any cached LAN connections you have made. It will show the IP and MAC and type of address (static or dynamic). Media Access Control (MAC) addresses would typically be your Ethernet card's unique address. This has nothing to do with the Apple Machintosh.
 </ul>
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 
 <a name="services"><b>Network Services</a></b>
 <ul>
@@ -413,72 +394,72 @@ Address Resolution Protocol resolved IP addresses to NIC addresses. It's not com
 	
 <b>DHCP
 </b>
-<br />
+<br>
 Dynamic Host Configuration Protocol. This service automatically assigns computers an IP address taken from a pool of available numbers. DHCP makes it much easier to manage a large IP network as there is no need to assign an IP address and configure each computer in use on the network. All you need to do is configure each workstation or device to recieve a DHCP assigned IP address and configuration and DHCP will do the rest. Most Operating Systems now set their TCP/IP stack as Dynamic by default, so many users don't know what their IP address is, or ever bother to find out how IP works. Great as DHCP is, dynamic addressing is not usually used for computers that are commonly accessed by name, such as servers. Servers usually get assigned a static address to prevent problems or excess traffic with the DNS server.
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 </div>
 <div>
 <img src="dns.gif" alt="DNS" align="right" vspace="10" hspace="50">
 <b>DNS
 </b>
-<br />
+<br>
 Domain Name Service. This service keeps a list of Computer names and their IP addresses. If you access a computer by it's name (such as www.woz.org as illustrated here) you are using a DNS server somewhere that translates that name to it's IP address so the router can route your request to the proper destination.
-<br />
-<br />
+<br>
+<br>
 If the computer you are looking for is on the same LAN as you, then the local DNS server just answers this quickly. Either you would have entered the DNS address into your workstation, or if you are set to be dynaimic, the DHCP server will tell your computer where the DNS server is. Most of the time, these two services will be running on the same server hardware. Even in a little home network, there is software that will do this for you, either in your broadband connection box, or even built right into your Operating System.
-<br />
-<br />
+<br>
+<br>
 If the computer you are looking for is on a separate LAN, things get a little trickier. 
-<br />
-<br />
+<br>
+<br>
 Your local DNS server doesn't keep a copy of all computer names in the world. That would just be too much work to do, and nearly impossible to maintain. What happends instead is pretty much the same situation Routers go through when they don't know where to route your data too. They ask someone else. As spread out as the Internet tries to be, there is still a bit of a pyramid structure when it comes to DNS services. 
-<br />
-<br />
+<br>
+<br>
 The Local DNS will ask what's known as a Root server to find the domain's DNS server wich will then direct you to the right server on it's network. These Root DNS servers are owned and operated by the places where you go to register a public network name, such as Internic. In the beginning, this was only handled by the US Government, but there are now several commercial naming service centers around to help with this task. 
-<br />
-<br />
+<br>
+<br>
 <b>NTP</b>
-<br />Network Time Protocol, which sets computer clocks over network connections. Many NTP servers exsist on the internet, and are normally used by network devices and servers to keep accurate time reporting for data synchronization and accurate log reporting.
-<br />
-<br />
+<br>Network Time Protocol, which sets computer clocks over network connections. Many NTP servers exsist on the internet, and are normally used by network devices and servers to keep accurate time reporting for data synchronization and accurate log reporting.
+<br>
+<br>
 <b>NNTP</b>
-<br />
+<br>
 Network News Transfer Protocol. Used for transporting Usenet data.
-<br />
-<br />
+<br>
+<br>
 <b>Usenet</b>
-<br />
+<br>
 A bulletin board like message posting network. Usenet was created before the Web, but resembles a network of blogs, or a form of public emailing. Usenet access requires an NNTP server account and NewsReader client software. There are also Web based Usenet gateways, such as Google Groups, that will allow you to read and post to the Usenet, and only requiring a web browser and a connection to the free Google groups website. 
-<br />
-<br />
+<br>
+<br>
 
 <b>Wireless</b>
-<br />
+<br>
 Standards:
 <ul>
-<li>802.11a = 54MBps @ distance of 50 feet<br />
-<li>802.11b = 11MBps (5MBps with WEP) @ distance of 200 feet<br />
-<li>802.11g = 54MBps (30MBps with WEP) @ distance of 200 feet<br />
-<li>802.11n = 100MBps (not yet available)<br />
-<li>Bluetooth = 2MBps @ distance of 30 feet (No TCP/IP support)<br />
-<li>Pre-N = a proprietary way to push wireless speeds until the new 802.11n standard is completed.<br />
+<li>802.11a = 54MBps @ distance of 50 feet<br>
+<li>802.11b = 11MBps (5MBps with WEP) @ distance of 200 feet<br>
+<li>802.11g = 54MBps (30MBps with WEP) @ distance of 200 feet<br>
+<li>802.11n = 100MBps (not yet available)<br>
+<li>Bluetooth = 2MBps @ distance of 30 feet (No TCP/IP support)<br>
+<li>Pre-N = a proprietary way to push wireless speeds until the new 802.11n standard is completed.<br>
 </ul>
-<br />
-<br />
+<br>
+<br>
 Wireless Terms:
 <ul>
-<li>WEP (Wired Equivalent Privacy) = early wireless encryption.<br />
-<li>WAP (WiFi Protected Access) = newer, better than WEP encryption.<br />
-<li>VPN (Virtual Private Network) = how people without WAP secure their WLANs.<br />
-<li>SSID (Service Set Identifier) = wireless network name that when set to broadcase just identifies itself so you can choose which wireless connection to logon to, or it can act as a password if the access box is set not to broadcast the SSID.<br />
+<li>WEP (Wired Equivalent Privacy) = early wireless encryption.<br>
+<li>WAP (WiFi Protected Access) = newer, better than WEP encryption.<br>
+<li>VPN (Virtual Private Network) = how people without WAP secure their WLANs.<br>
+<li>SSID (Service Set Identifier) = wireless network name that when set to broadcase just identifies itself so you can choose which wireless connection to logon to, or it can act as a password if the access box is set not to broadcast the SSID.<br>
 </li>
 <li>MIMO (multiple-input multiple-output)= A technique for boosting wireless bandwidth and range by taking advantage of multiplexing.
 </li>
 </ul>
-<br />
-<br />
+<br>
+<br>
 
 Wireless Modes:
 <ul>
@@ -487,43 +468,43 @@ Wireless Modes:
 <li>Infrastructure has your workstation access one specific wireless access box. This box assigns your systems IP address and determines the security policy (WEP, WAP, VPN, etc).
 </li>
 </ul>
-<br />
-<br />
+<br>
+<br>
 
 <b>
 Router
 </b>
-<br />
+<br>
 This service passes information from one network to another using a routing table. Routers are usually specially built computers dedicated to this service, but can be setup on any computer with the right software and at least 2 network cards installed.
-<br />
-<br />
+<br>
+<br>
 The distinction between a Firewall, NAT, and Router shouldn't confuse you. These are just services, or things a computer can do. All of these things are often together in the same machine. They don't have to be, but they usually are. In fact, in a small office network, it's not too uncommon to have all the Network services you can think of like DHCP, DNS, Firewall, NAT, Router, and Gateway all on the same computer, lumped together with e-mail, file, and print server services.
-<br />
-<br />
+<br>
+<br>
 As Networks get larger, more users are added, and traffic loads increase, you can separate these services out to among all kinds of hardware configurations. I don't even want to get into virtualization yet, but trust me, it's important to know the roles these technologies play, but the lines between them are not set in stone, and will continue change and evolve for a long time to come.
-<br />
-<br />
+<br>
+<br>
 
 <img src="firewall.jpg" alt="Firewall" align="right" vspace="100" hspace="100">
 <b>
 Firewall
 </b>
-<br />
+<br>
 This is a general term used to describe computer security. I think the term comes from another general term for the safety device in a car that protects the passengers inside the car from the heat and risk of the engine, also in a building a firewall is non flamable material that protects emergency areas like stairways.
-<br />
-<br />
+<br>
+<br>
 When placed in a computer, a firewall focuses on security that allows acceptable data to enter your computer, and stops unknown data from entering. Computer firewalls are normally software that monitors what data is going in and out of your system.
-<br />
-<br />
+<br>
+<br>
 A network firewall focuses on security that separates private network data from the public Internet data. Network firewalls are usually combinations of things. There are separate hardware devices that can be attached to the network to monitor network traffic like computer firewalls monitor computer data. There are also other methods that can be considered part of your network firewall such as route-filtering, NAT, Intrusion Detection and Prevention, the list goes on and on.
-<br />
-<br />
+<br>
+<br>
 Because firewalls are so closely tied to computer and network security, and security is such a large issue, I've split security topics to the following page.
-<br />
-<br />
+<br>
+<br>
 <a href="security.html">Click here to go to Computer and Network Security.</a>
-<br />
-<br />
+<br>
+<br>
 </ul>
 
 </body>
