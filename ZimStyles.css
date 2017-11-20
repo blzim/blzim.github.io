@@ -6,7 +6,7 @@ font-size:150%;
 color:blue; 
 padding: 50px;}
 
-body, p, h1, h2, h3, h5, table, td, th, ul, ol, textarea, input
+body, p, h1, h2, h3, h4, h5, table, td, th, ul, ol, textarea, input
 {font-family: verdana,helvetica,arial,sans-serif;}
 
 th, td {
