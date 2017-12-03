@@ -1,217 +1,519 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
 <link rel="stylesheet" href="../../ZimStyles.css">
 <title>Richard Corben</title>
-</head>
+<style>
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #333;
+}
 
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+</style>
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+</head>
 <body>
 <h2>Richard Corben</h2>
 <img src="RichardCorben.jpg">
-<p>
+<p>Click the headers to sort the table.</p>
 
-Story Title	Year	# of Pages	Writer	Publisher
-The Plague	1969	32	Dennis Cunningham	Weirdom
-Dead Hill	1969	7	Corben	
-Monsters Rule	1969	8	Corben	Voice of Comicdon
-Razar, the Unhero	1970	8	Herb Arnold	Rip Off Press
-Horrible Harvey's House	1970	11	Corben	Last Gasp
-When Dreams Collide	1970	8	Corben	Last Gasp
-Twighlight of the Dogs	1970	10	Corben	Fantagor Press
-Rowlf	1970	32	Corben	Voice of Comicdon
-Oteg	1970	8	Corben	Fantagor Press
-Gastric Fortitude	1970	5	Corben	Kitchen Sink
-Inna Pit	1970	4	Corben	Fantagor Press
-Frozen Beauty	1970	6	Corben	Warren
-Cidopey	1971	8	Corben	Rip Off Press
-To Spear a Fair Maiden	1971	8	Jan Strnad	Last Gasp
-Encounter at War	1971	13	Jan Strnad	Bud Plant
-Dumb Story	1971	10	Corben	Last Gasp
-Bookworm	1971	7	Jerry Conway	Warren
-Golden Sun Disk of the Incas	1971	1	?	Warren
-Astrology	1971	1	?	Warren
-Tangible Hatred	1971	10	Donald McGregor	Warren
-The Pest	1971	7	Steven Skeates	Warren
-Beast of Wolfton	1972	25	Corben	Last Gasp
-Gothic Tale	1972	15	Tom Vietch	Last Gasp
-Kittens for Christian	1972	10	Jan Strnad	Last Gasp
-Space Jacked	1972	10	Corben	Last Gasp
-The Temple	1972	4	Corben	Last Gasp
-To Meet the Faces you Meet	1972	16	Jan Strnad	Kitchen Sink
-Going Home	1972	8	Corben	Funnybook
-Dome Battle	1972	2	Corben	Fantagor Press
-Bull Digger	1972	2	Corben	Fantagor Press
-Rats in the Walls	1972	10	Lovecraft-Corben	Last Gasp
-Necromancer	1972	7	Corben	Fantagor Press
-Melton's Big Game	1972	10	Corben	Last Gasp
-Flys	1972	4	Corben	Fantagor Press
-The Awakening	1972	4	Corben	Fantagor Press
-For Love of a Demon	1972	7	Corben	Fantagor Press
-Bright Eyes	1972	7	Douglas Moench	Warren
-Friedheim the Magnificent	1972	7	Greg Potter	Warren
-Bug	1972	5	Corben	Fantagor Press
-Alice in Wonderlust	1973	3	Corben	Bud Plant
-Damsel in Dragon Dress	1973	6	Doug Moench	Fantagor Press
-Terror Tomb	1973	8	Corben	Warren
-Change into Something Comfortable	1973	8	Douglas Moench	Warren
-Slipped Mickey	1973	8	Douglas Moench	Warren
-Low Spark of High Heeled Noise	1973	8	Douglas Moench	Warren
-Lycan klutz	1973	8	Corben	Warren
-Unprovoked attack on a Hilton Hotel	1974	8	Jim Stenstrum	Warren
-As Though They Were Living	1974	8	Gerry Boudreau	Warren
-Wizard Wagstaff	1974	8	Jack Butterworth	Warren
-Top to Bottom	1974	8	Jack Butterworth	Warren
-Woodlik Inheritance	1974	8	Corben	Warren
-Child	1974	8	Greg Potter	Warren
-Mind of the Mass	1974	8	Greg Potter	Warren
-Bless Us Father	1974	8	William DuBay	Warren
-The Hero Within	1974	8	Steven Skeates	Warren
-Childhoods End	1974	8	Potter	Warren
-Angel Shy of Hell	1974	8	Jim Stenstrum	Warren
-Pinball Wizard	1974	8	Douglas Moench	Warren
-The Raven	1974	8	Richard Margopoulos	Warren
-Judas	1974	8	Richard Margopoulos	Warren
-Demon in the Cockpit	1974	8	Richard Margopoulos	Warren
-Forgive Us Our Trespasses	1975	8	William DuBay	Warren
-Bye, Bye Miss American Dream	1975	8	William DuBay	Warren
-Anti- Christmas	1975	8	Gerry Boudreau	Warren
-Oval Portrait	1975	8	Richard Margopoulos	Warren
-Shadow	1975	8	Richard Margopoulos	Warren
-Dweller in the Dark	1976	11	Herb Arnold	Sal Quartuccio
-Bowser	1976	8	Jan Strnad	Warren
-Within you Without you	1976	10	Bruce Jones	Warren
-The Believer	1976	8	Bud Lewis	Warren
-Mummy's Victory	1976	8	McKenzie	Warren
-Time and Time again	1976	10	Bruce Jones	Warren
-In Deep	1976	10	Bruce Jones	Warren
-Bloodstar	1976	96	Corben/John Jakes	Morning Star Press
-Chard	1977	10	Herb Arnold	Sal Quartuccio
-Years and Mind Forever	1977	10	Bruce Jones	Warren
-You're A Big Girl Now	1977	10	Bruce Jones	Warren
-Instinct	1977	7	Nick Cuti	Warren
-NeverWhere	1978	104	Corben	Fantagor Press-HM
-New Tales of the Arabian Nights	1978	94	Jan Strnad	HM-Fantagor Press
-Woman Scorned	1978	8	Bruce Jones	Warren
-Ogre	1978	8	Richard Corben	Warren
-The Bodyssey	1979	48	John Pocsik	HM- Fantagor Press
-Blood's a Rover illustrations	1980	15	Harlan Ellison	paperback
-Jeremy Brood	1982	64	Jan Strnad	Fantagor Press
-Mutant World	1982	64	Jan Strnad	Warren-Fantagor Press
-Muvovum	1983	100	Corben	Fantagor Press-HM
-Roda and the Wolf	1984	8	Corben	Heavy Metal
-Fur Trade	1984	8	John Pocsik	Fantagor Press
-Infected	1984	8	Bruce Jones	Pacific
-Rex 'n' Me	1984	8	Bruce Jones	Pacific
-Night of the Monkey	1985	8	John Pocsik	Eclipse Comics
-X-men for Ethiopia	1985	3	Alan Moore	Marvel
-Spirit of the Beast	1985	8	Corben	Heavy Metal
-Twisted Tales illos	1985	4	Bruce Jones	Pacific
-Rip in Time	1986	107	Bruce Jones	Fantagor Press
-Children of Fire	1987	152	Corben	Fantagor Press
-Vic and Blood	1987	31	Harlan Ellison	Mad Dog
-Den Comic cover 1	1988	1	Corben	Fantagor Press
-Den Comic cover 2	1988	1	Corben	Fantagor Press
-Den Comic cover 3	1988	1	Corben	Fantagor Press
-Den Comic cover 4	1988	1	Corben	Fantagor Press
-Den Comic cover 5	1988	1	Corben	Fantagor Press
-Den Comic cover 6	1988	1	Corben	Fantagor Press
-Den Comic cover 7	1988	1	Corben	Fantagor Press
-Den Comic cover 8	1988	1	Corben	Fantagor Press
-Den Comic cover 9	1988	1	Corben	Fantagor Press
-Den Comic cover 10	1988	1	Corben	Fantagor Press
-The Fall of the House of Usher	1989	28	Edgar Allan Poe- Corben	Pacific comics
-Such Pretty Little Toes	1989	6	Jan Strnad	Fantagor Press
-Wreck of the Katera Dan	1989	6	Jan Strnad	Fantagor Press
-Donneman's Bluff	1989	4	Jan Strnad	Fantagor Press
-Slash and Burn	1989	2	Corben	Rip Off Press
-The Juice Wagon	1990	14	Harlan Ellison	Dark Horse
-Son of Mutant World	1990	60	Jan Strnad	Fantagor Press
-Inducement	1990	4	Richard Morgopoulos	Fantagor Press
-Different	1990	4	Bruce Jones	Fantagor Press
-Fireworks	1990	6	Richard Margopoulos	Fantagor Press
-Silver, Emeralds and Rubies	1990	6	Richard Margopoulos	Fantagor Press
-Turtles Take Time	1990	32	Strnad	Mirage Press
-Cave of Ancient Fear	1991	4	Corben	Fantagor Press
-The Secret of Zokma	1991	9	Herb Arnold	Fantagor Press
-Forgotten Tomb	1991	6	Corben	Fantagor Press
-Cold Blood	1991	10	Richard Margopoulos	Fantagor Press
-Cartoon of Blood	1991	10	Richard Margopoulos	Fantagor Press
-Bath of Blood	1991	14	Richard Margopoulos	Fantagor Press
-Birth of Blood	1991	16	Richard Margopoulos	Fantagor Press
-Crypt of Blood	1991	10	Richard Margopoulos	Fantagor Press
-Densaga	1992	84	Corben	Fantagor Press
-Seed of the Sepulcher	1992	12	C. A. Smith- Corben	Fantagor Press
-The Vault of Yo Vombis	1993	10	C. A. Smith- Corben	Fantagor Press
-Return of the Sorcerer	1993	10	C. A. Smith- Corben	Fantagor Press
-The Sound of Thunder	1993	12	Ray Bradbury	Topps Comics
-Starstone of Blood	1993	6	Richard Margopoulos	Fantagor Press
-From the Pit	1994	40	Corben	Fantagor Press
-Gone Fishin'	1995	4	Corben	Penthouse Comix
-Penthouse gags	1995	6	Corben	Penthouse Comix
-Ringworld	1995	9	Larry Niven- Corben	Omni Comix
-Batman Black/White	1996	8	Strnad	DC Comics
-Denz	1996	66	Jan Strnad	Penthouse Comix
-Web of Fear	1997	10	Corben	Frazetta Illustrated
-Alien Alchemy	1997	66	John Arcudi	Dark Horse
-Gangland: Killer Smile	1997	10	John Pocsik	DC
-Heart Throb: Apposites Attract	1997	6	John Pocsik	DC
-Weird War cover	1997		Corben	DC
-Tower of Ho	1998	8	Corben	Frazetta Illustrated
-The Surviver	1998	6	John Pocsik	D. C. Vertigo
-Killer Smile	1998	10	John Pocsik	D. C. Vertigo
-C-23 cover5	1998	1	Jeff Mariotte	Wildstorm
-C-23 cover6	1998	1	Jeff Mariotte	Wildstorm
-C-23 cover7	1998	1	Jeff Mariotte	Wildstorm
-C-23 cover8	1998	1	Jeff Mariotte	Wildstorm
-Satanica	1998	5	Glenn Danzig	Verotic
-Marvel bookcover	1998	1		Byron Priess
-Vampire cover, 2 versions	1998	2		Heavy Metal
-M-80	1998	6	Arthur Suydam	Galaxy: Forbidden Zone
-Angel of Andromeda	1998	12	Arthur Suydam	Galaxy: Forbidden Zone
-Spear &amp; Fang	1998	10	Robert E Howard	Cross Plains
-Wolfgirl Eats	1999	10	Bruce Jones	D. C. Vertigo
-Apposites Attract	1999	6	John Pocsik	D. C. Vertigo
-Congo Bill 1 cover	1999	1	Scott Cunningham	D. C. Vertigo
-Congo Bill 2 cover	1999	1	Scott Cunningham	D. C. Vertigo
-Congo Bill 3 cover	1999	1	Scott Cunningham	D. C. Vertigo
-Congo Bill 4 cover	1999	1	Scott Cunningham	D. C. Vertigo
-Grass Gator	1999			Jeff Williams
-Psychic Pilgrim cd	1999	1	Corben	Jeff Williams
-Hard Time	2000	112	Brian Azzarello	DC Vertigo
-House on the Borderland	2000	84	John Pocsik	DC Vertigo
-The Split	2000	8	Joe Lansdale	D. C. Vertigo
-BLUDD Webisodes	2000		Jan Strnad	BLUDD
-Girl &amp; Worm cover	2001		Corben	DC: FLINCH
-Banner	2001	88	Brian Azzarello	Marvel
-The Crusades cover	2001		Corben	DC Vertigo
-Cyclops	2002	5	Corben	DC: SOLO
-The Plague	2002	12	Corben	DC: SOLO
-Interactive video:models &amp; characters	2002		Jeff Williams	DARKSTAR
-Cage	2002	110	Brian Azzarello	Marvel
-The Mummy: Belzon's Treasure	2003	12	Corben	DC: SOLO
-Cowboy: Homecoming	2003	5	Corben	DC: SOLO
-Spector, A Missing Life	2003	11	John Arcudi	DC: SOLO
-Mask	2003	8	Mark Andreyko	Wildstorm
-Kings Crown	2003		Jim Alexander	Metal Hurlant
-Punisher: The End	2004	48	Garth Ennis	Marvel
-Metal Hurlant cover	2004		Corben	Metal Hurlant
-Swamp Thing	2004	44		DC
-Bigfoot	2005	89	Zombie/Niles	IDW Publishing
-Swamp Thing	2005	22		DC Vertigo
-Hellboy Makoma	2005	46	Mignola	Dark Horse
-Haunt of Horror Poe> 3 issues	2006	72	Margopoulos	Marvel
-American Splendor	2006	5	Harvey Pekar	DC
-Ghost Rider	2006	44	Daniel Way	Marvel
-Jonah Hex cover	2007	cover		DC
-Living With The Dead	2007	cover		Dark Horse
-Conan	2007	67	Timothy Truman	Dark Horse
-Haunt of Horror Lovecraft	2008	72	Corben	Dark Horse
-Hellboy, Crooked Man	2008	72	Mignola	Dark Horse
-Starr the Slayer	2009	88	Daniel Way	Marvel
-Hellboy, Bride of Hell	2009	24	Mignola	Dark Horse
-Hellboy, Camazotz	2009	28	Mignola	Dark Horse
-</p>
+<table id="myTable">
+  <tr>
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by title, 1 for sorting by year:-->  
+    <th onclick="sortTable(0)">Creation</th>
+    <th onclick="sortTable(1)">Year</th>
+    <th onclick="sortTable(2)">Pages</th>
+	<th onclick="sortTable(3)">Writer</th>
+	<th onclick="sortTable(4)">Publisher</th>
+  </tr>
+  <tr>
+    <td>The Plague</td>
+	<td>1969</td>
+    <td>32</td>
+	<td>Dennis Cunningham</td>
+	<td>Weirdom</td>
+  </tr>
+  <tr>
+    <td>Dead Hill</td>
+    <td>1969</td>
+    <td>07</td>
+	<td>Corben</td>
+	<td></td>
+  </tr>
+  <tr>
+    <td>Monsters Rule</td>
+	<td>1969</td>
+    <td>08</td>
+	<td>Corben</td>
+	<td>Voice of Comicdon</td>
+  </tr>
+  <tr>
+    <td>Razar, the Unhero</td>
+	<td>1970</td>
+	<td>08</td>
+	<td>Herb Arnold</td>
+	<td>Rip Off Press</td>
+  </tr>
+    <tr>
+    <td>Horrible Harvey's House</td>
+	<td>1970</td>
+	<td>11</td>
+	<td>Corben</td>
+	<td>Last Gasp</td>
+  </tr>
+    <tr>
+    <td>When Dreams Collide</td>
+	<td>1970</td>
+	<td>08</td>
+	<td>Corben</td>
+	<td>Last Gasp</td>
+  </tr>
+  <tr>
+    <td>Twighlight of the Dogs</td>
+	<td>1970</td>
+	<td>10</td>
+	<td>Corben</td>
+	<td>Fantagor Press</td>
+  </tr>
+  <tr>
+    <td>Rowlf</td>
+	<td>1970</td>
+	<td>32</td>
+	<td>Corben</td>
+	<td>Voice of Comicdon</td></tr>
+<tr><td>Oteg</td><td>1970</td><td>08</td><td>Corben</td><td>Fantagor Press</td></tr>
+<tr><td>Gastric Fortitude</td><td>1970</td><td>05</td><td>Corben</td><td>Kitchen Sink</td></tr>
+<tr><td>Inna Pit</td><td>1970</td><td>4</td><td>Corben</td><td>Fantagor Press</td></tr>
+<tr><td>Frozen Beauty</td><td>1970</td><td>6</td><td>Corben</td><td>Warren</td></tr>
+<tr><td>Cidopey</td><td>1971</td><td>8</td><td>Corben</td><td>Rip Off Press</td></tr>
+<tr><td>To Spear a Fair Maiden</td><td>1971</td><td>8</td><td>Jan Strnad</td><td>Last Gasp</td></tr>
+<tr><td>Encounter at War</td><td>1971</td><td>13</td><td>Jan Strnad</td><td>Bud Plant</td></tr>
+<tr><td>Dumb Story</td><td>1971</td><td>10</td><td>Corben</td><td>Last Gasp</td></tr>
+<tr><td>Bookworm</td><td>1971</td><td>7</td><td>Jerry Conway</td><td>Warren</td></tr>
+<tr><td>Golden Sun Disk of the Incas</td><td>1971</td><td>1</td><td>?</td><td>Warren</td></tr>
+<tr><td>Astrology</td><td>1971</td><td>1</td><td>?</td><td>Warren</td></tr>
+<tr><td>Tangible Hatred</td><td>1971</td><td>10</td><td>Donald McGregor</td><td>Warren</td></tr>
+<tr><td>The Pest</td><td>1971</td><td>7</td><td>Steven Skeates</td><td>Warren</td></tr>
+<tr><td>Beast of Wolfton</td><td>1972</td><td>25</td><td>Corben</td><td>Last Gasp</td></tr>
+<tr><td>Gothic Tale</td><td>1972</td><td>15</td><td>Tom Vietch</td><td>Last Gasp</td></tr>
+<tr><td>Kittens for Christian</td><td>1972</td><td>10</td><td>Jan Strnad</td><td>Last Gasp
+</td></tr>
+<tr><td>Space Jacked</td><td>1972</td><td>10</td><td>Corben</td><td>Last Gasp
+</td></tr>
+<tr><td>The Temple</td><td>1972</td><td>4</td><td>Corben</td><td>Last Gasp
+</td></tr>
+<tr><td>To Meet the Faces you Meet</td><td>1972</td><td>16</td><td>Jan Strnad</td><td>Kitchen Sink
+</td></tr>
+<tr><td>Going Home</td><td>1972</td><td>8</td><td>Corben</td><td>Funnybook
+</td></tr>
+<tr><td>Dome Battle</td><td>1972</td><td>2</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Bull Digger</td><td>1972</td><td>2</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Rats in the Walls</td><td>1972</td><td>10</td><td>Lovecraft-Corben</td><td>Last Gasp
+</td></tr>
+<tr><td>Necromancer</td><td>1972</td><td>7</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Melton's Big Game</td><td>1972</td><td>10</td><td>Corben</td><td>Last Gasp
+</td></tr>
+<tr><td>Flys</td><td>1972</td><td>4</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>The Awakening</td><td>1972</td><td>4</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>For Love of a Demon</td><td>1972</td><td>7</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Bright Eyes</td><td>1972</td><td>7</td><td>Douglas Moench</td><td>Warren
+</td></tr>
+<tr><td>Friedheim the Magnificent</td><td>1972</td><td>7</td><td>Greg Potter</td><td>Warren
+</td></tr>
+<tr><td>Bug</td><td>1972</td><td>5</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Alice in Wonderlust</td><td>1973</td><td>3</td><td>Corben</td><td>Bud Plant
+</td></tr>
+<tr><td>Damsel in Dragon Dress</td><td>1973</td><td>6</td><td>Doug Moench</td><td>Fantagor Press
+</td></tr>
+<tr><td>Terror Tomb</td><td>1973</td><td>8</td><td>Corben</td><td>Warren
+</td></tr>
+<tr><td>Change into Something Comfortable</td><td>1973</td><td>8</td><td>Douglas Moench</td><td>Warren
+</td></tr>
+<tr><td>Slipped Mickey</td><td>1973</td><td>8</td><td>Douglas Moench</td><td>Warren
+</td></tr>
+<tr><td>Low Spark of High Heeled Noise</td><td>1973</td><td>8</td><td>Douglas Moench</td><td>Warren
+</td></tr>
+<tr><td>Lycan klutz</td><td>1973</td><td>8</td><td>Corben</td><td>Warren
+</td></tr>
+<tr><td>Unprovoked attack on a Hilton Hotel</td><td>1974</td><td>8</td><td>Jim Stenstrum</td><td>Warren
+</td></tr>
+<tr><td>As Though They Were Living</td><td>1974</td><td>8</td><td>Gerry Boudreau</td><td>Warren
+</td></tr>
+<tr><td>Wizard Wagstaff</td><td>1974</td><td>8</td><td>Jack Butterworth</td><td>Warren
+</td></tr>
+<tr><td>Top to Bottom</td><td>1974</td><td>8</td><td>Jack Butterworth</td><td>Warren
+</td></tr>
+<tr><td>Woodlik Inheritance</td><td>1974</td><td>8</td><td>Corben</td><td>Warren
+</td></tr>
+<tr><td>Child</td><td>1974</td><td>8</td><td>Greg Potter</td><td>Warren
+</td></tr>
+<tr><td>Mind of the Mass</td><td>1974</td><td>8</td><td>Greg Potter</td><td>Warren
+</td></tr>
+<tr><td>Bless Us Father</td><td>1974</td><td>8</td><td>William DuBay</td><td>Warren
+</td></tr>
+<tr><td>The Hero Within</td><td>1974</td><td>8</td><td>Steven Skeates</td><td>Warren
+</td></tr>
+<tr><td>Childhoods End</td><td>1974</td><td>8</td><td>Potter</td><td>Warren
+</td></tr>
+<tr><td>Angel Shy of Hell</td><td>1974</td><td>8</td><td>Jim Stenstrum</td><td>Warren
+</td></tr>
+<tr><td>Pinball Wizard</td><td>1974</td><td>8</td><td>Douglas Moench</td><td>Warren
+</td></tr>
+<tr><td>The Raven</td><td>1974</td><td>8</td><td>Richard Margopoulos</td><td>Warren
+</td></tr>
+<tr><td>Judas</td><td>1974</td><td>8</td><td>Richard Margopoulos</td><td>Warren
+</td></tr>
+<tr><td>Demon in the Cockpit</td><td>1974</td><td>8</td><td>Richard Margopoulos</td><td>Warren
+</td></tr>
+<tr><td>Forgive Us Our Trespasses</td><td>1975</td><td>8</td><td>William DuBay</td><td>Warren
+</td></tr>
+<tr><td>Bye, Bye Miss American Dream</td><td>1975</td><td>8</td><td>William DuBay</td><td>Warren
+</td></tr>
+<tr><td>Anti-Christmas</td><td>1975</td><td>8</td><td>Gerry Boudreau</td><td>Warren
+</td></tr>
+<tr><td>Oval Portrait</td><td>1975</td><td>8</td><td>Richard Margopoulos</td><td>Warren
+</td></tr>
+<tr><td>Shadow</td><td>1975</td><td>8</td><td>Richard Margopoulos</td><td>Warren
+</td></tr>
+<tr><td>Dweller in the Dark</td><td>1976</td><td>11</td><td>Herb Arnold</td><td>Sal Quartuccio
+</td></tr>
+<tr><td>Bowser</td><td>1976</td><td>8</td><td>Jan Strnad</td><td>Warren
+</td></tr>
+<tr><td>Within you Without you</td><td>1976</td><td>10</td><td>Bruce Jones</td><td>Warren
+</td></tr>
+<tr><td>The Believer</td><td>1976</td><td>8</td><td>Bud Lewis</td><td>Warren
+</td></tr>
+<tr><td>Mummy's Victory</td><td>1976</td><td>8</td><td>McKenzie</td><td>Warren
+</td></tr>
+<tr><td>Time and Time again</td><td>1976</td><td>10</td><td>Bruce Jones</td><td>Warren
+</td></tr>
+<tr><td>In Deep</td><td>1976</td><td>10</td><td>Bruce Jones</td><td>Warren
+</td></tr>
+<tr><td>Bloodstar</td><td>1976</td><td>96</td><td>Corben/John Jakes</td><td>Morning Star Press
+</td></tr>
+<tr><td>Chard</td><td>1977</td><td>10</td><td>Herb Arnold</td><td>Sal Quartuccio
+</td></tr>
+<tr><td>Years and Mind Forever</td><td>1977</td><td>10</td><td>Bruce Jones</td><td>Warren
+</td></tr>
+<tr><td>You're A Big Girl Now</td><td>1977</td><td>10</td><td>Bruce Jones</td><td>Warren
+</td></tr>
+<tr><td>Instinct</td><td>1977</td><td>7</td><td>Nick Cuti</td><td>Warren
+</td></tr>
+<tr><td>NeverWhere</td><td>1978</td><td>104</td><td>Corben</td><td>Fantagor Press-HM
+</td></tr>
+<tr><td>New Tales of the Arabian Nights</td><td>1978</td><td>94</td><td>Jan Strnad</td><td>HM-Fantagor Press
+</td></tr>
+<tr><td>Woman Scorned</td><td>1978</td><td>8</td><td>Bruce Jones</td><td>Warren
+</td></tr>
+<tr><td>Ogre</td><td>1978</td><td>8</td><td>Richard Corben</td><td>Warren
+</td></tr>
+<tr><td>The Bodyssey</td><td>1979</td><td>48</td><td>John Pocsik</td><td>HM- Fantagor Press
+</td></tr>
+<tr><td>Blood's a Rover illustrations</td><td>1980</td><td>15</td><td>Harlan Ellison</td><td>paperback
+</td></tr>
+<tr><td>Jeremy Brood</td><td>1982</td><td>64</td><td>Jan Strnad</td><td>Fantagor Press
+</td></tr>
+<tr><td>Mutant World</td><td>1982</td><td>64</td><td>Jan Strnad</td><td>Warren-Fantagor Press
+</td></tr>
+<tr><td>Muvovum</td><td>1983</td><td>100</td><td>Corben</td><td>Fantagor Press-HM
+</td></tr>
+<tr><td>Roda and the Wolf</td><td>1984</td><td>8</td><td>Corben</td><td>Heavy Metal
+</td></tr>
+<tr><td>Fur Trade</td><td>1984</td><td>8</td><td>John Pocsik</td><td>Fantagor Press
+</td></tr>
+<tr><td>Infected</td><td>1984</td><td>8</td><td>Bruce Jones</td><td>Pacific
+</td></tr>
+<tr><td>Rex 'n' Me</td><td>1984</td><td>8</td><td>Bruce Jones</td><td>Pacific
+</td></tr>
+<tr><td>Night of the Monkey</td><td>1985</td><td>8</td><td>John Pocsik</td><td>Eclipse Comics
+</td></tr>
+<tr><td>X-men for Ethiopia</td><td>1985</td><td>3</td><td>Alan Moore</td><td>Marvel
+</td></tr>
+<tr><td>Spirit of the Beast</td><td>1985</td><td>8</td><td>Corben</td><td>Heavy Metal
+</td></tr>
+<tr><td>Twisted Tales illos</td><td>1985</td><td>4</td><td>Bruce Jones</td><td>Pacific
+</td></tr>
+<tr><td>Rip in Time</td><td>1986</td><td>107</td><td>Bruce Jones</td><td>Fantagor Press
+</td></tr>
+<tr><td>Children of Fire</td><td>1987</td><td>152</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Vic and Blood</td><td>1987</td><td>31</td><td>Harlan Ellison</td><td>Mad Dog
+</td></tr>
+<tr><td>Den Comic cover 1</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 2</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 3</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 4</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 5</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 6</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 7</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 8</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 9</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Den Comic cover 10</td><td>1988</td><td>1</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>The Fall of the House of Usher</td><td>1989</td><td>28</td><td>Edgar Allan Poe- Corben</td><td>Pacific comics
+</td></tr>
+<tr><td>Such Pretty Little Toes</td><td>1989</td><td>6</td><td>Jan Strnad</td><td>Fantagor Press
+</td></tr>
+<tr><td>Wreck of the Katera Dan</td><td>1989</td><td>6</td><td>Jan Strnad</td><td>Fantagor Press
+</td></tr>
+<tr><td>Donneman's Bluff</td><td>1989</td><td>4</td><td>Jan Strnad</td><td>Fantagor Press
+</td></tr>
+<tr><td>Slash and Burn</td><td>1989</td><td>2</td><td>Corben</td><td>Rip Off Press
+</td></tr>
+<tr><td>The Juice Wagon</td><td>1990</td><td>14</td><td>Harlan Ellison</td><td>Dark Horse
+</td></tr>
+<tr><td>Son of Mutant World</td><td>1990</td><td>60</td><td>Jan Strnad</td><td>Fantagor Press
+</td></tr>
+<tr><td>Inducement</td><td>1990</td><td>4</td><td>Richard Morgopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Different</td><td>1990</td><td>4</td><td>Bruce Jones</td><td>Fantagor Press
+</td></tr>
+<tr><td>Fireworks</td><td>1990</td><td>6</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Silver, Emeralds and Rubies</td><td>1990</td><td>6</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Turtles Take Time</td><td>1990</td><td>32</td><td>Strnad</td><td>Mirage Press
+</td></tr>
+<tr><td>Cave of Ancient Fear</td><td>1991</td><td>4</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>The Secret of Zokma</td><td>1991</td><td>9</td><td>Herb Arnold</td><td>Fantagor Press
+</td></tr>
+<tr><td>Forgotten Tomb</td><td>1991</td><td>6</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Cold Blood</td><td>1991</td><td>10</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Cartoon of Blood</td><td>1991</td><td>10</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Bath of Blood</td><td>1991</td><td>14</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Birth of Blood</td><td>1991</td><td>16</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Crypt of Blood</td><td>1991</td><td>10</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>Densaga</td><td>1992</td><td>84</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Seed of the Sepulcher</td><td>1992</td><td>12</td><td>C. A. Smith- Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>The Vault of Yo Vombis</td><td>1993</td><td>10</td><td>C. A. Smith- Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Return of the Sorcerer</td><td>1993</td><td>10</td><td>C. A. Smith- Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>The Sound of Thunder</td><td>1993</td><td>12</td><td>Ray Bradbury</td><td>Topps Comics
+</td></tr>
+<tr><td>Starstone of Blood</td><td>1993</td><td>6</td><td>Richard Margopoulos</td><td>Fantagor Press
+</td></tr>
+<tr><td>From the Pit</td><td>1994</td><td>40</td><td>Corben</td><td>Fantagor Press
+</td></tr>
+<tr><td>Gone Fishin'</td><td>1995</td><td>4</td><td>Corben</td><td>Penthouse Comix
+</td></tr>
+<tr><td>Penthouse gags</td><td>1995</td><td>6</td><td>Corben</td><td>Penthouse Comix
+</td></tr>
+<tr><td>Ringworld</td><td>1995</td><td>9</td><td>Larry Niven- Corben</td><td>Omni Comix
+</td></tr>
+<tr><td>Batman Black/White</td><td>1996</td><td>8</td><td>Strnad</td><td>DC Comics
+</td></tr>
+<tr><td>Denz</td><td>1996</td><td>66</td><td>Jan Strnad</td><td>Penthouse Comix
+</td></tr>
+<tr><td>Web of Fear</td><td>1997</td><td>10</td><td>Corben</td><td>Frazetta Illustrated
+</td></tr>
+<tr><td>Alien Alchemy</td><td>1997</td><td>66</td><td>John Arcudi</td><td>Dark Horse
+</td></tr>
+<tr><td>Gangland: Killer Smile</td><td>1997</td><td>10</td><td>John Pocsik</td><td>DC
+</td></tr>
+<tr><td>Heart Throb: Apposites Attract</td><td>1997</td><td>6</td><td>John Pocsik</td><td>DC
+</td></tr>
+<tr><td>Weird War cover</td><td>1997</td><td></td><td>Corben</td><td>DC
+</td></tr>
+<tr><td>Tower of Ho</td><td>1998</td><td>8</td><td>Corben</td><td>Frazetta Illustrated
+</td></tr>
+<tr><td>The Surviver</td><td>1998</td><td>6</td><td>John Pocsik</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>Killer Smile</td><td>1998</td><td>10</td><td>John Pocsik</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>C-23 cover5</td><td>1998</td><td>1</td><td>Jeff Mariotte</td><td>Wildstorm
+</td></tr>
+<tr><td>C-23 cover6</td><td>1998</td><td>1</td><td>Jeff Mariotte</td><td>Wildstorm
+</td></tr>
+<tr><td>C-23 cover7</td><td>1998</td><td>1</td><td>Jeff Mariotte</td><td>Wildstorm
+</td></tr>
+<tr><td>C-23 cover8</td><td>1998</td><td>1</td><td>Jeff Mariotte</td><td>Wildstorm
+</td></tr>
+<tr><td>Satanica</td><td>1998</td><td>5</td><td>Glenn Danzig</td><td>Verotic
+</td></tr>
+<tr><td>Marvel bookcover</td><td>1998</td><td>1</td><td></td><td>Byron Priess
+</td></tr>
+<tr><td>Vampire cover, 2 versions</td><td>1998</td><td>2</td><td></td><td>Heavy Metal
+</td></tr>
+<tr><td>M-80</td><td>1998</td><td>6</td><td>Arthur Suydam</td><td>Galaxy: Forbidden Zone
+</td></tr>
+<tr><td>Angel of Andromeda</td><td>1998</td><td>12</td><td>Arthur Suydam</td><td>Galaxy: Forbidden Zone
+</td></tr>
+<tr><td>Spear &amp; Fang</td><td>1998</td><td>10</td><td>Robert E Howard</td><td>Cross Plains
+</td></tr>
+<tr><td>Wolfgirl Eats</td><td>1999</td><td>10</td><td>Bruce Jones</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>Apposites Attract</td><td>1999</td><td>6</td><td>John Pocsik</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>Congo Bill 1 cover</td><td>1999</td><td>1</td><td>Scott Cunningham</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>Congo Bill 2 cover</td><td>1999</td><td>1</td><td>Scott Cunningham</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>Congo Bill 3 cover</td><td>1999</td><td>1</td><td>Scott Cunningham</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>Congo Bill 4 cover</td><td>1999</td><td>1</td><td>Scott Cunningham</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>Grass Gator</td><td>1999</td><td></td><td></td><td>Jeff Williams
+</td></tr>
+<tr><td>Psychic Pilgrim cd</td><td>1999</td><td>1</td><td>Corben</td><td>Jeff Williams
+</td></tr>
+<tr><td>Hard Time</td><td>2000</td><td>112</td><td>Brian Azzarello</td><td>DC Vertigo
+</td></tr>
+<tr><td>House on the Borderland</td><td>2000</td><td>84</td><td>John Pocsik</td><td>DC Vertigo
+</td></tr>
+<tr><td>The Split</td><td>2000</td><td>8</td><td>Joe Lansdale</td><td>D. C. Vertigo
+</td></tr>
+<tr><td>BLUDD Webisodes</td><td>2000</td><td></td><td>Jan Strnad</td><td>BLUDD
+</td></tr>
+<tr><td>Girl &amp; Worm cover</td><td>2001</td><td></td><td>Corben</td><td>DC: FLINCH
+</td></tr>
+<tr><td>Banner</td><td>2001</td><td>88</td><td>Brian Azzarello</td><td>Marvel
+</td></tr>
+<tr><td>The Crusades cover</td><td>2001</td><td></td><td>Corben</td><td>DC Vertigo
+</td></tr>
+<tr><td>Cyclops</td><td>2002</td><td>5</td><td>Corben</td><td>DC: SOLO
+</td></tr>
+<tr><td>The Plague</td><td>2002</td><td>12</td><td>Corben</td><td>DC: SOLO
+</td></tr>
+<tr><td>Interactive video:models &amp; characters</td><td>2002</td><td></td><td>Jeff Williams</td><td>DARKSTAR
+</td></tr>
+<tr><td>Cage</td><td>2002</td><td>110</td><td>Brian Azzarello</td><td>Marvel
+</td></tr>
+<tr><td>The Mummy: Belzon's Treasure</td><td>2003</td><td>12</td><td>Corben</td><td>DC: SOLO
+</td></tr>
+<tr><td>Cowboy: Homecoming</td><td>2003</td><td>5</td><td>Corben</td><td>DC: SOLO
+</td></tr>
+<tr><td>Spector, A Missing Life</td><td>2003</td><td>11</td><td>John Arcudi</td><td>DC: SOLO
+</td></tr>
+<tr><td>Mask</td><td>2003</td><td>8</td><td>Mark Andreyko</td><td>Wildstorm
+</td></tr>
+<tr><td>Kings Crown</td><td>2003</td><td></td><td>Jim Alexander</td><td>Metal Hurlant
+</td></tr>
+<tr><td>Punisher: The End</td><td>2004</td><td>48</td><td>Garth Ennis</td><td>Marvel
+</td></tr>
+<tr><td>Metal Hurlant cover</td><td>2004</td><td></td><td>Corben</td><td>Metal Hurlant
+</td></tr>
+<tr><td>Swamp Thing</td><td>2004</td><td>44</td><td></td><td>DC
+</td></tr>
+<tr><td>Bigfoot</td><td>2005</td><td>89</td><td>Zombie/Niles</td><td>IDW Publishing
+</td></tr>
+<tr><td>Swamp Thing</td><td>2005</td><td>22</td><td></td><td>DC Vertigo
+</td></tr>
+<tr><td>Hellboy Makoma</td><td>2005</td><td>46</td><td>Mignola</td><td>Dark Horse
+</td></tr>
+<tr><td>Haunt of Horror Poe> 3 issues</td><td>2006</td><td>72</td><td>Margopoulos</td><td>Marvel
+</td></tr>
+<tr><td>American Splendor</td><td>2006</td><td>5</td><td>Harvey Pekar</td><td>DC
+</td></tr>
+<tr><td>Ghost Rider</td><td>2006</td><td>44</td><td>Daniel Way</td><td>Marvel
+</td></tr>
+<tr><td>Jonah Hex cover</td><td>2007</td><td>cover</td><td></td><td>DC
+</td></tr>
+<tr><td>Living With The Dead</td><td>2007</td><td>cover</td><td></td><td>Dark Horse
+</td></tr>
+<tr><td>Conan</td><td>2007</td><td>67</td><td>Timothy Truman</td><td>Dark Horse
+</td></tr>
+<tr><td>Haunt of Horror Lovecraft</td><td>2008</td><td>72</td><td>Corben</td><td>Dark Horse
+</td></tr>
+<tr><td>Hellboy, Crooked Man</td><td>2008</td><td>72</td><td>Mignola</td><td>Dark Horse
+</td></tr>
+<tr><td>Starr the Slayer</td><td>2009</td><td>88</td><td>Daniel Way</td><td>Marvel
+</td></tr>
+<tr><td>Hellboy, Bride of Hell</td><td>2009</td><td>24</td><td>Mignola</td><td>Dark Horse
+</td></tr>
+<tr><td>Hellboy, Camazotz</td><td>2009</td><td>28</td><td>Mignola</td><td>Dark Horse
+</td></tr>
+</table>
 
 </body>
 </html>
