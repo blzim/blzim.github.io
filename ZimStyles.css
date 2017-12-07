@@ -13,6 +13,21 @@ th, td {
     padding: 15px; vertical-align:top;
 }
 
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #333;
+}
+
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
 h1 {font-size:160%;}
 h2 {font-size:120%;margin-top:10px;margin-bottom:10px;}
 h3 {font-size:110%;}
