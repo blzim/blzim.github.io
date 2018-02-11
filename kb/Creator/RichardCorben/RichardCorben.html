@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="../../../ZimStyles.css">
 <title>Richard Corben</title>
-<script src="../../tablesort.js"></script>
+<script src="../../sorttable.js"></script>
 </head>
 
 <body>
@@ -12,16 +12,14 @@
 <img src="RichardCorben.jpg"><br>
 <img src="RichardCorbenArt1.jpg">
 <img src="RichardCorbenArt2.jpg">
-<p>Click the headers to sort the table.</p>
 
-<table id="myTable">
+<table class="sortable">
   <tr>
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by title, 1 for sorting by year:-->  
-    <th onclick="sortTable(0)">Creation</th>
-    <th onclick="sortTable(1)">Year</th>
-    <th onclick="sortTable(2)">Pages</th>
-	<th onclick="sortTable(3)">Writer</th>
-	<th onclick="sortTable(4)">Publisher</th>
+    <th>Creation</th>
+    <th>Year</th>
+    <th>Pages</th>
+	<th>Writer</th>
+	<th>Publisher</th>
   </tr>
   <tr>
     <td>The Plague</td>
