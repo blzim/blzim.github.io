@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Hi-Fructose</title>
 </head>
 
@@ -21,7 +22,73 @@ Each beautifully designed, full color issue is printed on high quality paper. Hi
 </p><p>
 Readers of Hi-Fructose are seeking to satisfy their cravings for new and unique art: Hi-Fructose informs, rather follows trends in mainstream media including film, fashion and design.
 </p><p>
-Issues:<ul>
+<div class="row">
+<div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div>
+</div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV01.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV02.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV03.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV04.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV05.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV06.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV07.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV08.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV09.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV10.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV11.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV12.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV13.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV14.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV15.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV16.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV17.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV18.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV19.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV20.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV21.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV22.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV23.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV24.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV25.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV26.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV27.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV28.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV29.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV30.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV31.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV32.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV33.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV34.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV35.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV36.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV37.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV38.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV39.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV40.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV41.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV42.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV43.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV44.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV45.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HiFructoseV46.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div class="caption-container">
+<p id="caption"></p>
+</div>
+</div>
+</div>
+
+<ul>
 <li><a href="HiFructose01.html">Hi-Fructose vol. 1</a></li>
 <li><a href="HiFructose02.html">Hi-Fructose vol. 2</a></li>
 <li><a href="HiFructose03.html">Hi-Fructose vol. 3</a></li>
