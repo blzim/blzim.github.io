@@ -2,19 +2,34 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Atom</title>
 </head>
 
 <body>
-<h2>Atom</h2>
 <img src="Atom.jpg"> 
 <img src="Atom032.jpg"> <br>
-Series: on-going, 38 issues<br>
+Series: 38 issues 1962 - 1968<br>
 Illustrator: Gil Kane<br>
 Writer: Gardner Fox<br>
-Publisher: 1962-1968 DC<br>
+Publisher: DC<br>
 <p>
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="Atom.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Atom032.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+</p><p>
 About: The Atom is a name shared by several fictional comic book superheroes from the DC Comics universe. The original Golden Age Atom, Al Pratt, was created by Ben Flinton and Bill O'Connor and first appeared in All-American Publications' All-American Comics #19 (Oct. 1940). He initially had no superpowers; instead, he was a diminutive college student and later a physicist who was depicted as a tough guy, a symbol of all the short kids who could still make a difference. 
 </p><p>
 The second Atom was the Silver Age Atom, Ray Palmer, who first appeared in 1961. Raymond Palmer, Ph.D. in Physics, was named for real-life science fiction writer Raymond A. Palmer, who was himself quite short. After stumbling onto a mass of white dwarf star matter that had fallen to Earth, he fashioned a lens which allowed him to shrink down to subatomic size. 
