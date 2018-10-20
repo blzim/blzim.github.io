@@ -6,36 +6,26 @@
 <link rel="stylesheet" href="../ZimStyles.css">
 </head>
 <body>
-<h1>Digital Logic</h1>
+<b>Digital Logic</b>
 <p>
-The binary number system is not only the foundation of Computer Science, but also of digital electronics in general.</p>
-<p>
-The number system we are taught in school is the decimal number system, which are sets of ten, 0 to 9. To add a value after 9, we move to the next column and start using two symbols like 10.</p>
-<p>
-Binary does the same thing, but only has two values, 1 and 0 so when it wants to represent more than one, it moves to the next column by using two symbols like 10. This shows how you can get many values from just 1 and 0, which can be used to represent on and off states of electricity.</p>
-<p>
+The binary number system is not only the foundation of Computer Science, but also of digital electronics in general.
+</p><p>
+The number system we are taught in school is the decimal number system, which are sets of ten, 0 to 9. To add a value after 9, we move to the next column and start using two symbols like 10.
+</p><p>
+Binary does the same thing, but only has two values, 1 and 0 so when it wants to represent more than one, it moves to the next column by using two symbols like 10. This shows how you can get many values from just 1 and 0, which can be used to represent on and off states of electricity.
+</p><p>
 <img src="binary.gif">
-</p>
-<p>
-By using just two states in a bit, then chaining the bits together, we can represent all of the characters in the english language and all of the numbers in the decimal number system in using just 8 bits. Chain a few more bits together and we can represent Red Green Blue values to make all the colors we can see or representing the changes over time in air pressure for all of the sounds that we can hear from a speaker.</p>
-
-<p>
+</p><p>
+By using just two states in a bit, then chaining the bits together, we can represent all of the characters in the english language and all of the numbers in the decimal number system, using just 8 bits. That is all early computers could do.
+</p><p>
 <img src="ASCII_Table.svg">
+</p><p>
+The ASCII table above was the most successful type of encoding for the latin character and arabic numeral sets (text), until much later when Unicode extended ASCII to include all the character sets of the worlds major languages.
+</p><p>
+Colors and images are sent to your video card, translated using a Color Lookup Table into chroma and luminance values, then sent to your monitor. 
+</p><p>
+Sounds are converted into a stream of analog signals, representing the changes over time in air pressure, using the table in a digital-to-analog converter (DAC) in your sound card, and sent to your speakers. Audio signals picked up by a microphone does the same process in reverse, using the vibrations in the microphone to get translated into 1s and 0s.
 </p>
-<p>
-A computer does everything in binary, a two state (1 or 0, on or off) number system. Everything else is represented by a code. This ASCII table was the most successful type of encoding the latin character and arabic numeral sets, until much later when Unicode extended ASCII to include all the character sets of the worlds major languages.</p>
-<p>
-The processor can move data like this ASCII table to and from memory and storage using machine instructions, and keeps track of it all using address tables.</p>
-<p>
-Application program code gets translated into 1s and 0s by the compiler into sets of machine instructions, also known as operation code (opcode) that the processor can understand, which is based on its instruction set architecture (ISA). When Processors have different opcode or ISA, we say they are a different platform. Most programs will only work correctly on the platform they were programmed to run on, unless there is a translation layer that changes the code to match the Platform. Languages like Java became popular because the allow a program to run across multiple types of platforms, by using a translation layer called a virtual machine.</p>
-<p>
-Data codes like ASCII were created so that data could move between different platforms and still be understood.
-</p>
-<p>
-Everything you experience on your system, colors, sounds, movies, games, are all translated binary signals like this ASCII table. Colors are translated using a Color Lookup Table, organized into pallets of colors and sent to your video display. Sounds are converted into analog signals using a table in a digital-to-analog converter (DAC) and sent to your speakers.
-</p>
-<p>
-Audio signals picked up by a microphone or or video signals picked up by a camera are converted into a stream of discrete numbers, representing the changes over time in air pressure for audio, and chroma and luminance values for video.
 </div>
 
 <div>
@@ -50,28 +40,85 @@ Transistors can open or close a circuit, turning power on an off like a light sw
 <br>
 <br>
 When the semiconductor gets no power, it insulates or stops the current in the first circuit. As soon as it gets power from the second circuit, it conducts or starts the first circuit again. 
-<br>
-<br>
-<br>
-<br>
-<img src="transistor.jpg" align="left" hspace="20px">
-<br>
-<br>
-<br>
+<p>
+<img src="transistor.jpg" hspace="20px"><br>
 Because of how the semiconductor can open or close a circuit, it is referred to as a gate. 
-<br>
-<br>
-<br>
+<p>
 <img src="gates.gif" align="left" hspace="20px">
-<br>
-<br>
-<br>
-<br>
+</p><p>
 Combinding these gates in particular patterns, we can represent the various states of logic from a boolean algebra table. These boolean value gates are called Logic Gates.
 <br>
 <br>
-Combinding these Logic Gates together in specific ways we can make an adder. By connecting adders together with a carry over line, we make what is known as a full adder. Full adders are used to add binary digits (bits) together. Connect this with a form of memory and we have the beginnings of a computer. 
-</p>
+Combinding these Logic Gates together in specific ways we can make an adder. By connecting adders together with a carry over line, we make what is known as a full adder. Full adders are used to add binary digits (bits) together. 
+</p><p>
+<b>Two's Compliment (subtraction)</b>
+<br>
+The two's complement of a binary number takes half the bits and treats them like negative values. Using this method, we can use a Full Adder circuit on negative numbers giving us subtraction. Addition in sets = multiplication and subtraction in sets = division,  a full set of arithmatic.
+<br>
+<br>
+
+<table border="1">
+&nbsp;<b>Eight-bit two's-complement integers</b>
+<tr>
+<th>Bits</th>
+<th>Unsigned<br />
+value</th>
+<th>Two's<br />
+complement<br />
+value</th>
+</tr>
+<tr>
+<td>0111 1111</td>
+<td align="right">127</td>
+<td align="right">127</td>
+</tr>
+<tr>
+<td>0111 1110</td>
+<td align="right">126</td>
+<td align="right">126</td>
+</tr>
+<tr>
+<td>0000 0010</td>
+<td align="right">2</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>0000 0001</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0000&#160;0000</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1111 1111</td>
+<td align="right">255</td>
+<td align="right">-1</td>
+</tr>
+<tr>
+<td>1111 1110</td>
+<td align="right">254</td>
+<td align="right">-2</td>
+</tr>
+<tr>
+<td>1000 0010</td>
+<td align="right">130</td>
+<td align="right">-126</td>
+</tr>
+<tr>
+<td>1000 0001</td>
+<td align="right">129</td>
+<td align="right">-127</td>
+</tr>
+<tr>
+<td>1000 0000</td>
+<td align="right">128</td>
+<td align="right">-128</td>
+</tr>
+</table>
+</p><p>
 <a href="processors.html">Next Page: Processors</a>
 </body>
 </html>

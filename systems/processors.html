@@ -12,87 +12,38 @@
 <img src="IntelProcessor.jpg"> &nbsp; <img src="cpu_diagram.jpg">
 </p>
 <p>
-Processors do different things inside of one IC (Integrated Circuit) chip.</p><p>
-They fetch instructions from the <b>Memory Interface</b> with the <b>Instruction Fetcher</b>, decode what instructions need math with the <b>Instruction Decoder</b>, temporarily store the data using <b>Registers</b>, do any needed arithmatic with the <b>ALU</b> (Arithmatic Logic Unit) and move results either back to the Registers for more processing or back out into the system memory.
+Processors do different things inside of one IC (Integrated Circuit) chip.
 </p><p>
-This system processor cycle is known as the instruction cycle and is often illustrated in Computer Science books using a diagram like the following:
+The core of a processor does what is called a "Machine Cycle". A machine cycle uses two elements of the process core, the Control Unit and the Arithmatic Logic Unit (ALU).
+</p><p>
+The Control Unit fetches instructions from the <b>Memory Interface</b> with the <b>Instruction Fetcher</b>, decodes what instructions need to be modified with the <b>Instruction Decoder</b>, temporarily stores the data using <b>Registers</b>, hands any data that needs to be modified to the <b>ALU</b> which applies the changes and moves the results either back to the Registers for more processing or back out into the system memory.
+</p><p>
+This system processor cycle is known either as the "Instruction Cycle" or the "Machine Cycle" depending on what you read, and is often illustrated in Computer Science books using a diagram like the following:
 </p><p>
 <img src="InstructionCycle.jpg">
 </p><p>
 The ALU does math using circuits called &quot;full adders&quot; and &quot;two's compliment&quot;.
 <br>
-The full adder circuit adds binary numbers and carries the remainder off to the next adder with a series of boolean logic gates.<br>
-(see <a href="binary.html">Digital Logic</a> to learn about binary gates).
+The full adder circuit adds binary numbers and carries the remainder off to the next adder with a series of boolean logic gates.
+</p><p>
+See <a href="binary.html">Digital Logic</a> to learn about binary gates and boolean algebra.
 </p><p>
 <img src="Fulladder.gif">
 </p><p>
-<h1>Two's Compliment</h1>
-<br>
-The two's complement of a binary number takes half the bits and treats them like negative values. Using this method, we can use a Full Adder circuit on negative numbers giving us subtraction. Addition in sets = multiplication and subtraction in sets gives us division, giving a full set of mathematics.
-<br>
-<br>
-
-<table border="1">
-&nbsp;<b>Eight-bit two's-complement integers</b>
-<tr>
-<th>Bits</th>
-<th>Unsigned<br />
-value</th>
-<th>Two's<br />
-complement<br />
-value</th>
-</tr>
-<tr>
-<td>0111 1111</td>
-<td align="right">127</td>
-<td align="right">127</td>
-</tr>
-<tr>
-<td>0111 1110</td>
-<td align="right">126</td>
-<td align="right">126</td>
-</tr>
-<tr>
-<td>0000 0010</td>
-<td align="right">2</td>
-<td align="right">2</td>
-</tr>
-<tr>
-<td>0000 0001</td>
-<td align="right">1</td>
-<td align="right">1</td>
-</tr>
-<tr>
-<td>0000&#160;0000</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr>
-<td>1111 1111</td>
-<td align="right">255</td>
-<td align="right">-1</td>
-</tr>
-<tr>
-<td>1111 1110</td>
-<td align="right">254</td>
-<td align="right">-2</td>
-</tr>
-<tr>
-<td>1000 0010</td>
-<td align="right">130</td>
-<td align="right">-126</td>
-</tr>
-<tr>
-<td>1000 0001</td>
-<td align="right">129</td>
-<td align="right">-127</td>
-</tr>
-<tr>
-<td>1000 0000</td>
-<td align="right">128</td>
-<td align="right">-128</td>
-</tr>
-</table>
+Different methods for doing the instruction set exist. Collectively these methods are known as "Instruction Set Architecture" (ISA). The different hardware methods used to perform the ISA, is known as the Micro Processor Architecture, more commonly referred to as the "Microarchitecture". 
+</p><p>
+Often times different hardware Microarchitecture will use a different instruction set, but not always, the two are separtate things. An AMD processor performs the same x86 instructions as an Intel processor but uses a different Microarchitecture to perform the same instructions.
+<p></p>
+Traditionally, a different ISA means your programs will not be compatible, but different Microarchitecture using the same ISA can use the same programs. I say traditionally because there now exists cross platform code, created to run in a virtual machine, that might be able to run unaltered between different ISAs, but still, a different virtual machine is needed per ISA.
+</p><p>
+ISAs usually run in two varieties, CISC and RISC. CISC = Complex Instruction Set Computer. RISC = Reduced Instruction Set Computer. Other types exist, but are uncommon. They include very long instruction word (VLIW) architectures, and the closely related long instruction word (LIW) and explicitly parallel instruction computing (EPIC) architectures. Architectures with even less complexity have been studied, such as the minimal instruction set computer (MISC) and one instruction set computer (OISC). 
+</p><p>
+The Operating Systems also needs to be created under one of these instruction sets. Windows OS commonly runs under CISC x86, whereas different versions of Linux exist that run under both CISC and RISC such as x86 and ARM (Advanced RISC Machine) Architecture.
+</p><p>
+As different as CISC and RISC are, they both follow the template for all modern computers, known as the Von Neumann architecture, detailed in a 1945 paper by John von Neumann. 
+</p><p>
+<img src="VNA.svg" title="Von Neuman Architecture">
+</p><p>
 
 <a href="terms.html">Next Page: System Terminology</a>
 </body>
