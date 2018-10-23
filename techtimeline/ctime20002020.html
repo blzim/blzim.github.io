@@ -828,7 +828,32 @@ Google Earth is a free-of-charge, downloadable virtual globe program. It maps th
 <table><td><img src="pics20002020/2005_Git.png"></td><td>
 Git is a version control system that is used for software development and other version control tasks. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.
 <p>
-Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer is Junio Hamano. As with most other distributed version control systems, and unlike most clientserver systems, every Git directory on every computer is a full-fledged repository with complete history and full version-tracking capabilities, independent of network access or a central server.
+Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer is Junio Hamano. As with most other distributed version control systems, and unlike most client server systems, every Git directory on every computer is a full-fledged repository with complete history and full version-tracking capabilities, independent of network access or a central server.
+</td></table>
+
+<a name="SAS"></a>
+<b>2005: SAS</b><br>
+<table><td><img src="pics20002020/SASint1.jpg" title="internal"><br>
+<img src="pics20002020/SASint2.jpg" title="internal"><br>
+<img src="pics20002020/SASext1.jpg" title="external"><br>
+<img src="pics20002020/SASext2.jpg" title="HD external"><br>
+</td><td>
+Serial Attached SCSI (SAS) is a point-to-point serial protocol that moves data to and from computer-storage devices such as hard drives and tape drives. SAS replaces the older Parallel SCSI (Parallel Small Computer System Interface, usually pronounced "scuzzy") bus technology that first appeared in the mid-1980s. 
+</p><p>
+SAS, like its predecessor, uses the standard SCSI command set. SAS offers optional compatibility with Serial ATA (SATA), versions 2 and later. This allows the connection of SATA drives to most SAS backplanes or controllers. The reverse, connecting SAS drives to SATA backplanes, is not possible.
+</p><p>
+Maximum number of devices is 65,535, the speed depends on the version. SAS-1: 3 Gbit/s (2005), SAS-2: 6 Gbit/s (2009), SAS-3: 12 Gbit/s (2013), SAS-4: 22.5 Gbit/s (2017).
+</p><p>
+A SAS Domain is the SAS version of a SCSI domain—it consists of a set of SAS devices that communicate with one another by means of a service delivery subsystem. Each SAS port in a SAS domain has a SCSI port identifier that identifies the port uniquely within the SAS domain, the World Wide Name. 
+</p><p>
+It is assigned by the device manufacturer, like an Ethernet device's MAC address, and is typically worldwide unique as well. SAS devices use these port identifiers to address communications to each other.
+</p><p>
+In addition, every SAS device has a SCSI device name, which identifies the SAS device uniquely in the world. One doesn't often see these device names because the port identifiers tend to identify the device sufficiently.
+</p><p>
+For comparison, in parallel SCSI, the SCSI ID is the port identifier and device name. In Fibre Channel, the port identifier is a WWPN and the device name is a WWNN.
+</p><p>
+SAS works inside and outside of the system and has a variety of connector and cable types. 
+</p>
 </td></table>
 
 <!--- 2006 STARTS --------------------------->
@@ -865,21 +890,23 @@ I like to believe the name is a symbol for dual core Pentium 5. V being 5 in Rom
 
 <a name="matrixstorage"></a>
 <b>2006: Matrix Storage</b><br>
-<table><td><img src="pics20002020/2006_matrixStorage.jpg"></td>
-<td>With the introduction of 915 and 925 chipsets, Intel delivered a new, more flexible storage controller described as Matrix Storage Technology. It enables support of multiple simultaneous RAID arrays, based on the same sets of drives. A RAID array uses multiple drives simultaneously, to increase the disk subsystem performance while also improving data security from drive failures or defects.
-<p>
-At the very simplest level, RAID combines multiple hard drives into a single logical unit. Thus, instead of seeing several different hard drives, the 
-operating system sees only one. Standard RAID Levels are: 
-<p>
+<img src="pics20002020/2006_matrixStorage.jpg">
+<p><ul>
+With the introduction of 915 and 925 chipsets, Intel delivered a new, more flexible storage controller described as Matrix Storage Technology. It enables support of multiple simultaneous RAID arrays, based on the same sets of drives. A RAID array uses multiple drives simultaneously, to increase the disk subsystem performance while also improving data security from drive failures or defects.
+</p><p>
+At the very simplest level, RAID combines multiple hard drives into a single logical unit. Thus, instead of seeing several different hard drives, the  operating system sees only one. 
+</p><p>
+Standard RAID Levels are: 
+</p><p>
 <b>RAID 0:</b> Stripped, not redundant. Creates a performance in speed via simultaneous I/O. Requires at least 2 drives.
-<p>
+</p><p>
 <b>RAID 1:</b> Mirrored, 100% redundant. Secures data against single drive failure. Requires at least 2 drives.
-<p>
+</p><p>
 <b>RAID 5:</b> Stripped, with full redundancy written as parity data that is only read if a data stripe has an error. Slightly faster, secures against single 
 drive failure, but not doulbe drive failure. Requires at least 3 drives.
-<p>
+</p><p>
 <b>RAID 6:</b> Similar to RAID 5, with double parity data, premitting more than one drive failure.
-</td></table>
+</p><p></ul>
 
 <a name="dellalienware"></a>
 <b>2006: Dell buys Alienware</b><br>
