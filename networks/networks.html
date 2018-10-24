@@ -40,19 +40,22 @@ WAN: Wide Area Network (country sized)
 GAN: Global Area Network (the Internet)
 <br>
 <br>
-MANs are pretty rare compared to LANs and WANs. I don't know much about them except that they are older than the internet, and are commonly used to connect one building to another, somtimes without involving an ISP, so I'll just leave MANs out of this. Defining the difference between LANs and WANs is hard enough.
-<br>
-<br>
+MANs are rare compared to LANs and WANs and are used to connect one building to another.
+<p>
 A LAN is loosly defined as an office sized collection of connected computers, but is more like any sized private network, even two shared computers at your house.
-<br>
-<br>
-A WAN is what is used to connect LANs together, usually over a phone company's network with data circuit and service names like T1, Frame Relay, ISDN, DSL, VPN. When you connect to the Internet, you are connecting to a WAN, even if it's only temporary, like using a dial up modem, or wirelessly at a Coffee Shop, it's a WAN connection.
-<br>
-<br>
-The Internet is the utimate WAN, the system that connects WANs, some call it the GAN Global Area Network. When you connect to &quot;the Internet&quot; what you are doing entering your Internet Service Providers LAN. You might just be passing through their LAN, then their WAN, to other WANs or LANs until you finnally reach your requested destination. Even at work, when connecting to the Internet, what you are doing is passing though your company's LAN, then connecting to or through your company's ISP's LAN, then possbily onto the next LAN until you reach your destination.
-<br>
-<br>
-The critical system in all networks is the router. The router is a special function system. That function might be running on special hardware, and with special software, but you can turn a standard PC into a Router. 
+<p>
+A WAN is what is used to connect LANs together, usually over a phone company's network with data circuit and service names like T1, Frame Relay, ISDN, DSL, VPN. Anytime you need access from an Internet Service Provider (ISP) you are using a WAN.
+<p>
+The Internet is the utimate WAN, the system that connects WANs, with names like Global Area Network (GAN), or Public Switched Telephone Network (PSTN) or cloud. 
+<p>
+When you connect to &quot;the Internet&quot; what you are doing entering your Internet Service Providers LAN. You might just be passing through their LAN, then their WAN, to other WANs or LANs until you finnally reach your requested destination. 
+<p>
+Most small to mid sized offices and homes connect to the internet using either a DSL or a Cable modem. Modems often have Ethernet ports on them that connect to the Ethernet port on your computer. 
+<p>
+The dotted line circle in the illustration below is to show that your router, wireless, and modem can be integrated in one box depending on the type of equipment you use. The router will make sure that all inside traffic stays inside, passing only outside traffic to the ISP/Telco office for further switching.
+<p>
+<img src="DSL.jpg">
+<p>
 </ul>
 
 <a name="analogy"><b>A Network Analogy</b></a>
@@ -126,19 +129,10 @@ The largest and most complicated Network Component to talk about are Protocols s
 The Layers I'll talk about here are Link, Network, Transport, and Application. OSI has 7, but I'm looking at TCP/IP, and these are the only OSI layers TCP/IP uses. The OSI thing was created before TCP/IP was, as a tool for protocol designers to help keep things talking with each other, so I'm not getting into all that, just using it to keep track of our layers.
 <br>
 <br>
-
 Ethernet, Wi-Fi,and USB are hardware  protocols more officially catagorized as &quot;Data Link&quot; protocols when using the OSI model, and so are in a different protocol category than TCP/IP. There are more hardware protocols than these, there are probably hundreds out there, but these are the most common when talking about Networks (as of 2005).
-<br>
-<br>
-
-Ethernet is a marketing term used to make IEEE 802.3 easy to pronounce and recognize. It commonly works with &quot;Cat&quot; or catagory cables, which look like fat telephone cables. The standard Ethernet cable now is Cat5, but Cat6 is just around the corner. Ethernet has become the standard LAN protocol, but remember how flimsy the term LAN is?
-<br>
-<br>
-
-DSL and Cablemodems often have Ethernet ports on them that connect to the Ethernet port on your computer (or the Ethernet port on your Wireless box, unless your wireless service is integrated). In the Office, Ethernet is king. It was designed for Computer Networks since the very early days of getting computers to talk to each other. Not long ago, if you wanted Ethernet, you would have to go out and buy an Ethernet card and install it in your Desktop or Laptop, but just about all systems today have this hardware built right into the motherboard, that's how standard it has become.
-<br>
-<br>
-
+<p>
+Ethernet is  the standard LAN protocol. The official ethernet standard is called IEEE 802.3. It works using fiber or more commonly copper &quot;Cat 6&quot; cables. They look like fat telephone cables using RJ-45 cable connectors instead of the standard telephone RJ-10 connectors. The copper cables come in thick shielded or more commonly thin unshielded twisted pair (UTP).
+<p>
 USB is another common hardware protocol you might see on your computer or your broadband internet connection. USB was designed to connect local computer equipment together like printers and drives, but it is starting to creep into network equipment. You can even find USB to Ethernet converters, in case you don't have an Ethernet port on your system, so it's understandable if you get confused by all of these protocols.
 <br>
 <br>
