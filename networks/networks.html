@@ -396,7 +396,6 @@ Address Resolution Protocol resolved IP addresses to NIC addresses. It's not com
 <ul>
 <div>
 <img src="dhcp.gif" alt="DHCP" align="right" hspace="150" border="1">
-	
 <b>DHCP
 </b>
 <br>
@@ -476,19 +475,50 @@ Wireless Modes:
 <br>
 <br>
 
-<b>
-Router
-</b>
-<br>
-This service passes information from one network to another using a routing table. Routers are usually specially built computers dedicated to this service, but can be setup on any computer with the right software and at least 2 network cards installed.
-<br>
-<br>
-The distinction between a Firewall, NAT, and Router shouldn't confuse you. These are just services, or things a computer can do. All of these things are often together in the same machine. They don't have to be, but they usually are. In fact, in a small office network, it's not too uncommon to have all the Network services you can think of like DHCP, DNS, Firewall, NAT, Router, and Gateway all on the same computer, lumped together with e-mail, file, and print server services.
-<br>
-<br>
-As Networks get larger, more users are added, and traffic loads increase, you can separate these services out to among all kinds of hardware configurations. I don't even want to get into virtualization yet, but trust me, it's important to know the roles these technologies play, but the lines between them are not set in stone, and will continue change and evolve for a long time to come.
-<br>
-<br>
+<b>Router</b><br>
+This service passes information from one network to another using a routing table. Routers are specially built computers dedicated to this service, but could be setup on a desktop computer with the right software and at least 2 network cards installed.
+<p>
+A router in a home or small business connects the local machines to the internet service provider. In some cases, the router, switch, wireless access point, DHCP and modem services are all inside the same box. 
+<p>
+In a larger network, these are usually separate systems to prevent the network from getting too slow.
+<p>
+To understand why networks slow down when the get too large, how Ethernet works needs to be understood.
+<p>
+<b>Ethernet</b><br>
+Ethernet stations communicate by sending each other data packets: blocks of data individually sent and delivered. All communication happens on the same wire, any information sent by one computer is received by all, even if that information is intended for just one destination.
+<p>
+Each Ethernet station is given a 48-bit MAC address. The MAC addresses are used to specify both the destination and the source of each data packet. 
+<p>
+The network interface card listens for the MAC address and interrupts the CPU only when applicable packets are received: the card ignores information not addressed to it.
+<p>
+A collision happens when two stations attempt to transmit at the same time. Transmitting at the same time corrupts the data and requires stations to re-transmit. It does this with a scheme known as carrier sense multiple access with collision detection (CSMA/CD).
+<p>
+Communication will automatically resume but the lost data and re-transmission slows the network down.
+<p>
+Use of a single cable also means that the data bandwidth is shared, such that, for example, available data bandwidth to each device is halved when two stations are simultaneously active.
+<p>
+<b>Switch</b><br>
+Devices (computers, phones, whatever) on a network are called nodes. If your node is cabled, the cable runs to the wall in what is called a patch panel. The patch panel usually runs from your desk to a wiring closet or data center, where they connect together in a switch. 
+<p>
+Wireless Access Points (WAPs) are also cabled into the switch. A switch is traditionally a multiport network connection device that uses hardware addresses to process and forward data at the data link layer (layer 2) of the OSI model. Multiple switches can be connected together to give additional connectivity ports.
+<p>
+Some switches can also process data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches.
+<p>
+<b>VLAN, Layer 3 Switch</b><br>
+One way to speed up a slow network is by breaking one large LAN into multiple smaller networks. This is typically done using a Virtual LAN (VLAN) switch. These types of switches are sometimes called Layer 3 Switches, because they can read packet addresses like a router.
+<p>
+Generally, Layer 3 switches are faster than routers, but they usually lack some of the advanced functionalities of routers.
+<p>
+A router analyzes the Layer 3 destination address of every packet, and devises the best next hop for it. This process takes time, and hence every packet encounters some delay because of this.
+<p>
+In a Layer 3 switch, on the other hand, whenever a routing table searches for any specific destination, a cache entry is made in a fast memory. This cache entry contains the source-destination pair and next hop address. 
+<p>
+Once this cache entry is in place, the next packet with the same source and destination pair does not have to go through the entire process of searching the routing table. Next hop information is directly picked up from the cache. That's why it is called route once switch many. This way, a Layer 3 switch can route packets much faster than the router.
+<p>
+A router has some advanced routing functionality, which Layer 3 switches lack. Routers are mostly used to divide the LAN from the Internet. Routing and Firewall services is small to midsized networks are often combined into one box. 
+<p>
+Having said that, there is a new trend using layer 3 switches in WAN environment, like MPLS. I might go into that in the WAN section.
+<p>
 <img src="firewall.jpg" alt="Firewall" align="right" vspace="100" hspace="100">
 <b>
 Firewall
