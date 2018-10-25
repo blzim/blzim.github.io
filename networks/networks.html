@@ -497,25 +497,37 @@ Communication will automatically resume but the lost data and re-transmission sl
 <p>
 Use of a single cable also means that the data bandwidth is shared, such that, for example, available data bandwidth to each device is halved when two stations are simultaneously active.
 <p>
-<b>Switch</b><br>
-Devices (computers, phones, whatever) on a network are called nodes. If your node is cabled, the cable runs to the wall in what is called a patch panel. The patch panel usually runs from your desk to a wiring closet or data center, where they connect together in a switch. 
+<b>Switch</b>
 <p>
-Wireless Access Points (WAPs) are also cabled into the switch. A switch is traditionally a multiport network connection device that uses hardware addresses to process and forward data at the data link layer (layer 2) of the OSI model. Multiple switches can be connected together to give additional connectivity ports.
+<img src="switch.gif">
 <p>
-Some switches can also process data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches.
+If your workstation is cabled, the cable runs to the wall in what is called a patch panel. The patch panel usually runs from your desk to a wiring closet or data center, where they connect together in a switch. 
 <p>
-<b>VLAN, Layer 3 Switch</b><br>
-One way to speed up a slow network is by breaking one large LAN into multiple smaller networks. This is typically done using a Virtual LAN (VLAN) switch. These types of switches are sometimes called Layer 3 Switches, because they can read packet addresses like a router.
+If your workstation is on wifi, the Wireless Access Points (WAPs) are also cabled into the switch. 
+<p>
+A switch is a multi-port network connection device that uses hardware addresses to process and forward data at the data link layer (layer 2) of the OSI model. Multiple switches can be connected together to give additional connectivity ports.
+<p>
+A server typically has several users sending and receiving data at the same time, slowing down the server's switch port. To solve this type of bottleneck, many switches have high speed ports that are 10 times the normal port speed.
+<p>
+By attaching the server to the high speed port, up to 10 users can have full bandwidth simultaneously. Multiple high speed ports can be connected to multiple network ports on the server when additional speed is needed.
+<p>
+Each device connected to a switch port can transfer data to any of the other ports at any time and the transmissions will not interfere. Because broadcasts are still being forwarded to all connected devices by the switch, the newly formed network segment continues to be a broadcast domain.
+<p>
+Some switches can also process data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 or multilayer switches.
+<p>
+<b>VLAN, Layer 3 Switch</b>
+<br>
+Another way to speed up a slow network is by breaking one large broadcast domain into multiple smaller domains in a process called segmentation. This is typically done using a Virtual LAN (VLAN) switch. These types of switches are sometimes called Layer 3 Switches, because they can read packet addresses like a router.
 <p>
 Generally, Layer 3 switches are faster than routers, but they usually lack some of the advanced functionalities of routers.
 <p>
-A router analyzes the Layer 3 destination address of every packet, and devises the best next hop for it. This process takes time, and hence every packet encounters some delay because of this.
+A router analyses the Layer 3 destination address of every packet, and devises the best next hop for it. This process takes time, and hence every packet encounters some delay because of this.
 <p>
 In a Layer 3 switch, on the other hand, whenever a routing table searches for any specific destination, a cache entry is made in a fast memory. This cache entry contains the source-destination pair and next hop address. 
 <p>
 Once this cache entry is in place, the next packet with the same source and destination pair does not have to go through the entire process of searching the routing table. Next hop information is directly picked up from the cache. That's why it is called route once switch many. This way, a Layer 3 switch can route packets much faster than the router.
 <p>
-A router has some advanced routing functionality, which Layer 3 switches lack. Routers are mostly used to divide the LAN from the Internet. Routing and Firewall services is small to midsized networks are often combined into one box. 
+A router has some advanced routing functionality, which Layer 3 switches lack. Routers are mostly used to divide the LAN from the Internet. Routing and Firewall services is small to mid-sized networks are often combined into one box. 
 <p>
 Having said that, there is a new trend using layer 3 switches in WAN environment, like MPLS. I might go into that in the WAN section.
 <p>
