@@ -26,27 +26,57 @@ Different peripheral buses have been used in computers over the years and have b
 <p>
 <b>Internal Peripheral Bus</b>
 </p><ul>
+<table>
+<td><img src="busTypes.gif"><br>
+</td>
+<td>
 ISA (Industry Standard Architecture) <br> 
-Pronounced "eye-suh." An expansion bus commonly used in the original  IBM PCs, which was improved in a second generation called Expanded ISA or EISA. 
+Pronounced "eye-suh." Was an expansion bus commonly used in the original  IBM PCs. It was improved in a second generation called Expanded ISA or EISA. 
 </p><p>
 PCI</b> (Peripheral Component Interconnect)<br>
 It was designed primarily by Intel and first appeared on PCs in late 1993. PCI runs at 33MHz, supports 32- and 64-bit data paths and bus mastering.It was the first bus to provide "plug and play" capability.
 </p><p>
-<img src="busTypes.gif">
+Accelerated Graphics Port (AGP) was designed as a high-speed PCI replacement for attaching a video card to a computer system, primarily to assist in the acceleration of 3D computer graphics. 
 </p><p>
-All the boards in the above illustration have been replaced PCIe.
+Micro Channel bus, was a proprietary 16 or 32-bit parallel computer bus introduced by IBM in 1987. It replaced the ISA bus and was itself replaced by PCI bus architecture.
+</p><p>
+The Video Electronics Standards Association Local bus (VL-bus) was a short-lived bus introduced during the 486 generation of x86 IBM PCs mainly as a graphics card bus.
+</td>
+</table>
+<p>
+In 2004, all the boards in the above illustration were replaced by<br>
+Peripheral Component Interconnect Express (PCIe).
+</p><p>
+<img src="pcieLogo.jpg">
+</p><p>
+<img src="pcieSlots.jpg"><br>
+<img src="pcieTable.jpg"><br>
+[PCIe 5.0, 32 GT/s, 32 Gb/s, ~ 3.9 GB/s, ~ 63 GB/s (×16) expected in 2019]
+</p><p>
+PCIe is a high-speed serial computer expansion bus standard, designed to replace the older PCI, PCI-X and AGP bus standards. 
+</p><p>
+PCIe has numerous improvements over the older standards, including higher maximum system bus throughput, lower I/O pin count and smaller physical footprint, better performance scaling for bus devices, a more detailed error detection and reporting mechanism (Advanced Error Reporting, AER), and native hot-swap functionality. More recent revisions of the PCIe standard provide hardware support for I/O virtualization.
+</p><p>
+Defined by its number of lanes, the PCI Express electrical interface is also used in a variety of other standards, most notably the laptop expansion card interface ExpressCard and computer storage interfaces SATA Express and M.2.
+</p><p>
+Format specifications are maintained and developed by the PCI-SIG (PCI Special Interest Group), a group of more than 900 companies that also maintain the conventional PCI specifications. PCIe 3.0 is the latest standard for expansion cards that are in production and available on mainstream personal computers.
+</p><p>
+All PCI Express versions are backward and forward compatible, meaning no matter what version the PCIe card or your motherboard supports, they should work together, at least at a minimum level. The max performance of the card is based on the revision of the PCIe port on your motherboard. 
+</p><p>
+If you use a Version 3.0 PCIe card on a 2.0 port, it will probably work at 2.0 speed.
+</p><p>
+Mini PCIe v2 (M.2)<br>
+<img src="M2.jpg" title="M.2 SSD">
+</p><p>
+The new version of Mini PCI express, M.2 replaces the mSATA standard. Computer bus interfaces provided through the M.2 connector are PCI Express 3.0 (up to four lanes), Serial ATA 3.0, and USB 3.0 (a single logical port for each of the latter two). It is up to the manufacturer of the M.2 host or device to select which interfaces are to be supported, depending on the desired level of host support and device type.
 </p><p></ul>
 <b>External Peripherial Bus</b><ul>
 </p><p>
-PCMCIA<br>
-Personal Computer Memory Card International Association, "PC cards"<br>
-An international standards body and trade association that was founded in 1989 established the standard for connecting 
-peripherals to laptops. PC Cards are 85.6 mm long by 54 mm wide (3.37"x 2.126") and use a 68-pin connector.
+Universal Serial Bus (USB)<br>
 </p><p>
-<img src="PCcard.gif">
+<img src="usbLogo.jpg">
 </p><p>
-USB<br>
-Universal Serial Bus is now the standard interface for low-speed peripherals such as the keyboard, 
+USB is now the standard interface for low-speed peripherals such as the keyboard, 
 mouse, joystick, scanner, printer and telephony devices. The original USB standard has a max bandwidth of 1.5 Mbytes/sec, and up to 127 devices can be attached. 
 </p><p>
 Peripherals can be "hot swapped" or plugged in and unplugged without turning the system off. 
@@ -73,7 +103,7 @@ Recommended Standard 232 is a standard introduced in 1960 for serial communicati
 </p><p>
 The RS-232 standard had been commonly used in computer serial ports. The standard defines the electrical characteristics and timing of signals, the meaning of signals, and the physical size and pinout of connectors. This port has been replaced by USB, but USB to "serial" adapters are still un use today. Although USB is a serial bus, when people say serial port, they usually mean RS-232.
 </p><p>
-RS-232 and USB are not the only serial buses. Other popular serial buses include:
+RS-232 and USB dominate, but other serial buses still in use today include:
 <ul>
 I2C<br>
 Inter-Integrated Circuit, pronounced I-squared-C, is a synchronous, multi-master, multi-slave, packet switched, single-ended, serial computer bus invented in 1982 by Philips Semiconductor (now NXP Semiconductors). It is widely used for attaching lower-speed peripheral ICs to processors and microcontrollers.
@@ -85,9 +115,16 @@ SMBus is derived from I2C for communication with low-bandwidth devices on a moth
 </p><p>
 SPI<br>
 Serial Peripheral Interface is a synchronous serial communication interface specification used for short distance communication, primarily in embedded systems. The interface was developed by Motorola in the mid 1980s and has become a de facto standard. Typical applications include Secure Digital cards and liquid crystal displays.
-
+</p><p>
 SPI devices communicate in full duplex mode using a master-slave architecture with a single master. The master device originates the frame for reading and writing. Sometimes SPI is called a four-wire serial bus in reference to the two wire SMBus.
 </p></ul><p>
+PCMCIA (PC Cards)<br>
+Personal Computer Memory Card International Association is an international standards body that was founded in 1989 to established the standard for connecting peripherals to laptops. 
+</p><p>
+PC Cards are business card sized and with 68-pin connector that plugs into a CardBus. Not only did they dominate the laptop market, but they were also seen in Remote Authentication Dial-In User Service (RADIUS) servers. They were thinner than the phone cable RJ-10 connector so they worked, at first, with dongle cables which were later replaced by pop out "XJack" connections. They were the USB of their day.
+</p><p>
+<img src="pcCard.jpg">
+</p><p>
 
 <a href="memory.html">Next Page: Memory </a>
 </body>
