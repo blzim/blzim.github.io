@@ -7,74 +7,88 @@
 </head>
 
 <body>
-<b>System Overview</b><br>
-<img src="desktop.gif"> &nbsp; <img src="laptop.jpg"> &nbsp; <img src="tablet.png">
-<br>
-</p>
+<b>Systems</b><ul>
 <p>
-A system is a general term that can mean many things, but here we are referring to information systems, hardware that runs an operating system and can access networks. These systems come in many shapes and sizes, and although designed for different purposes, they share most of the same core technology.</p>
-<p>
-<b>Server</b><br>
-A server is a system used to deliver information to clients. Although hardware designed to be a full time server might look different, a server is actually special system software and is referred to as a service. At a home or small business, a desktop with the right software can also be used as a server. In networking terms, a server is a system that serves requests for data, and clients are systems that request data. A client can be any system, typically a desktop, laptop, or cell phone, but even a server can act as a client when it needs something from a network. For example a server is a client when it needs to store data on a backup server, to authenticate users from a authentication server, or even to get software updates over the network. The hardware designed to run as a server in a datacenter might look different, but the general ideas and terms are the same. They both have power supplies, motherboards, CPUs, memory and similar I/O (Input/Output) devices.
-</p>
-<b>Desktop</b> (or workstation) <br>
-The term PC used to refer to any kind of personal computer  and was used all the time in the 1970s and 80s because back then, that was the only type of hardware an individual would use. Today we have choices like laptops, tablets, and phones. PCs are desktop computers that conform to the standard originally developed by IBM.</p>
-<p>
-<b>Laptop</b><br>
-Similar to a desktop, a laptop is an individual user system, designed to be more portable than a desktop, but can still access the same networks and has hardware with the same ideas that are used in desktops and servers.</p>
-<p>
-<b>Cellphone and Tablet</b><br>
-Tablets and cell phones are lumped together because they often run the same type of operating system and are getting hard to find differences in. Some large phones are the same size as some small tablets. They are designed to be even more portable than a laptop, but can still access the same networks using hardware with the same ideas that are used in desktop and server hardware.
-</p>
-<p>
-Now that we've defined what they are, lets look at some of the things they share.
-</p>
-<p>
-<b>Power Supply</b><br>
+A system is a general term that can mean many things, but here we are referring to information systems, hardware that runs an operating system and can access networks. Systems come in many shapes and sizes, designed for different purposes, but they share the same basic technology.
+</p><p>
+A system on a network can be a both client and a server at the same time. Servers are anything on a network that serves data, and clients are anything that requests data. For example a server is also a client when it sends data to a backup server, to authenticate users from a authentication server, or to get software updates over the network. 
+</p><p>
+If your workstation is sharing data over the network, it is also a server. If the printer is connected to the network directly it is a print server. If it requires an external device to connect the network, then that external device is the print server.
+</p></ul><p>
+Server<br><ul>
+Hardware designed to run as a full time server is different than that of a workstation. For that reason it is a different system type. There are many different types of systems that act as servers and many different types of things they can serve. Common types of servers are file servers, print servers, web servers, database servers, application servers, back-up servers, to name a few. 
+</p><p>
+Sometimes server hardware is specific to the type of serving or the volume of serving that will be done. There are large servers called main frames, other big ones called super computers, and groups of servers that act like one big system called server "clusters".
+</p><p>
+<img src="mainframe.jpg" title="IBM Z Enterprise mainframe">
+</p></ul><p>
+Desktop
+</p><ul><p>
+<img src="desktop.gif">
+</p><p>
+The term PC used to refer to any kind of personal computer and was used all the time in the 1970s and 80s because back then, that was the only type of hardware an individual would use. Today there are many choices like laptops, tablets, phones, and single board computers.
+</p></ul><p>
+Laptop
+</p><ul><p>
+<img src="laptop.jpg">
+</p><p>
+A laptop is designed to be more portable than a desktop, but works with the same basic concepts as desktops. Collectively desktops and laptop are called "workstations".
+</p></ul><p>
+Mobile Device (Cellphone, Tablet)
+</p><ul><p>
+<img src="tablet.png">
+</p><ul><p>
+Tablets and cell phones are lumped together because they often run the same type of operating system, use wireless network access and otherwise are getting hard to find differences in. Some large phones are the same size as some small tablets, and tablets how have apps that allow them to make calls. They are both designed to be even more portable than a laptop and are collectively referred to as "moble devices".
+</p><p>
+In networking terms, all of the above hardware are called network "nodes". They all share the following.
+</p></ul><p>
+Power Supply<br><ul>
 An electrical system that converts AC current from the wall outlet into the DC currents 
 required by the computer circuitry. In a desktop or laptop, +5, -5, +12 and -12 voltages are generated. The 3 and 5 volts are used for the electronic circuitry, and the 12 volts are required for the drives. Fortunately, power supplies usually 
-come preinstalled with the PC case and are standardized between Desktop and Laptops, so you will probably never have to choose between power supplies, but if you do, here are a few things to look for in a power supply: </P>
-
-EMI Electro Magnetic Interference<br>
-Fan Rating - Airflow rated in cubic feet per minute<br>
-Hold-up time - Time period that a power supply's output will remain within specified limits, following power 
+come preinstalled with the PC case and are standardized between Desktop and Laptops, so you will probably never have to choose between power supplies, but if you do, here are a few things to look for in a power supply:
+<p><ul>
+<li>EMI Electro Magnetic Interference<br>
+<li>Fan Rating - Airflow rated in cubic feet per minute<br>
+<li>Hold-up time - Time period that a power supply's output will remain within specified limits, following power 
 disturbances or a loss of input power.<br>
-Load regulation - Change in output voltage due to a varying load.<br>
-Line regulation - Change in output voltage due to varying input voltage.<br>
-MTBF - Mean Time Between Failure.<br>
-Noise - Loudness<br>
-Operating temperature - Range of temperatures a power supply can be safely operated.<br>
-Overvoltage protection - Shuts down the power supply if the output voltage exceeds a specified limit.<br>
-
-<p><b>Keyboards</b><br>
-Most work well for all systems using a USB bus connection. Old keyboards plug into either a 5-pin DIN called an AT connector, or a 6-pin mini-DIN called a PS/2 connector on the motherboard. Adapters also exist to connect a 5-pin plug to a 6-pin socket.</p>
-<p>
-<img src="USBtypes.jpg">&nbsp;&nbsp;<img src="Image19.gif">
-</p>
-<p>
-<b>Key names</b> - Each symbol key on a keyboard has a specific name. Some symbol key names are listed:
-<br>
+<li>Load regulation - Change in output voltage due to a varying load.<br>
+<li>Line regulation - Change in output voltage due to varying input voltage.<br>
+<li>MTBF - Mean Time Between Failure.<br>
+<li>Noise - Loudness<br>
+<li>Operating temperature - Range of temperatures a power supply can be safely operated.<br>
+<li>Overvoltage protection - Shuts down the power supply if the output voltage exceeds a specified limit.<br>
+</ul></ul><p>
+Keyboards<br><ul>
+All wired keyboards today use a USB connection. Wireless keyboards use a USB transeiver. 
+</p><p>
+Old keyboards used to plug into either a 5-pin DIN called an "AT connector", or a 6-pin mini-DIN called a "PS/2" connector. 
+</p><p>
+Really old keyboards (original IBM PC systems) plug into a DB-6 socket, looks like a slightly smaller serial port. Adapters exist to connect a 5-pin DIN into a DB-6 socket. Good luck finding one anymore.
+</p><p>
+<img src="Image19.gif">
+</p></ul><p>
+Key names
+</p><ul><p>
 <b>:   </b> = colon <br>
 <b>;   </b> = semi colon <br>
 <b>\   </b> = backslash <br>
 <b>/   </b>= forwardslash <br>
 <b>|   </b> = pipe (shift + \)<br>
 <b>~   </b> = tilde <br>
-<b>[ ] </b> brackets <br>
-<b>{}  </b> curly brackets <br>
-<b> _  </b> underscore (shift + hyphen)<br>
-<b> @  </b> ampersand <br>
-<b>#   </b> hash or pound <br>
-<b>^   </b> karat <br>
-<b>()  </b>parenthises</p>
-<p>
-<p>
-<b>Mouse</b><br>
+<b>[ ] </b> = brackets <br>
+<b>{}  </b>  = curly brackets or braces<br>
+<b> _  </b>  = underscore (shift + hyphen)<br>
+<b> @  </b> = ampersand <br>
+<b>#   </b>  = hash or pound <br>
+<b>^   </b> = karat <br>
+<b>()  </b> = parenthesis</p>
+</p></ul><p>
+Mouse
+</p><ul><p>
 It is called a mouse because it more or less resembles one, with the cord being the mouse's tail, but as technology moves on, wireless and other features like trackball, touch pad, and touch screens might make you wonder where the name came from. <br>
-Mice also use USB or blue tooth, but you might still find one with a PS/2 or DB-9 serial connector.
-<br>
-</p>
-<p><a href="motherboard.html">Next Page: Motherboards </p>
+Mice also use USB or blue tooth, but they used to use a PS/2 or DB-9 serial port.
+</ul></p><p>
+<a href="motherboard.html">Next Page: Motherboards </p>
 
 </body>
 </html>
