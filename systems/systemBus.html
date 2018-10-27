@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Data Bus</title>
+<title>System Bus</title>
 <link rel="stylesheet" href="../ZimStyles.css">
 </head>
 
@@ -11,15 +11,36 @@
 <ul>
 The system bus creates a common pathway, or channel, between multiple devices. These channels are physically made with conductive materials like pins, wires, and traces to carry electrical signals across a circuit board. Logically the bus communicates using various bus protocols.
 </p><p>
-The system bus is comprised of two parts: the address bus and the data bus. Addresses are sent over the address bus to signal a memory location, and the data is transferred over the data bus to that location.
+The system bus is comprised of three parts: the control bus, the address bus, and the data bus, which work together to get the system work done. The address bus carries the information about the device with which the CPU is communicating, the data bus carries the actual data being processed, the control bus carries commands from the CPU and returns status signals from the devices.
 </p><p>
-System buses are broken into two types, local and peripheral. The local bus or processor bus, provides a parallel data transfer path between the CPU and main memory. It is also known as the "northbridge". The size of this bus depends on the size of the processor.
+<img src="systemBus.jpg">
+</p><p>
+Buses are either local or peripheral. 
+</p><p>
+The local bus, processor bus, northbridge, or front side bus, whatever type of implementation is being used, provides a parallel data transfer path between the CPU and main memory. The size of this bus depends on the size of the processor.
 </p><p>
 A 32-bit local bus transfers 32-bits at the same time (in parallel) over 32 wires. A 64-bit bus uses 64 wires. Physically bits are electric pulses of on and off patterns and logically they are interpreted as binary digits.
 </p><p>
-The peripheral bus connects any expansion cards to the system. This bus used to be called the "southbridge", but more recently is being called the Platform Controller Hub (PCH).
+The original front-side bus architecture has been replaced by HyperTransport, Intel QuickPath Interconnect (QPI) or Direct Media Interface (DMI) in modern CPUs.
 </p><p>
-There are internal and external peripherials, devices that are connected either on the inside or the outside of the system chassis. Both internal and external devices physically connect to the same peripheral bus, but logically use different peripheral bus protocols. An analogy would be physically using your mouth to speak, but logically speaking English and Spanish. 
+DMI is used by one or more processors to connect the what used to be northbridge to the PCH aka southbridge. 
+</p><p>
+QPI is used to connect the socket 1366 processors to the northbridge, while the northbridge is completely incorporated into socket 1155 processors, so no QPI bus is possible or necessary with socket 1155 processors.
+</p><p>
+<img src="blockDiagram2.jpg"> <img src="blockDiagram.gif"> <img src="QPi.png">
+</p><p>
+The control bus is made up of interrupt lines, byte enables lines, read/write signals and status lines.
+</p><p>
+Interrupt Request (IRQ) Lines<br>
+IRQ is a specified type of control bus line used by devices to interrupt the current stream of data to the central processing unit. It allows the computer to do control many tasks by interrupting an ongoing process to get a new task quickly done if the new task has a higher priority.
+</p><p>
+The central processing unit does not know if the system is sending or receiving data without the control bus. Where the write and read information have to go is managed and regulated by the control bus.
+</p><p>
+Addresses are sent over the address bus to signal a memory location, and the data is transferred over the data bus to that location.
+</p><p>
+The peripheral bus connects any expansion cards to the system. This bus used to be called the "southbridge", but more recently is being called the Platform Controller Hub (PCH) or I/O Controller Hub (ICH).
+</p><p>
+There are internal and external peripherals, devices that are connected either on the inside or the outside of the system chassis. Both internal and external devices physically connect to the same peripheral bus, but logically use different peripheral bus protocols. An analogy would be physically using your mouth to speak, but logically speaking English and Spanish. 
 </p><p>
 The most common internal peripheral protocol is PCIe, and the most common external is USB.
 </p></ul>
