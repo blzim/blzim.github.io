@@ -65,10 +65,19 @@ All PCI Express versions are backward and forward compatible, meaning no matter 
 </p><p>
 If you use a Version 3.0 PCIe card on a 2.0 port, it will probably work at 2.0 speed.
 </p><p>
+Mini PCI Express
+</p><p>
+<img src="MiniPCIe.jpg">
+</p><p>
+PCI Express Mini Card (also known as Mini PCI Express, Mini PCIe, Mini PCI-E, mPCIe, and PEM), based on PCI Express, is a replacement for the Mini PCI form factor. It is developed by the PCI-SIG. The host device supports both PCI Express and USB 2.0 connectivity, and each card may use either standard. Most laptop computers built after 2005 use PCI Express for expansion cards; however, as of 2015, many vendors are moving toward using the newer M.2 form factor for this purpose.
+</p><p>
 Mini PCIe v2 (M.2)<br>
 <img src="M2.jpg" title="M.2 SSD">
 </p><p>
 The new version of Mini PCI express, M.2 replaces the mSATA standard. Computer bus interfaces provided through the M.2 connector are PCI Express 3.0 (up to four lanes), Serial ATA 3.0, and USB 3.0 (a single logical port for each of the latter two). It is up to the manufacturer of the M.2 host or device to select which interfaces are to be supported, depending on the desired level of host support and device type.
+</p><p>
+NVMe<br>
+Non-Volatile Memory External (NVMe) is a specification for accessing NAND flash memory, such as solid-state drives (SSDs) attached via a PCIe. 
 </p><p></ul>
 <b>External Peripherial Bus</b><ul>
 </p><p>
@@ -82,26 +91,43 @@ mouse, joystick, scanner, printer and telephony devices. The original USB standa
 Peripherals can be "hot swapped" or plugged in and unplugged without turning the system off. 
 USB ports began to appear on PCs in 1997, and was integrated into all the major systems since Windows 98.
 </p><p>
-The devices are plugged directly into a four-pin USB socket on the PC or into a multi-port hub that plugs into the PC or 
-into a device that also functions as a hub for other devices. 
+The devices are plugged directly into a four-pin USB socket on the PC or into a multi-port hub.
 </p><p>
-USB ports on the PC and hubs use a rectangular Type A socket.  All cables that are permanently attached to the device have a Type A plug.Devices that use a separate cable have a square type B socket, and the cable that connects them has both a Type A and a Type B plug.
+<img src="Image12.gif">&nbsp; <img src="usbPorts.jpg">
 </p><p>
-<IMG SRC="Image12.gif">
+Specifications suggests that plugs and receptacles be colour-coded (SuperSpeed is identified by blue).
 </p><p>
-USB Connections<br>
-The thin, rectangular A connectors are on the PC and hub. 
-Type B connectors are used on peripherals that have cables which are not permanently attached.
+Unlike other data buses (such as Ethernet), USB connections are directed. A host device has "downstream" facing ports that connect to the "upstream" ports of devices. Only downstream facing ports provide power. 
+</p><p>
+This topology was chosen to prevent electrical overloads and damaged equipment so USB cables have different ends: A and B, with different physical connectors for each. Each format has a plug and receptacle defined for each of the A and B ends.
 </p><p>
 <IMG SRC="USBtypes.jpg">
 </p><p>
 USB connections resolve installation conflicts, with a standard software system called PnP (Plug and Play) developed by IBM and Microsoft in the 1990s. Now users no longer have to manually assign settings like IRQs.
 </p><p>
-RS-232
+USB-C, also known as USB Type-C, is a 24-pin USB connector system, which is distinguished by its two-fold rotationally-symmetrical connector.
 </p><p>
-Recommended Standard 232 is a standard introduced in 1960 for serial communication transmission of data. It formally defines the signals connecting between a DTE (data terminal equipment) such as a computer terminal, and a DCE (data circuit-terminating equipment or data communication equipment), such as a modem. For this reason you often hear a DB-9 serial cable being called a "null modem cable".
+<img src="usbC.jpg">
 </p><p>
-The RS-232 standard had been commonly used in computer serial ports. The standard defines the electrical characteristics and timing of signals, the meaning of signals, and the physical size and pinout of connectors. This port has been replaced by USB, but USB to "serial" adapters are still un use today. Although USB is a serial bus, when people say serial port, they usually mean RS-232.
+The USB Type-C Specification 1.0 was published by the USB Implementers Forum (USB-IF) and was finalized in August 2014. It was developed at roughly the same time as the USB 3.1 specification. The default protocol with the USB-C connector is USB 3.1, which, at 10Gbps, is theoretically twice as fast as USB 3.0.
+</p><p>
+USB-C specification also supports Intel’s Thunderbolt 3 data-transfer technology. A USB-C port equipped with Thunderbolt 3 can push data speeds to a theoretical limit of 40Gbps. 
+</p><p>
+USB-C’s Alternate Mode for video enables adapters to output video from USB-C port to HDMI, DisplayPort, VGA and other types of video connectors on displays, TVs and projectors.
+</p><p>
+RS-232 UART
+</p><p>
+Recommended Standard (RS) 232 is a standard introduced in 1960 for serial communication transmission of data. It works together with a Universal Asynchronous Receiver Transmitter (UART) for serial communication in which the data format and transmission speeds are configurable. 
+</p><p>
+The RS-232 electric signaling levels and methods are handled external to the UART. A UART is usually an individual (or part of an) integrated circuit (IC) used for serial communications over a computer or peripheral device serial port. 
+</p><p>
+Together they formally define communication connecting between DTE (data terminal equipment) such as a computer terminal, and a DCE (data circuit-terminating equipment or data communication equipment), such as a modem. You often hear a DB-9 serial cable being called a "null modem cable".
+</p><p>
+<img src="nullModem.jpg"> <img src="usbSerial.jpg"> <img src="usbGPIO.jpg">
+</p><p>
+The standard defines the electrical characteristics and timing of signals, the meaning of signals, and the physical size and pinout of connectors. Workstations used to have DB9 UART ports, but they have been replaced by USB.
+</p><p>
+USB to "serial" adapters are still un use today. Although USB is a serial bus, when people say serial port, they usually mean RS-232.
 </p><p>
 RS-232 and USB dominate, but other serial buses still in use today include:
 <ul>
@@ -125,7 +151,59 @@ PC Cards are business card sized and with 68-pin connector that plugs into a Car
 </p><p>
 <img src="pcCard.jpg">
 </p><p>
-
+eSATA/eSATAp<br>
+The eSATA connector is a more robust SATA connector, intended for connection to external hard drives and SSDs. eSATA's transfer rate (up to 6 Gbit/s) is similar to that of USB 3.0 (up to 5 Gbit/s on current devices; 10 Gbit/s speeds via USB 3.1, announced on 31 July 2013). A device connected by eSATA appears as an ordinary SATA device, giving both full performance and full compatibility associated with internal drives.
+</p><p>
+eSATA does not supply power to external devices. This is an increasing disadvantage compared to USB. Even though USB 3.0's 4.5 W is sometimes insufficient to power external hard drives, technology is advancing and external drives gradually need less power, diminishing the eSATA advantage. 
+</p><p>
+eSATAp (power over eSATA; aka ESATA/USB) is a connector introduced in 2009 that supplies power to attached devices using a new, backward compatible, connector. On a notebook eSATAp usually supplies only 5 V to power a 2.5-inch HDD/SSD; on a desktop workstation it can additionally supply 12 V to power larger devices including 3.5-inch HDD/SSD and 5.25-inch optical drives.
+</p><p>
+ePCIe
+</p><p>
+<img src="ePCIe.jpg">
+</p><p>
+External PCI Express (ePCIe) specifications were released by the PCI-SIG in February 2007. Standard cables and connectors have been defined for ×1, ×4, ×8, and ×16 link widths, with a transfer rate of 250 MB/s per lane. The PCI-SIG also expects the norm will evolve to reach 500 MB/s, as in PCI Express 2.0. 
+</p><p>
+With an ePCIe laptop port and an enclosure case containing PCIe-to-ePCIe adapter circuitry, you can use hardware intended for desktops with your laptop.
+</p><p>
+VGA
+</p><p>
+<img src="vgaCable.jpg">
+</p><p>
+Video Graphics Array (VGA) is a graphics standard for video display controller first introduced with the IBM PS/2 line of computers in 1987, following CGA and EGA introduced in earlier IBM personal computers. VGA follows the RGB color model is an additive color model in which red, green and blue light are added together in various ways to reproduce a broad array of colors. For this reason, you sometimes hear a VGA cable being called an RGB cable.
+</p><p>
+DVI
+</p><p>
+<img src="dvi.jpg">
+</p><p>
+Digital Visual Interface (DVI) is a video display interface developed by the Digital Display Working Group (DDWG). The digital interface is used to connect a video source, such as a video display controller, to a display device, such as a computer monitor. It was developed with the intention of creating an industry standard for the transfer of digital video content.
+</p><p>
+HDMI
+</p><p>
+<img src="HDMI.jpg">
+</p><p>
+High-Definition Multimedia Interface (HDMI) is a proprietary audio/video interface for transmitting uncompressed video data and compressed or uncompressed digital audio data from an HDMI-compliant source device, such as a display controller, to a compatible computer monitor, video projector, digital television, or digital audio device. HDMI is a digital replacement for analog video standards.
+</p><p>
+DP
+</p><p>
+<img src="displayPort.jpg">
+</p><p>
+DisplayPort (DP) is a digital display interface developed by a consortium of PC and chip manufacturers and standardized by the Video Electronics Standards Association (VESA). 
+</p><p>
+The interface is primarily used to connect a video source to a display device such as a computer monitor, and it can also carry audio, USB, and other forms of data.
+</p><p>
+DisplayPort was designed to replace VGA and DVI. The interface is backward compatible with other interfaces, such as HDMI and DVI, through the use of either active or passive adapters.
+</p><p>
+Thunderbolt
+</p><p>
+<img src="thunderbolt.jpg">
+</p><p>
+Thunderbolt combines PCI Express and Mini DisplayPort into a new serial data interface. Original Thunderbolt implementations have two channels, each with a transfer speed of 10 Gbit/s, resulting in an aggregate unidirectional bandwidth of 20 Gbit/s.
+</p><p>
+Thunderbolt 2 uses link aggregation to combine the two 10 Gbit/s channels into one bi-directional 20 Gbit/s channel.
+</p><p>
+Thunderbolt 3 uses the USB Type-C connector and one 40 Gbit/s channel.
+</p><p>
 <a href="memory.html">Next Page: Memory </a>
 </body>
 </html>
