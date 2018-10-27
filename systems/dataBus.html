@@ -7,21 +7,21 @@
 </head>
 
 <body>
-<b>The Data Bus</b><br>
+<b>The System Bus</b><br>
 <ul>
-Computer buses are broken into two types, local and peripheral. They both perform the same function, to create a common pathway, or channel, between multiple devices. These channels are physically made with conductive materials like pins, wires, and traces to carry electrical signals across a circuit board. Logically the bus communicates using various bus protocols.
+The system bus creates a common pathway, or channel, between multiple devices. These channels are physically made with conductive materials like pins, wires, and traces to carry electrical signals across a circuit board. Logically the bus communicates using various bus protocols.
 </p><p>
-The computer's internal bus is known as the local bus, or processor bus. It provides a parallel data transfer path between the CPU and main memory, also known as the "northbridge". The size of this bus depends on the size of the processor.
+The system bus is comprised of two parts: the address bus and the data bus. Addresses are sent over the address bus to signal a memory location, and the data is transferred over the data bus to that location.
 </p><p>
-A 32-bit parallel bus transfers 32-bits at a time over 32 wires. A 64-bit bus uses 64 wires. Physically bits are electric pulses of on and off patterns and logically they are interpreted as binary digits. The word "bit" is short hand for binary digit.
+System buses are broken into two types, local and peripheral. The local bus or processor bus, provides a parallel data transfer path between the CPU and main memory. It is also known as the "northbridge". The size of this bus depends on the size of the processor.
 </p><p>
-Peripheral buses connect any expansion cards that are plugged into the computer's motherboard, as seen in the previous page.
+A 32-bit local bus transfers 32-bits at the same time (in parallel) over 32 wires. A 64-bit bus uses 64 wires. Physically bits are electric pulses of on and off patterns and logically they are interpreted as binary digits.
 </p><p>
-There are also internal and external peripherials. This describes devices that are connected inside or outside of the system chassis. Both internal and external devices connect to the peripheral bus, what was called the "southbridge", more recently called the Platform Controller Hub (PCH). The local bus is specific to the CPU/Memory connection.
-</p><p> 
-The bus is comprised of two parts: the address bus and the data bus. Addresses are sent over the address bus to signal a memory location, and the data is transferred over the data bus to that location. 
+The peripheral bus connects any expansion cards to the system. This bus used to be called the "southbridge", but more recently is being called the Platform Controller Hub (PCH).
 </p><p>
-Different peripheral buses have been used in computers over the years and have been replaced by PCIe.
+There are internal and external peripherials, devices that are connected either on the inside or the outside of the system chassis. Both internal and external devices physically connect to the same peripheral bus, but logically use different peripheral bus protocols. An analogy would be physically using your mouth to speak, but logically speaking English. 
+</p><p>
+The most common internal peripheral protocol is PCIe, and the most common external is USB.
 </p></ul>
 <p>
 <b>Internal Peripheral Bus</b>
