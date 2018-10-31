@@ -51,22 +51,37 @@ The most common internal peripheral protocol is PCIe, and the most common extern
 <td><img src="busTypes.gif"><br>
 </td>
 <td>
-ISA (Industry Standard Architecture) <br> 
-Pronounced "eye-suh." Was an expansion bus commonly used in the original  IBM PCs. It was improved in a second generation called Expanded ISA or EISA. 
+ISA short for Industry Standard Architecture was an expansion bus commonly used in the original IBM PCs of the 1970s.
 </p><p>
-PCI</b> (Peripheral Component Interconnect)<br>
+EISA short for  Expanded ISA improved the original ISA standard.
+</p><p>
+PCI</b> Peripheral Component Interconnect<br>
 It was designed primarily by Intel and first appeared on PCs in late 1993. PCI runs at 33MHz, supports 32- and 64-bit data paths and bus mastering.It was the first bus to provide "plug and play" capability.
 </p><p>
-Accelerated Graphics Port (AGP) was designed as a high-speed PCI replacement for attaching a video card to a computer system, primarily to assist in the acceleration of 3D computer graphics. 
+AGP or Accelerated Graphics Port was designed as a high-speed PCI replacement for attaching a video card to a computer system. 
 </p><p>
-Micro Channel bus, was a proprietary 16 or 32-bit parallel computer bus introduced by IBM in 1987. It replaced the ISA bus and was itself replaced by PCI bus architecture.
+Micro Channel was a proprietary 16 or 32-bit parallel computer bus introduced by IBM in 1987. It replaced the ISA bus and was itself replaced by PCI bus architecture.
 </p><p>
-The Video Electronics Standards Association Local bus (VL-bus) was a short-lived bus introduced during the 486 generation of x86 IBM PCs mainly as a graphics card bus.
+VL, Video Electronics Standards Association Localbus was a short-lived bus introduced during the 486 generation of x86 IBM PCs.
 </td>
 </table>
 <p>
-In 2004, all the boards in the above illustration were replaced by<br>
-Peripheral Component Interconnect Express (PCIe).
+IDE<br>
+Integrated Drive Electronics is a standard parallel bus interface for storage devices. The IDE controller is often built into the motherboard and uses a master/slave confguration to allow multiple devices to attach to the same cable and interface. Prior to the IDE drive, controllers were separate external devices so IDE reduced problems associated with storage devices and integrated controllers. 
+</p><p>
+SCSI<br>
+Small Computer System Interface is a set of standards formalized in 1986 for physically connecting and transferring data between computers and peripheral devices that competed with IDE. The SCSI standards define commands, protocols, electrical, optical and logical interfaces. SCSI is most commonly used for hard disk drives and tape drives, but it can connect a wide range of other devices, including scanners and CD drives, although not all controllers can handle all devices. 
+</p><p>
+ATA/PATA<br>
+IDE was adopted as a standard by the American National Standards Institute (ANSI) in November 1990, who made a series of generational changes and changed the name to Advanced Technology Attachment (ATA). This name was later updated to Parallel ATA (PATA) after Serial ATA was released.
+</p><p>
+SATA<br>
+Serial Advanced Technology Atachment succeeded the older Parallel ATA (PATA) standard in 2000, offering several advantages over the older interface: reduced cable size and cost (seven conductors instead of 40 or 80), native hot swapping, faster data transfer through higher signaling rates, and more efficient transfer through an (optional) I/O queuing protocol.
+</p><p>
+SAS<br>
+Serial Attached SCSI (SAS) is a point-to-point serial protocol that moves data to and from computer-storage devices such as hard drives and tape drives. SAS replaces the older Parallel SCSI bus technology. SAS, like its predecessor, uses the standard SCSI command set. SAS offers optional compatibility with Serial ATA (SATA), versions 2 and later. This allows the connection of SATA drives to most SAS backplanes or controllers. The reverse, connecting SAS drives to SATA backplanes, is not possible.
+</p><p>
+In 2004, other than SATA and SAS, all the protocols listed above were succeeded by Peripheral Component Interconnect Express (PCIe). SATA and SAS might also be on their way out, but not as of 2018. Time will tell.<br>
 </p><p>
 <img src="pcieLogo.jpg">
 </p><p>
@@ -165,12 +180,31 @@ Serial Peripheral Interface is a synchronous serial communication interface spec
 </p><p>
 SPI devices communicate in full duplex mode using a master-slave architecture with a single master. The master device originates the frame for reading and writing. Sometimes SPI is called a four-wire serial bus in reference to the two wire SMBus.
 </p></ul><p>
-PCMCIA (PC Cards)<br>
-Personal Computer Memory Card International Association is an international standards body that was founded in 1989 to established the standard for connecting peripherals to laptops. 
-</p><p>
-PC Cards are business card sized and with 68-pin connector that plugs into a CardBus. Not only did they dominate the laptop market, but they were also seen in Remote Authentication Dial-In User Service (RADIUS) servers. They were thinner than the phone cable RJ-10 connector so they worked, at first, with dongle cables which were later replaced by pop out "XJack" connections. They were the USB of their day.
+PCMCIA (PC Cards)
 </p><p>
 <img src="pcCard.jpg">
+</p><p>
+Personal Computer Memory Card International Association is an international standards body that was founded in 1989 to established the standard for connecting peripherals to laptops. PC Cards are business card sized and with 68-pin connector that plugs into a CardBus. Not only did they dominate the laptop market, but they were also seen in Remote Authentication Dial-In User Service (RADIUS) servers. They were thinner than the phone cable RJ-10 connector so they worked, at first, with dongle cables which were later replaced by pop out "XJack" connections.
+</p><p>
+RCA Composite
+</p><p>
+<img src="RCAcomposite.jpg">
+</p><p>
+RCA connector, sometimes called a phono connector or (in other languages) Cinch connector, is a coaxial radio frequency connector designed to work at radio frequencies in the multi-megahertz range. Commonly used to carry audio and video signals. The name RCA derives from the Radio Corporation of America, which introduced the design by the early 1940s.
+</p><p>
+4P4C / RJ-10
+</p><p>
+<img src="4P4C.jpg">
+</p><p>
+4P4C connector is the standard modular connector used on both ends of telephone handset cords, and is therefore often called a handset connector. This handset connector is not a registered jack, because it was not intended to connect directly to the telephone lines. However it is often referred to as RJ10.
+</p><p>
+Phone Jack
+</p><p>
+<img src="TRSjack.jpg"> <img src="TRS.jpg">
+</p><p>
+A phone jack, audio jack, headphone jack or jack plug, is a family of electrical connectors typically used for analog audio signals. The phone connector was invented for use in telephone switchboards in the 19th century and is still widely used. 
+</p><p>
+The Three-contact versions are known as TRS connectors, where T stands for "tip" (left audio), R stands for "ring" (right audio) and S stands for "sleeve" (ground). TRRS (stereo-plus-mic) sockets became particularly common on smartphones, which are often compatible with standard 3.5 mm stereo headphones.
 </p><p>
 eSATA/eSATAp<br>
 The eSATA connector is a more robust SATA connector, intended for connection to external hard drives and SSDs. eSATA's transfer rate (up to 6 Gbit/s) is similar to that of USB 3.0 (up to 5 Gbit/s on current devices; 10 Gbit/s speeds via USB 3.1, announced on 31 July 2013). A device connected by eSATA appears as an ordinary SATA device, giving both full performance and full compatibility associated with internal drives.
