@@ -15,34 +15,26 @@ The program's instructions are copied into memory from disk or tape and then ext
 </p><p>
 <img src="Image15.gif">
 </p><p>
-As data is entered into memory, the previous contents of that space are lost. 
-Once the data is in memory, it can be processed (calculated, compared and copied). The results are sent to a screen, 
-printer, disk, tape or communications channel. Memory is like an electronic checkerboard, with each square holding 
-one byte of data or instruction. Each square has a separate address like a post office box and can be manipulated 
-independently. As a result, the computer can break apart programs into instructions for execution and data records 
-into fields for processing.
+As data is entered into memory, the previous contents of that space are lost. Once the data is in memory, it can be processed (calculated, compared and copied). The results are sent to a screen, printer, disk, tape or communications channel. Memory is like an electronic checkerboard, with each square holding one byte of data or instruction. Each square has a separate address like a post office box and can be manipulated independently. As a result, the computer can break apart programs into instructions for execution and data records into fields for processing.
 </p><p>
 Each checkerboard square of memory holds one byte.The contents of any single byte or group of bytes can
 be calculated, compared and copied independently.That's how fields are put together to form records and broken 
 apart when read back in. On the disk, data is stored in sectors, which hold a chunk of data (typically 512 bytes) 
 and are the smallest unit that can be read or written.
 </p><p>
-Memory Doesn't Usually Remember Oddly enough, the computer's memory doesn't remember anything when the power is turned off. 
-That's why you have to save your files before you quit your program. Although there are memory chips that do hold their 
-content permanently (ROMs, PROMs, EPROMs), they're used for internal control purposes and not for the user's data. 
-"Remembering" memory in a computer system is its disks and tapes, and although they are also called memory devices, 
-many prefer to call them storage devices in order to differentiate them from internal memory. 
+Two ways to categorize memory is volitle and non volitle. Volatile memory loses its stored data when the power to the memory chip is turned off. However it can be faster and less expensive than non-volatile memory. This type is used for the main memory in most computers, since data is stored on the hard disk while the computer is off. 
+</p><p>
+The SRAM, static ram memory cell is a type of flip-flop circuit, usually implemented using FETs. These require very low power to keep the stored value when not being accessed.
 </p><p>
 DRAM
+</p><p>
+<img src="DRAMcell.png">
 </p><p> 
-The most common type of computer memory. It usually uses one transistor and a capacitor to represent a bit. The capacitors must be energized hundreds of times per second in order to maintain the charges. Unlike firmware chips (ROMs, PROMs, etc.) both major varieties of RAM (dynamic and static) lose their content when the power is turned off. 
+The most common type of computer memory. It usually uses one transistor and a capacitor to represent a bit. Charging and discharging this capacitor can store a '1' or a '0' in the cell. However, the charge in this capacitor will slowly leak away, and must be refreshed hundreds of times per second in order to maintain the charges. Because of this refresh process, DRAM uses more power, but can achieve greater storage densities.
 </p><p>
 SIMM
 </p><p>
-Single In-line Memory Module is a narrow printed circuit board that holds memory chips. It plugs into 
-a SIMM socket on the motherboard or memory board. The first SIMM format that became popular on personal computers 
-was 3.5" long and used a 30-pin connector. A larger 4.25" format uses 72-pins and contains from one to 64 megabytes 
-of RAM.
+Single In-line Memory Module is a narrow printed circuit board that holds memory chips. It plugs into a SIMM socket on the motherboard or memory board. The first SIMM format that became popular on personal computers was 3.5" long and used a 30-pin connector. A larger 4.25" format uses 72-pins and contains from one to 64 megabytes of RAM.
 </p><p>
 <img src="Image16.gif">
 </p><p>
@@ -62,6 +54,26 @@ SODIMMs
 Small Outline DIMMs are used in laptops, while 30-pin SIMMs are typically found in older PCs.
 </p><p>
 Shift registers, processor registers, data buffers and other small digital registers that have no memory address decoding mechanism are not considered as memory although they also store digital data.
+</p><p>
+SDRAM 
+</p><p>
+Synchronous dynamic random-access memory (SDRAM) is added circuitry to the DRAM chip which synchronizes all operations with a clock signal added to the computer's memory bus. This allowed the chip to process multiple memory requests simultaneously using pipelining, to increase the speed. The data on the chip is also divided into banks which can each work on a memory operation simultaneously. This became the dominant type of computer memory by about the year 2000.
+</p><p>
+DDR SDRAM 
+</p><p>
+Double data rate SDRAM, can transfer twice the data (two consecutive words) on each clock cycle by double pumping (transferring data on both the rising and falling edges of the clock pulse). Extensions of this idea are the current (2012) technique being used to increase memory access rate and throughput. Since it is proving difficult to further increase the internal clock speed of memory chips, these chips increase the transfer rate by transferring more data words on each clock cycle.
+<ul>
+<li>DDR2 SDRAM transfers 4 consecutive words per internal clock cycle
+<li>DDR3 SDRAM transfers 8 consecutive words per internal clock cycle.
+<li>DDR4 SDRAM transfers 16 consecutive words per internal clock cycle.
+</ul>
+</p><p>
+SRAM
+</p><p>
+Static random-access memory relies on several transistors forming a digital flip-flop to store each bit. This is less dense and more expensive per bit than DRAM, but faster and does not require memory refresh. It is used for smaller cache memories in computers.
+</p><p>
+Nonvolatile memory preserves the data stored in it during periods when the power to the chip is turned off. Therefore, it is used for the memory in portable devices, which don't have disks, and for removable memory cards among other uses.
+
 </p><p>
 <a href="measurements.html">Next Page: Measurements</a>
 
