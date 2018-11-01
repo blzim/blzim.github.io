@@ -7,7 +7,7 @@
 </head>
 <body>
 
-Memory
+MEMORY
 </p><p>
 The computer's workspace (physically, a collection of RAM chips). It is an important resource, since it determines the size and number of programs that can be run at the same time, as well as the amount of data that can be processed instantly. All program execution and data processing takes place in memory. 
 </p><p>
@@ -20,9 +20,11 @@ As data is entered into memory, the previous contents of that space are lost. On
 Each checkerboard square of memory holds one byte.The contents of any single byte or group of bytes can
 be calculated, compared and copied independently.That's how fields are put together to form records and broken 
 apart when read back in. On the disk, data is stored in sectors, which hold a chunk of data (typically 512 bytes) 
-and are the smallest unit that can be read or written.
+and are the smallest unit that can be read or written. Two ways to categorize memory is volitile and non volitle. 
 </p><p>
-Two ways to categorize memory is volitle and non volitle. Volatile memory loses its stored data when the power to the memory chip is turned off. However it can be faster and less expensive than non-volatile memory. This type is used for the main memory in most computers, since data is stored on the hard disk while the computer is off. 
+VOLITLE
+</p><p>
+Volatile memory loses its stored data when the power to the memory chip is turned off. However it can be faster and less expensive than non-volatile memory. This type is used for the main memory in most computers, since data is stored on the hard disk while the computer is off. 
 </p><p>
 SRAM
 </p><p>
@@ -76,8 +78,21 @@ SRAM
 </p><p>
 Static random-access memory relies on several transistors forming a digital flip-flop to store each bit. This is less dense and more expensive per bit than DRAM, but faster and does not require memory refresh. It is used for smaller cache memories in computers.
 </p><p>
+NON VOLITILE
+</p><p>
 Nonvolatile memory preserves the data stored in it during periods when the power to the chip is turned off. Therefore, it is used for the memory in portable devices, which don't have disks, and for removable memory cards among other uses.
-
+</p><p>
+ROM (Read-only memory) This is designed to hold permanent data, and in normal operation is only read from, not written to. Although many types can be written to, the writing process is slow and usually all the data in the chip must be rewritten at once. It is usually used to store system software which must be immediately accessible to the computer, such as the BIOS program which starts the computer, and the software (microcode) for portable devices and embedded computers such as microcontrollers. 
+</p><p>
+See the <a href="firmware.html">Firmware</a> page for more about chip code.
+</p><p>
+PROM (Programmable read-only memory) In this type the data is written into the chip before it is installed in the circuit, but it can only be written once. The data is written by plugging the chip into a device called a PROM programmer.
+</p><p>
+EPROM (Erasable programmable read-only memory) In this type the data in it can be rewritten by removing the chip from the circuit board, exposing it to an ultraviolet light to erase the existing data, and plugging it into a PROM programmer. The IC package has a small transparent "window" in the top to admit the UV light. It is often used for prototypes and small production run devices, where the program in it may have to be changed at the factory.
+</p><p>
+EEPROM (Electrically erasable programmable read-only memory) In this type the data can be rewritten electrically, while the chip is on the circuit board, but the writing process is slow. This type is used to hold firmware, the low level microcode which runs hardware devices, such as the BIOS program in most computers, so that it can be updated.
+</p><p>
+NVRAM (Flash memory) In this type the writing process is intermediate in speed between EEPROMS and RAM memory; it can be written to, but not fast enough to serve as main memory. It is often used as a semiconductor version of a hard disk, to store files. It is used in portable devices such as PDAs, USB flash drives, and removable memory cards used in digital cameras and cellphones.
 </p><p>
 <a href="measurements.html">Next Page: Measurements</a>
 
