@@ -17,11 +17,11 @@ The system bus is comprised of three parts: the control bus, the address bus, an
 </p><p>
 Buses are either local or peripheral. 
 </p><p>
-The local bus, processor bus, northbridge, or front side bus, whatever type of implementation is being used, provides a parallel data transfer path between the CPU and main memory. The size of this bus depends on the size of the processor.
+The local bus or processor bus, provides a parallel data transfer path between the CPU and main memory. The size of this bus depends on the size of the processor.
 </p><p>
 A 32-bit local bus transfers 32-bits at the same time (in parallel) over 32 wires. A 64-bit bus uses 64 wires. Physically bits are electric pulses of on and off patterns and logically they are interpreted as binary digits.
 </p><p>
-The original front-side bus architecture has been replaced by HyperTransport, Intel QuickPath Interconnect (QPI) or Direct Media Interface (DMI) in modern CPUs.
+The front side bus connects the CPU to the L2 Cache and Northbridge memory controller (see illustraton below). The original front-side bus architecture has been replaced by Direct Media Interface (DMI) in CPUs since 2000.
 </p><p>
 DMI is used by one or more processors to connect the what used to be northbridge to the PCH aka southbridge. 
 </p><p>
