@@ -138,13 +138,23 @@ Modern drives and memory make extensive use of error correction codes (ECCs), pa
 </p><p>
 SSD
 </p><p>
+<img src="ssd.jpg">
+</p><p>
 A solid-state drive (SSD) uses integrated circuit assemblies as memory to store data persistently. SSDs may use traditional hard disk drive (HDD) form-factors and protocols such as SATA and SAS, greatly simplfying usage of SSDs in computers. Following the initial acceptance of SSDs with HDD interfaces, new form factors such as the M.2 form factor, and new I/O protocols such as NVM Express have been developed to address specific requirements of the Flash memory technology used in SSDs.
 </p><p>
 Compared with electromechanical drives, SSDs are typically more resistant to physical shock, run silently, have quicker access time and lower latency. While the price of SSDs has continued to decline over time, SSDs are (as of 2018) still more expensive per unit of storage than HDDs and are expected to continue to be so into the next decade.
 </p><p>
 Every SSD includes a controller that incorporates the electronics that bridge the NAND memory components to the host computer. The controller is an embedded processor that executes firmware-level code and is one of the most important factors of SSD performance.
 </p><p>
+If a particular block was programmed and erased repeatedly without writing to any other blocks, that block would wear out before all the other blocks, thereby prematurely ending the life of the SSD. For this reason, SSD controllers use a technique called wear leveling to distribute writes as evenly as possible across all the flash blocks in the SSD.
+</p><p>
+A multi-level cell (MLC) is a memory element capable of storing more than a single bit of information, compared to a single-level cell (SLC) which can store only one bit per memory element.
+</p><p>
+Triple-level cells (TLC) and quad-level cells (QLC) are versions of MLC memory, which can store 3 and 4 bits per cell, respectively. Note that due to the convention, the name "multi-level cell" is sometimes used specifically to refer to the "two-level cell", which is slightly confusing.
+</p><p>
 RAID
+</p><p>
+<img src="RAID6.jpg">
 </p><p>
 Redundant Array of Independent Disks is a data storage virtualization technology that combines multiple physical hard disk or solid state drive components into one or more logical units for the purposes of data redundancy, performance improvement, or both.
 <ul>
@@ -156,7 +166,27 @@ Redundant Array of Independent Disks is a data storage virtualization technology
 <li>RAID 5 consists of block-level striping with distributed parity.
 <li>RAID 6 consists of block-level striping with double distributed parity. Double parity provides fault tolerance up to two failed drives. This makes larger RAID groups more practical, especially for high-availability systems, as large-capacity drives take longer to restore. RAID 6 requires a minimum of four disks.
 </ul>
-
+</p><p>
+JBOD
+</p><p>
+Just a Bunch Of Drives is an architecture using multiple hard drives exposed as individual devices. Hard drives may be treated independently or may be combined into one or more logical volumes using a volume manager. A spanned volume provides no redundancy, so failure of a single hard drive amounts to failure of the whole logical volume. Redundancy for resilience and/or bandwidth improvement may be provided, in software, at a higher level.
+</p><p>
+Disk Array
+</p><p>
+A disk array is a disk storage system which contains multiple disk drives. It is differentiated from JBOD, in that an array has cache memory and advanced functionality, like RAID and virtualization. Components of a typical disk array include:
+<ul>
+<li>Disk array controllers
+<li>Cache in form of both volatile random-access memory and non-volatile flash memory.
+<li>Disk enclosures for both magnetic rotational hard disk drives and electronic solid-state drives.
+<li>Power supplies
+</ul>
+Typically a disk array provides increased availability, resiliency, and maintainability by using additional redundant components (controllers, power supplies, fans, etc.), often up to the point where all single points of failure (SPOFs) are eliminated from the design. Additionally, disk array components are often hot-swappable.
+</p><p>
+Typically, disk arrays are divided into categories:
+<ul>
+<li>Network attached storage (NAS) arrays
+<li>Storage area network (SAN) arrays
+</ul>
 </p><p>
 <a href="measurements.html">Next Page: Measurements</a>
 
