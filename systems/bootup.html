@@ -11,27 +11,33 @@ The Boot Up Process
 <p>
 Two stages: Getting the hardware running (firmware), then getting the Operating System running (stored software) usually from USB or Hard Drive. 
 </p><p>
-In the past the OS was booted from floppy disk and in the future the OS might be stored on something like a solid state drive. With Embedded systems, the OS might be stored directly on the system chip (SoC).
+In the past the OS was booted from floppy disk. Presently booting most commonly occurs from a Hard Disk Drive. Increasingly the OS might be stored on a solid state drive, or with system on a chip (SoC), the OS might be stored directly on the processor chip.
 </p><p>
 The power supply gets AC power and provides DC power to the parts of the system. System DC voltages are usually 12v, 5v, and 3.3V which are kept separate from each other by power rails.
 </p><p>
 Power On Self Test (POST). POST checks that the hardware is working correctly. POST will either use a system of beep codes or a display on the motherboard if it runs into errors. The system manufacturer usually provides a table of POST code meanings.
 </p><p>
-<img src="Linuxboot.jpg" align="left">
+<table><td>
+<img src="Linuxboot.jpg">
+</td><td>
+Boot order is set from the BIOS "System Setup", traditionally stored in a Complimentary Metal Oxide Semiconductor (CMOS) chip. Systems are moving from CMOS to FLASH to store the BIOS settings. System Setup is sometimes called "CMOS" or "NVRAM".
 </p><p>
-Boot order occurs according to the BIOS parameters often called the System Setup, which is stored in what was called the Complimentary Metal Oxide Semiconductor (CMOS), now being more generally called the NVRAM, because some systems are moving from CMOS to flash NAND to store the BIOS settings.
+Control passes to the first block of the primary boot device. Storage drives have been formatted in 512 byte sector blocks. In 2009, Storage started moving to 4096 byte sectors called Advanced Format (AF) or 4K drives, much more efficient in larger capacities.
+</td></table>
 </p><p>
-Control passes to the first block of the primary boot device. Hard drives have typically been formatted with 512 byte sector blocks. In 2009, Hard drives started moving to 4096 byte sectors known as Advanced Format (AF) or 4K drives. 4K sectors are 8 times the old sector size and prove to be much more efficient in larger capacity drives and has room for better error correction.
+The Master Boot Record (MBR), is being replaced by the GUID Partition Table (GPT). MBR and GPT work with 512 byte sector blocks, but so far only GPT works with 4K block drives.
 </p><p>
-What was previously called the Master Boot Record (MBR), on some systems is now the GUID Partition Table (GPT), depending on how the drive was formatted. This is the same for HDDs, SSDs, and Flash NAND USB boot sticks. MBR works with the 512 byte HDD sectors and GPT is used for 4K drives.
+The first block of the boot device contains a partition table and a boot loader program that points to the boot program of the selected Operating System. Windows is called the "Windows Bootloader", Macs use the "Darwin Bootloader", and Linux was called Linux Loader (Lilo), but has been replaced by the Grand Unifited Bootloader "GRUB".
 </p><p>
-The first block of the boot device contains a partition table and a boot loader program that points to the boot program of the selected Operating System. Windows is called the Windows Bootloader, Macs use the Darwin Bootloader, and Linux was called Linux Loader (Lilo), but has been replaced in newer systems by the Grand Unifited Bootloader (GRUB).
-</p><p>
-The Boot loader usually provides a menu allowing the user to select which Operating System to run on systems that have multiple OSes installed.
+The Boot loader provides a menu allowing the user to select which Operating System to run on systems that have multiple OSes installed.
 </p><p>
 The Operating system start sequences might vary slightly. In Linux, GRUB loads the kernel core into RAM, then runs the initrd (initial ramdisk), which then runs the rest of the Kernel and OS including the real root filesystem, and the runlevel programs from the run command daemond (rc.d).
 </p><p>
 The GRUB configuration file shows the boot options including the device, the kernel filename (the compressed Linux kernel is called vmlinuz), and the initial ramdisk called initrd.
+</p><p>
+Do to issues where Windows updates would replace the software boot loader, wiping out any alternative boot options, many dual boot users have switched to installing other OSes like Linux on their own disk, then using the boot order from System Setup to select which disk to boot from.
+</p><p>
+Users with single disk systems have been using Virtual Enviroments like VmWare Player or Oracle Virtualbox.
 </p><p>
 <a href="operatingSystems.html">Next Page: Operating Systems</a>
 </p>
