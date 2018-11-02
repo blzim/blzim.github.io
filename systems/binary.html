@@ -9,57 +9,61 @@
 
 Digital Logic
 <p>
+<table><td>
+<img src="binary.gif">
+<img src="MorseCode.gif">
+<img src="digitalSignal.jpg">
+</td><td>
 The binary number system is not only the foundation of Computer Science, but also of digital electronics in general.
 </p><p>
-The number system we are taught in school is the decimal number system, which are sets of ten, 0 to 9. To add a value after 9, we move to the next column and start using two symbols like 10.
+The number system we are first taught in school is the decimal number system, which are sets of ten, 0 to 9. 
 </p><p>
-Binary does the same thing, but only has two values, 1 and 0 so when it wants to represent more than one, it moves to the next column by using two symbols like 10. This shows how you can get many values from just 1 and 0, which can be used to represent on and off states of electricity.
+To add a value after 9, we move into the next column and start using two symbols like 10.
 </p><p>
-<img src="binary.gif">
+Binary does the same thing, but only has two values, 1 and 0 so when it wants to represent a third value, it moves into the next column by using two symbols like 10.
 </p><p>
-By using just two states in a bit, then chaining the bits together, we can represent all of the characters in the english language and all of the numbers in the decimal number system, using just 8 bits. That is all early computers could do.
+We can use two states to represent a language, like the dot-dash of the telegraph.
 </p><p>
-<img src="ASCII_Table.svg">
+A digital signal has two or more distinguishable waveforms, in this example, high voltage and low voltages, each of which can be mapped onto a digit.
+</p><p>
+By using just two states in a bit, then chaining the bits together, we can represent all of the characters in the english language and all of the numbers in the decimal number system, using just 8 bits.
+</td></table>
+</p><p>
+<img src="ASCII_Table.jpg" title="ASCII Table in three rows">
 </p><p>
 The ASCII table above was the most successful type of encoding for the latin character and arabic numeral sets (text), until much later when Unicode extended ASCII to include all the character sets of the worlds major languages.
 </p><p>
 Colors and images are sent to your video card, translated using a Color Lookup Table into chroma and luminance values, then sent to your monitor. 
 </p><p>
 Sounds are converted into a stream of analog signals, representing the changes over time in air pressure, using the table in a digital-to-analog converter (DAC) in your sound card, and sent to your speakers. Audio signals picked up by a microphone does the same process in reverse, using the vibrations in the microphone to get translated into 1s and 0s.
-</p>
-</div>
-
-<div>
-<p>
-<img src="MorseCode.gif" align="left" hspace="20px">
-<img src="signal_lamp.jpg" align="left" hspace="20px">
-<br>
-Binary is very useful in electronics because we can turn electical power on and off very quickly using a switch. Like the dot-dash of the telegraph, or ship to ship communication using a signal lamp, computers turn power on and off quickly using transistors.
-<br>
-<br>
+</p><p>
+An advantage of digital circuits when compared to analog circuits is that signals represented digitally can be transmitted without degradation caused by noise. For example, a continuous audio signal transmitted as a sequence of 1s and 0s, can be reconstructed without error, provided the noise picked up in transmission is not enough to prevent identification of the 1s and 0s.
+</p><p>
 Transistors can open or close a circuit, turning power on an off like a light switch does. Instead of using your finger to flick a switch, transistors use a second power line to open or close the circuit. This second power line connects to a semiconductor material that is sandwiched between the ends of the first circuit. 
-<br>
-<br>
+</p><p>
 When the semiconductor gets no power, it insulates or stops the current in the first circuit. As soon as it gets power from the second circuit, it conducts or starts the first circuit again. 
-<p>
-<img src="transistor.jpg" hspace="20px"><br>
+</p><p>
+<img src="transistor.jpg">
+</p><p>
 Because of how the semiconductor can open or close a circuit, it is referred to as a gate. 
-<p>
+</p><p>
 <img src="gates.gif" align="left" hspace="20px">
 </p><p>
 Combinding these gates in particular patterns, we can represent the various states of logic from a boolean algebra table. These boolean value gates are called Logic Gates.
-<br>
-<br>
-Combinding these Logic Gates together in specific ways we can make an adder. By connecting adders together with a carry over line, we make what is known as a full adder. Full adders are used to add binary digits (bits) together. 
 </p><p>
-<b>Two's Compliment (subtraction)</b>
-<br>
+Logic gates that can be used to create combinational logic. Each logic gate is designed to perform a function of boolean logic when acting on logic signals.
+</p><p> 
+Applying combinational logic in specific ways we can make a half adder. By connecting half adders together with a carry over line, we make what is known as a full adder. Full adders are used to add binary digits (bits) together. 
+</p><p>
+Other circuits that use combinational logic are multiplexers, demultiplexers, encoders, decodersm and subtractors.
+</p><p>
+Two's Compliment (binary subtraction)
+</p><p>
 The two's complement of a binary number takes half the bits and treats them like negative values. Using this method, we can use a Full Adder circuit on negative numbers giving us subtraction. Addition in sets = multiplication and subtraction in sets = division,  a full set of arithmatic.
-<br>
-<br>
+</p><p>
 
 <table border="1">
-&nbsp;<b>Eight-bit two's-complement integers</b>
+Eight-bit two's-complement integers
 <tr>
 <th>Bits</th>
 <th>Unsigned<br />
@@ -119,6 +123,80 @@ value</th>
 <td align="right">-128</td>
 </tr>
 </table>
+</p><p>
+<table><td>
+<img src="smdThroughHole.jpg" title="Thourgh Hole and Surface Mount resistors">
+</td><td>
+Electronic components come in many different semiconductor packages. The two main categories are through-hole (or leaded), and surface-mount, also known as surface-mount device (SMD). 
+</p><p>
+Because they are smaller and have shorter interconnections, SMDs have better high-frequency characteristics but lower power rating.
+</td></table>
+</p><p>
+IC
+</p><p>
+Integrated Circuit (IC) also known as a "chip", is a microscopic electronic circuit array formed by the fabrication of various electrical and electronic components (resistors, capacitors, transistors, and so on) on a semiconductor material (silicon) wafer, which can perform operations similar to the large electronic printed circuit boards (PCBs) made of discrete electronic components.
+
+<table><td>
+<img src="ic.jpg">
+</td><td>
+An integrated circuit (IC) is a set of electronic circuits on one small flat piece ("chip") of semiconductor material like silicon. 
+</p><p>
+Integrating many transistors into a small chip also makes them cheaper and faster than discrete components.
+</p><p>
+As the technology progressed, millions, then billions of transistors could be placed on one chip, giving rise to the field of electronic design automation (EDA).
+</p><p>
+<li>SSI	small-scale integration 1964, 1 to 10 Transistors, 1 to 12 Logic Gates
+<li>MSI	medium-scale integration 1968, 10 to 500 Transistors, 13 to 99 Logic Gates
+<li>LSI	large-scale integration 1971, 500 to 20 000 Transistors, 100 to 9999 Logic Gates
+<li>VLSI	very large-scale integration 1980, 20 000 to 1 000 000 Transistors, 10 000 to 99 999 Logic Gates
+<li>ULSI	ultra-large-scale integration 1984, 1 000 000 Transistors and more, 100 000 and more Logic Gates
+</td></table>
+
+</p><p>
+The IC's mass production capability, reliability and building-block approach to circuit design has ensured the rapid adoption of standardized ICs in place of designs using discrete transistors. ICs are now used in virtually all electronic equipment and have revolutionized the world of electronics. Computers, mobile phones, and other digital home appliances are now inextricable parts of the structure of modern societies, made possible by the small size and low cost of ICs.
+</p><p>
+Integrated circuits can be classified into analog, digital, and mixed signal, consisting of both analog and digital signaling on the same IC.
+</p><p>
+Digital integrated circuits can contain anywhere from one to billions of logic gates, flip-flops, multiplexers, and other circuits in a few square millimeters. 
+</p><p>
+The small size of these circuits allows high speed, low power dissipation, and reduced manufacturing cost compared with board-level integration.
+</p><p>
+To choose representations, engineers consider types of digital systems. Most digital systems divide into "combinational systems" and "sequential systems." A combinational system always presents the same output when given the same inputs. It is basically a representation of a set of logic functions, as already discussed.
+</p><p>
+A sequential system is a combinational system with some of the outputs fed back as inputs. This makes the digital machine perform a "sequence" of operations. The simplest sequential system is probably a flip flop, a mechanism that represents a binary digit or "bit".
+</p><p>
+<img src="ringCounter.jpg">
+</p><p>
+Sequential systems are often designed as state machines. In this way, engineers can design a system's gross behavior, and even test it in a simulation, without considering all the details of the logic functions.
+</p><p>
+Sequential systems divide into two further subcategories. "Synchronous" sequential systems change state all at once, when a "clock" signal changes state. "Asynchronous" sequential systems propagate changes whenever inputs change. 
+</p><p>
+Synchronous sequential systems are made of well-characterized asynchronous circuits such as flip-flops, that change only when the clock changes, and which have carefully designed timing margins.
+</p><p>
+Analog ICs<br>
+Not all ICs are digital. ICs that operate over a continuous range of signal are called as Analog ICs. These are subdivided as linear Integrated Circuits (Linear ICs) and Radio Frequency Integrated Circuits (RF ICs). A frequently used analog IC is an operational amplifier or simply called as an op-amp.
+</p><p>
+Mixed ICs<br>
+The integrated circuits that are obtained by the combination of analog and digital ICs on a single chip are called as Mixed ICs. These ICs functions as Digital to Analog converters, Analog to Digital converters (D/A and A/D converters) and clock/timing ICs. 
+</p><p>
+Comparators<br>
+The comparator ICs are used as comparators for comparing the inputs and then to produce an output based on the ICs’ comparison.
+</p><p>
+Switching ICs<br>
+Switches or Switching ICs are designed by using the transistors and are used for performing the switching operations. The above figure is an example showing an SPDT IC switch.
+</p><p>
+Audio amplifiers<br>
+The audio amplifiers are one of the many types of ICs, which are used for the amplification of the audio. These are generally used in the audio speakers, television circuits, and so on. The above circuit shows the low- voltage audio amplifier IC.
+</p><p>
+Operational amplifiers<br>
+The operational amplifiers are frequently used ICs, similar to the audio amplifiers which are used for the audio amplification. These op-amps are used for the amplification purpose, and these ICs work similar to the transistor amplifier circuits. 
+</p><p>
+Timer ICs<br>
+Timers are special purpose integrated circuits used for the purpose of counting and to keep a track of time in intended applications. 
+</p><p>
+Flip-Flop
+</p><p>
+A flip-flop or latch is a circuit that has two stable states and can be used to store state information. The circuit can be made to change state by signals applied to one or more control inputs and will have one or two outputs. It is the basic storage element in sequential logic. Flip-flops and latches are fundamental building blocks of digital electronics systems used in computers, communications, and many other types of systems.
 </p><p>
 <a href="processors.html">Next Page: Processors</a>
 </body>
