@@ -9,13 +9,11 @@
 
 The Boot Up Process
 <p>
-Two stages: Getting the hardware running (firmware), then getting the Operating System running (stored software) usually from USB or Hard Drive. 
+The two stages of bootup are: Getting the hardware to run it's firmware, then getting the Operating System running from a storage device into memory.
 </p><p>
-In the past the OS was booted from floppy disk. Presently booting most commonly occurs from a Hard Disk Drive. Increasingly the OS might be stored on a solid state drive, or with system on a chip (SoC), the OS might be stored directly on the processor chip.
+In the past the OS was written into the hardware. Early portable OSes were booted from floppy disks. Common storage devices today are Hard Drives or Solid State Drives. With system on a chip (SoC), single board or mobile devices, the OS might be stored directly on the processor chip, or on some other chip based storage like Secure Digital (SD), MultiMediaCard (MMC), or embedded MMC (eMMC).
 </p><p>
-The power supply gets AC power and provides DC power to the parts of the system. System DC voltages are usually 12v, 5v, and 3.3V which are kept separate from each other by power rails.
-</p><p>
-Power On Self Test (POST). POST checks that the hardware is working correctly. POST will either use a system of beep codes or a display on the motherboard if it runs into errors. The system manufacturer usually provides a table of POST code meanings.
+Power On Self Test (POST). POST checks that the hardware is working correctly. POST will either use a system of beep codes or a display on the motherboard if it runs into errors. The system manufacturer usually provides a table of POST codes to help with trouleshooting.
 </p><p>
 <table><td>
 <img src="Linuxboot.jpg">
@@ -37,7 +35,7 @@ The GRUB configuration file shows the boot options including the device, the ker
 </p><p>
 Do to issues where Windows updates would replace the software boot loader, wiping out any alternative boot options, many dual boot users have switched to installing other OSes like Linux on their own disk, then using the boot order from System Setup to select which disk to boot from.
 </p><p>
-Users with single disk systems have been using Hypervisor or Virtual Environment Software like VmWare Player or Oracle Virtualbox, to run their OS of choice inside a Virtual Machine.
+Users with single disk systems have been using "hosted hypervisors" or Virtual Environment software like VmWare Player or Oracle Virtualbox, to run their OS of choice inside a Virtual Machine.
 </p><p>
 Hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines. A computer on which a hypervisor runs one or more virtual machines is called a host machine, and each virtual machine is called a guest machine. 
 </p><p>
