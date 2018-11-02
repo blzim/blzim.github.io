@@ -124,10 +124,14 @@ value</th>
 </tr>
 </table>
 </p><p>
+Components
+</p><p>
 <table><td>
 <img src="smdThroughHole.jpg" title="Thourgh Hole and Surface Mount resistors">
 </td><td>
-Electronic components come in many different semiconductor packages. The two main categories are through-hole (or leaded), and surface-mount, also known as surface-mount device (SMD). 
+Electronic components come in many different packages.
+</p><p> 
+The two main categories are through-hole (or leaded), and surface-mount, also known as surface-mount device (SMD). 
 </p><p>
 Because they are smaller and have shorter interconnections, SMDs have better high-frequency characteristics but lower power rating.
 </td></table>
@@ -165,7 +169,11 @@ To choose representations, engineers consider types of digital systems. Most dig
 </p><p>
 A sequential system is a combinational system with some of the outputs fed back as inputs. This makes the digital machine perform a "sequence" of operations. The simplest sequential system is probably a flip flop, a mechanism that represents a binary digit or "bit".
 </p><p>
-<img src="ringCounter.jpg">
+Flip-Flop
+</p><p>
+<img src="flipflop.jpg">
+</p><p>
+A flip-flop or latch is a circuit that has two stable states and can be used to store state information. The circuit can be made to change state by signals applied to one or more control inputs and will have one or two outputs. It is the basic storage element in sequential logic. Flip-flops and latches are fundamental building blocks of digital electronics systems used in computers, communications, and many other types of systems.
 </p><p>
 Sequential systems are often designed as state machines. In this way, engineers can design a system's gross behavior, and even test it in a simulation, without considering all the details of the logic functions.
 </p><p>
@@ -173,31 +181,56 @@ Sequential systems divide into two further subcategories. "Synchronous" sequenti
 </p><p>
 Synchronous sequential systems are made of well-characterized asynchronous circuits such as flip-flops, that change only when the clock changes, and which have carefully designed timing margins.
 </p><p>
+Timer ICs
+</p><p>
+<img src="555timer.jpg"> <img src="555flipflop.jpg">
+</p><p>
+Timers are special purpose integrated circuits used for the purpose of counting and to keep a track of time in intended applications. 
+</p><p>
+The switching of the output waveform is achieved by controlling the trigger and reset inputs of the 555 timer which are held “HIGH” by the two pull-up resistors, R1 and R2. By taking the trigger input (pin 2) “LOW”, switch in set position, changes the output state into the “HIGH” state and by taking the reset input (pin 4) “LOW”, switch in reset position, changes the output into the “LOW” state.
+</p><p>
+This 555 timer circuit will remain in either state indefinitely and is therefore bistable. Then the Bistable 555 timer is stable in both states, “HIGH” and “LOW”. The threshold input (pin 6) is connected to ground to ensure that it cannot reset the bistable circuit as it would in a normal timing application.
+</p><p>
+Shift Register
+</p><p>
+<img src="shiftRegister.jpg">
+</p><p>
+This sequential device loads the data present on its inputs and then moves or “shifts” it to its output once every clock cycle, hence the name Shift Register.
+</p><p>
+A shift register basically consists of several single bit “D-Type Data Latches”, one for each data bit, either a logic “0” or a “1”, connected together in a serial type daisy-chain arrangement so that the output from one data latch becomes the input of the next latch and so on.
+</p><p>
+Data bits may be fed in or out of a shift register serially, that is one after the other from either the left or the right direction, or all together at the same time in a parallel configuration.
+</p><p>
+The number of individual data latches required to make up a single Shift Register device is usually determined by the number of bits to be stored with the most common being 8-bits (one byte) wide constructed from eight individual data latches.
+</p><p>
+Shift Registers are used for data storage or for the movement of data and are therefore commonly used inside calculators or computers to store data such as two binary numbers before they are added together, or to convert the data from either a serial to parallel or parallel to serial format. The individual data latches that make up a single shift register are all driven by a common clock ( Clk ) signal making them synchronous devices.
+</p><p>
+Shift register IC’s are generally provided with a clear or reset connection so that they can be “SET” or “RESET” as required. Generally, shift registers operate in one of four different modes with the basic movement of data through a shift register being:
+</p><p>
+<li>Serial-in to Parallel-out (SIPO)  -  the register is loaded with serial data, one bit at a time, with the stored data being available at the output in parallel form.
+<li>Serial-in to Serial-out (SISO)  -  the data is shifted serially “IN” and “OUT” of the register, one bit at a time in either a left or right direction under clock control.
+<li>Parallel-in to Serial-out (PISO)  -  the parallel data is loaded into the register simultaneously and is shifted out of the register serially one bit at a time under clock control.
+<li>Parallel-in to Parallel-out (PIPO)  -  the parallel data is loaded simultaneously into the register, and transferred together to their respective outputs by the same clock pulse.
+</p><p>
 Analog ICs<br>
 Not all ICs are digital. ICs that operate over a continuous range of signal are called as Analog ICs. These are subdivided as linear Integrated Circuits (Linear ICs) and Radio Frequency Integrated Circuits (RF ICs). A frequently used analog IC is an operational amplifier or simply called as an op-amp.
 </p><p>
 Mixed ICs<br>
-The integrated circuits that are obtained by the combination of analog and digital ICs on a single chip are called as Mixed ICs. These ICs functions as Digital to Analog converters, Analog to Digital converters (D/A and A/D converters) and clock/timing ICs. 
+The integrated circuits that are obtained by the combination of analog and digital ICs on a single chip are called as Mixed ICs. These ICs functions as Digital to Analog converters, Analog to Digital converters (D/A and A/D converters).
 </p><p>
 Comparators<br>
 The comparator ICs are used as comparators for comparing the inputs and then to produce an output based on the ICs’ comparison.
 </p><p>
 Switching ICs<br>
-Switches or Switching ICs are designed by using the transistors and are used for performing the switching operations. The above figure is an example showing an SPDT IC switch.
+Switches or Switching ICs are designed by using the transistors and are used for performing the switching operations.
 </p><p>
 Audio amplifiers<br>
-The audio amplifiers are one of the many types of ICs, which are used for the amplification of the audio. These are generally used in the audio speakers, television circuits, and so on. The above circuit shows the low- voltage audio amplifier IC.
+The audio amplifiers are one of the many types of ICs, which are used for the amplification of the audio. These are generally used in the audio speakers, television circuits, and so on.
 </p><p>
 Operational amplifiers<br>
 The operational amplifiers are frequently used ICs, similar to the audio amplifiers which are used for the audio amplification. These op-amps are used for the amplification purpose, and these ICs work similar to the transistor amplifier circuits. 
 </p><p>
-Timer ICs<br>
-Timers are special purpose integrated circuits used for the purpose of counting and to keep a track of time in intended applications. 
-</p><p>
-Flip-Flop
-</p><p>
-A flip-flop or latch is a circuit that has two stable states and can be used to store state information. The circuit can be made to change state by signals applied to one or more control inputs and will have one or two outputs. It is the basic storage element in sequential logic. Flip-flops and latches are fundamental building blocks of digital electronics systems used in computers, communications, and many other types of systems.
-</p><p>
+
 <a href="processors.html">Next Page: Processors</a>
 </body>
 </html>
