@@ -22,7 +22,7 @@ Boot order is set from the BIOS "System Setup", traditionally stored in a Compli
 Control passes to the first block of the primary boot device. Storage drives have been formatted in 512 byte sector blocks. In 2009, Storage started moving to 4096 byte sectors called Advanced Format (AF) or 4K drives, much more efficient in larger capacities.
 </td></table>
 </p><p>
-The Master Boot Record (MBR), is being replaced by the GUID Partition Table (GPT). MBR and GPT work with 512 byte sector blocks, but so far only GPT works with 4K block drives.
+The Master Boot Record (MBR), is being replaced by the GUID Partition Table (GPT) which allows for many more partitions and works with larger storage devices.
 </p><p>
 The first block of the boot device contains a partition table and a boot loader program that points to the boot program of the selected Operating System. Windows is called the "Windows Bootloader", Macs use the "Darwin Bootloader", and Linux was called Linux Loader (Lilo), but has been replaced by the Grand Unified Bootloader "GRUB".
 </p><p>
