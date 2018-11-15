@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hardware
-</title>
+<title>Hardware</title>
 <link rel="stylesheet" type="text/css" href="../ZimStyles.css">
 </head>
 <body>
@@ -13,7 +12,7 @@ The two stages of bootup are: Getting the hardware to run it's firmware, then ge
 </p><p>
 In the past the OS was written into the hardware. Early portable OSes were booted from floppy disks. Common storage devices today are Hard Drives or Solid State Drives. With system on a chip (SoC), single board or mobile devices, the OS might be stored directly on the processor chip, or on some other chip based storage like Secure Digital (SD), MultiMediaCard (MMC), or embedded MMC (eMMC).
 </p><p>
-Power On Self Test (POST). POST checks that the hardware is working correctly. POST will either use a system of beep codes or a display on the motherboard if it runs into errors. The system manufacturer usually provides a table of POST codes to help with trouleshooting.
+Power On Self Test (POST). POST checks that the hardware is working correctly. POST will either use a system of beep codes or a display on the motherboard if it runs into errors. The system manufacturer usually provides a table of POST codes to help with trouble shooting.
 </p><p>
 <table><td>
 <img src="Linuxboot.jpg">
@@ -25,7 +24,7 @@ Control passes to the first block of the primary boot device. Storage drives hav
 </p><p>
 The Master Boot Record (MBR), is being replaced by the GUID Partition Table (GPT). MBR and GPT work with 512 byte sector blocks, but so far only GPT works with 4K block drives.
 </p><p>
-The first block of the boot device contains a partition table and a boot loader program that points to the boot program of the selected Operating System. Windows is called the "Windows Bootloader", Macs use the "Darwin Bootloader", and Linux was called Linux Loader (Lilo), but has been replaced by the Grand Unifited Bootloader "GRUB".
+The first block of the boot device contains a partition table and a boot loader program that points to the boot program of the selected Operating System. Windows is called the "Windows Bootloader", Macs use the "Darwin Bootloader", and Linux was called Linux Loader (Lilo), but has been replaced by the Grand Unified Bootloader "GRUB".
 </p><p>
 The Boot loader provides a menu allowing the user to select which Operating System to run on systems that have multiple OSes installed.
 </p><p>
@@ -39,9 +38,9 @@ Users with single disk systems have been using "hosted hypervisors" or Virtual E
 </p><p>
 Hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines. A computer on which a hypervisor runs one or more virtual machines is called a host machine, and each virtual machine is called a guest machine. 
 </p><p>
-The hypervisor presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems. Multiple instances of a variety of operating systems may share the virtualized hardware resources: for example, Linux, Windows, and macOS instances can all run on a single physical x86 machine. 
+The hypervisor presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems. Multiple instances of a variety of operating systems may share the vitalized hardware resources: for example, Linux, Windows, and macOS instances can all run on a single physical x86 machine. 
 </p><p>
-This contrasts with operating-system-level virtualization, where all instances (usually called containers) must share a single kernel, though the guest operating systems can differ in user space, such as different Linux distributions with the same kernel.
+This contrasts with operating-system-level Virtualization, where all instances (usually called containers) must share a single kernel, though the guest operating systems can differ in user space, such as different Linux distributions with the same kernel.
 </p><p>
 The term hypervisor is a variant of supervisor, a traditional term for the kernel of an operating system: the hypervisor is the supervisor of the supervisor.
 </p><p>
