@@ -20,13 +20,13 @@ Power On Self Test (POST). POST checks that the hardware is working correctly. P
 Boot order is set from the BIOS "System Setup", traditionally stored in a Complimentary Metal Oxide Semiconductor (CMOS) chip. Systems are moving from CMOS to FLASH to store the BIOS settings. System Setup is sometimes called "CMOS" or "NVRAM".
 </p><p>
 Control passes to the first block of the primary boot device. Storage drives have been formatted in 512 byte sector blocks. In 2009, Storage started moving to 4096 byte sectors called Advanced Format (AF) or 4K drives, much more efficient in larger capacities.
-</td></table>
 </p><p>
 The Master Boot Record (MBR), is being replaced by the GUID Partition Table (GPT) which allows for many more partitions and works with larger storage devices.
+</td></table>
 </p><p>
-The first block of the boot device contains a partition table and a boot loader program that points to the boot program of the selected Operating System. Windows is called the "Windows Bootloader", Macs use the "Darwin Bootloader", and Linux was called Linux Loader (Lilo), but has been replaced by the Grand Unified Bootloader "GRUB".
+The first block of the boot device contains a partition table and a boot loader program that points to the boot program of the selected Operating System. Windows is called the "Windows Bootloader", Macs use the "Darwin Bootloader", Linux was called Linux Loader (Lilo), but has been replaced by the Grand Unified Bootloader (GRUB).
 </p><p>
-The Boot loader provides a menu allowing the user to select which Operating System to run on systems that have multiple OSes installed.
+The Boot loader provides a menu allowing the user to select which Operating System to run on systems that have multiple OSes installed. This process is sometimes called a chainloader or chainloading Operating Systems.
 </p><p>
 The Operating system start sequences might vary slightly. In Linux, GRUB loads the kernel core into RAM, then runs the initrd (initial ramdisk), which then runs the rest of the Kernel and OS including the real root filesystem, and the runlevel programs from the run command daemon (rc.d).
 </p><p>
