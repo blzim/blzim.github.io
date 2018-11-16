@@ -17,7 +17,7 @@ Power On Self Test (POST). POST checks that the hardware is working correctly. P
 <table><td>
 <img src="Linuxboot.jpg">
 </td><td>
-Boot order is set from the BIOS "System Setup", traditionally stored in a Complimentary Metal Oxide Semiconductor (CMOS) chip. Systems are moving from CMOS to FLASH to store the BIOS settings. System Setup is sometimes called "CMOS" or "NVRAM".
+Boot order is set from the BIOS "System Setup", traditionally stored in a Complimentary Metal Oxide Semiconductor (CMOS) chip. Systems are moving from CMOS to FLASH to store the BIOS settings. System Setup is sometimes called "CMOS" or "NVRAM". It searches it's boot devices for boot code. 
 </p><p>
 Control passes to the first block of the primary boot device. Storage drives have been formatted in 512 byte sector blocks. In 2009, Storage started moving to 4096 byte sectors called Advanced Format (AF) or 4K drives, much more efficient in larger capacities.
 </p><p>
@@ -28,13 +28,15 @@ The first block of the boot device contains a partition table and a boot loader 
 </p><p>
 The Boot loader provides a menu allowing the user to select which Operating System to run on systems that have multiple OSes installed. This process is sometimes called a chainloader or chainloading Operating Systems.
 </p><p>
-The Operating system start sequences might vary slightly. In Linux, GRUB loads the kernel core into RAM, then runs the initrd (initial ramdisk), which then runs the rest of the Kernel and OS including the real root filesystem, and the runlevel programs from the run command daemon (rc.d).
+The Operating system start sequences might vary slightly. In Linux, GRUB loads its core into RAM, which allows it to access storage and filesystems and executes the kernel, (the compressed Linux kernel is called vmlinuz). Here is where user space starts. The kernel runs the initrd (initial ramdisk), which then runs the drivers needed to run the rest of the kernel and OS including the real root filesystem.
 </p><p>
-The GRUB configuration file shows the boot options including the device, the kernel filename (the compressed Linux kernel is called vmlinuz), and the initial ramdisk called initrd.
+The kernel does not talk to the BIOS or UEFI and can't get data from disks without drivers. In order to get the right driver to run the storage hardware it needs to load the driver file. In order to load the driver file it needs a filesystem. To fix this cycle, the kernel loads a small generic filesystem called initramfs or the initial RAM filesystem into RAM, loads the storage drivers it needs, then hands control over to the real root filesystem, which continues to load the rest of the OS.
 </p><p>
-Do to issues where Windows updates would replace the software boot loader, wiping out any alternative boot options, many dual boot users have switched to installing other OSes like Linux on their own disk, then using the boot order from System Setup to select which disk to boot from.
+Since Windows 8, Microsoft started requiring vendors to use secure boot, which will only load a digitally signed boot loader. This was done to prevent rootkit malware from taking control of the boot process. Unfortunately this also broke traditional Linux dual booting. Some Linux distros now have a secure boot signature.
 </p><p>
-Users with single disk systems have been using "hosted hypervisors" or Virtual Environment software like VmWare Player or Oracle Virtualbox, to run their OS of choice inside a Virtual Machine.
+Windows will also replace the software boot loader if it has been changed, wiping out any alternative boot options. Many dual boot users have switched to installing other OSes like Linux on their own disk, then using the boot order from BIOS System Setup to select which disk to boot from.
+</p><p>
+Users with single disk systems have been using "hosted hypervisors" or Virtual Environment software like VmWare Player or Oracle VirtualBox, to run their OS of choice inside a Virtual Machine.
 </p><p>
 Hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines. A computer on which a hypervisor runs one or more virtual machines is called a host machine, and each virtual machine is called a guest machine. 
 </p><p>
