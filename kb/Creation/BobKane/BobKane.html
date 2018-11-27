@@ -2,30 +2,45 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Bob Kane</title>
 </head>
 
 <body>
-<h2>Bob Kane</h2>
-<img src="BobKane.jpg"> 
-<img src="BobKaneArt04.jpg">
+Bob Kane<br>
+<img src="BobKane.jpg">
 <p>
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="BobKaneArt01.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BobKaneArt02.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BobKaneArt03.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BobKaneArt04.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BobKaneArt05.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BobKaneArt06.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+</p><p>
 Robert "Bob" Kane (born Robert Kahn; October 24, 1915 – November 3, 1998) was an American comic book writer and artist who co-created, with Bill Finger, the DC Comics character Batman. He was inducted into the comic book industry's Jack Kirby Hall of Fame in 1994 and into the Will Eisner Comic Book Hall of Fame in 1996.
 </p><p>
 He entered the comics field in 1936, freelancing original material to editor Jerry Iger's comic book Wow, What A Magazine!, including his first pencil and ink work on the serial Hiram Hick. The following year, Kane began to work at Iger's subsequent studio, Eisner &amp; Iger, which was one of the first comic book "packagers" that produced comics on demand for publishers entering the new medium during its late-1930s and 1940s Golden Age. 
 </p><p>
-In early 1939, DC's success with the seminal superhero Superman in Action Comics prompted editors to scramble for more such heroes. In response, Bob Kane conceived "the Bat-Man."[9] Kane said his influences for the character included actor Douglas Fairbanks' film portrayal of the swashbuckler Zorro, Leonardo da Vinci's diagram of the ornithopter, a flying machine with huge bat-like wings; and the 1930 film The Bat Whispers, based on Mary Rinehart's mystery novel The Circular Staircase (1908).
+In early 1939, DC's success with the seminal superhero Superman in Action Comics prompted editors to scramble for more such heroes. In response, Bob Kane conceived "the Bat-Man." Kane said his influences for the character included actor Douglas Fairbanks' film portrayal of the swashbuckler Zorro, Leonardo da Vinci's diagram of the ornithopter, a flying machine with huge bat-like wings; and the 1930 film The Bat Whispers, based on Mary Rinehart's mystery novel The Circular Staircase (1908).
 </p><p>
 Bill Finger joined Bob Kane's nascent studio in 1938. An aspiring writer and part-time shoe salesperson, he had met Kane at a party, and Kane later offered him a job ghost writing the strips Rusty and Clip Carson.
 </p><p>
 Finger said he offered such suggestions as giving the character a cowl and scalloped cape instead of wings; adding gloves; leaving the mask's eye holes blank to connote mystery; and removing the bright red sections of the original costume, suggesting instead a gray-and-black color scheme. He also devised the character's civilian name, Bruce Wayne, wrote the first Batman story, while Kane provided art. Kane, who had already submitted the proposal for Batman at DC and held a contract, is the only person given an official company credit for Batman's creation.
 </p><p>
 According to Kane, "Bill Finger was a contributing force on Batman right from the beginning. He wrote most of the great stories and was influential in setting the style and genre other writers would emulate ... I made Batman a superhero-vigilante when I first created him. Bill turned him into a scientific detective.
-</p><p>
-<img src="BobKaneArt01.jpg"> 
-<img src="BobKaneArt02.jpg"> 
-<img src="BobKaneArt03.jpg"> 
 </p>
 </body>
 </html>
