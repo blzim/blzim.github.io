@@ -2,14 +2,31 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Al Williamson</title>
 </head>
 
 <body>
-<h2>Al Williamson</h2>
-<img src="AlWilliamson.jpg">
-<img src="AlWilliamsonArt02.jpg">
+<img src="AlWilliamson.jpg"><br>
+<p>
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="AlWilliamsonArt01.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="AlWilliamsonArt02.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="AlWilliamsonArt03.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="AlWilliamsonArt04.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+
 <p>
 Alfonso "Al" Williamson (March 21, 1931 – June 12, 2010) was an American cartoonist, comic book artist and illustrator specializing in adventure, Western and science-fiction/fantasy.
 </p><p>
@@ -20,8 +37,6 @@ In the 1960s, he gained recognition for continuing Raymond's illustrative tradit
 Williamson is known for his collaborations with a group of artists including Frank Frazetta, Roy Krenkel, Angelo Torres, and George Woodbridge, which was affectionately known as the "Fleagle Gang". Williamson has been cited as a stylistic influence on a number of younger artists, and encouraged many, helping such newcomers as Bernie Wrightson and Michael Kaluta enter the profession. He has won several industry awards, and six career-retrospective books about him have been published since 1998. Living in Pennsylvania with his wife Corina, Williamson retired in his seventies.
 </p><p>
 Williamson was inducted into the Will Eisner Comic Book Hall of Fame in 2000.
-</p><p>
-<img src="AlWilliamsonArt01.jpg">
 </p>
 </body>
 </html>
