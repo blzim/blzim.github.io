@@ -2,20 +2,30 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Joe Maneely</title>
 </head>
 <body>
-<h2>Joe Maneely</h2>
 <img src="JoeManeely.jpg">
-<img src="JoeManeelyArt1.jpg">
-<img src="JoeManeelyArt2.jpg">
-<img src="JoeManeelyArt3.jpg">
 <p>
-Publishers: Atlas/Marvel<br>
-Biography: 1926 - 1958
-<p>
-Joe co-created the Marvel characters the Black Knight, the Ringo Kid, the Yellow Claw, and Jimmy Woo. An exquisite draftsman whose delicate yet solid, fine-line figures made his work both distinctive and well-suited to the medium, Maneely was one of the relative stars of Atlas, along with such soon-to-blossom talents as Steve Ditko and John Romita, Sr.
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="JoeManeelyArt1.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="JoeManeelyArt2.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="JoeManeelyArt3.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+</p><p>
+Joe Maneely (1926 - 1958) co-created the Marvel characters the Black Knight, the Ringo Kid, the Yellow Claw, and Jimmy Woo. An exquisite draftsman whose delicate yet solid, fine-line figures made his work both distinctive and well-suited to the medium, Maneely was one of the relative stars of Atlas, along with such soon-to-blossom talents as Steve Ditko and John Romita, Sr.
 </p><p>
 Stan Lee commented that, "Joe Maneely to me would have been the next Jack Kirby. He also could draw anything, make anything look exciting, and I actually think he was even faster than Jack." Talented and well-respected, he died in a commuter-train accident shortly before Marvel's ascendancy into a commercial and pop-cultural conglomerate.
 </p><p>
