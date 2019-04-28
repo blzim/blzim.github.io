@@ -2,18 +2,36 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Jim Starlin</title>
 </head>
 <body>
-<h2>Jim Starlin</h2>
+Jim Starlin<br>
 <img src="JimStarlin.jpg">
-<img src="JimStarlinArt1.jpg">
-<img src="JimStarlinArt2.jpg">
 <p>
-Publishers: Marvel<br>
-Biography: 1949 - current<br>
-With a career dating back to the early 1970s, he is best known for "cosmic" tales and space opera; for revamping the Marvel Comics characters Captain Marvel and Adam Warlock; and for creating or co-creating the Marvel characters Thanos, Drax the Destroyer, Gamora and Shang-Chi, Master of Kung Fu.
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="Starlin01.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Starlin02.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Starlin03.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Starlin04.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Starlin05.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Starlin06.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Starlin07.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="Starlin08.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+<p>
+Jim Stalin (born 1949 - current) has a career dating back to the early 1970s. He is best known for "cosmic" tales, space operas, for revamping the Marvel Comics characters <a href="../CaptainMarvel/CaptainMarvel.html">Captain Marvel</a>, <a href="../AdamWarlock/Warlock.html">Adam Warlock</a>, and for creating or co-creating the Marvel characters Thanos, Drax the Destroyer, Gamora and <a href="https://blzimg.github.io/MasterOfKungFu/MasterOfKungFu.html">Shang-Chi, Master of Kung Fu</a>.
 </p><p>
 Awards: <br>
 1973: Won the "Outstanding New Talent" Shazam Award, tied with Walt Simonson<br>
