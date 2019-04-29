@@ -2,15 +2,34 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Bruce Jones</title>
 </head>
 
 <body>
-<h2>Bruce Jones</h2>
-<img src="BruceJones.jpg">
-<img src="DemonKiss.jpg">
+<img src="BruceJones.jpg" title="Bruce Jones">
 <p>
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="BruceJones01.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BruceJones02.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BruceJones03.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BruceJones04.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BruceJones05.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BruceJones06.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="BruceJones07.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+</p><p>
 Bruce Eliot Jones (born 1946) whose pen names include Philip Roland and Bruce Elliot, is an American comic book writer, novelist, illustrator, and screenwriter whose work included writing Marvel Comics' The Incredible Hulk from 2001 to 2005.
 </p><p>
 Jones broke into comics in the early 1970s when he moved to New York City from his native Kansas City, Missouri, looking for work as a comics artist. He made his professional debut with Major Publications' black-and-white horror-comics magazine Web of Horror #3 (April 1970), writing and drawing the six-page story "Point of View". Jones then wrote for Warren Publishing's black-and-white horror-comics Creepy and Eerie, and, under the pseudonym Philip Roland, for rival Skywald's line. During this time he wrote his first novel, The Contestants.
