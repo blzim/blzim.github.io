@@ -2,13 +2,31 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Harold Gray</title>
 </head>
 
 <body>
-<h2>Harold Gray</h2>
-<img src="HaroldGray.jpg"> <img src="Annie01.jpg">
+<img src="HaroldGray.jpg" title="Harold Gray"> 
+<p>
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="Annie01.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="AnnieColor.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HaroldGray01.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="HaroldGray02.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+</p><p>
 <p>
 Harold Lincoln Gray (January 20, 1894 – May 9, 1968) was an American cartoonist, best known as the creator of the newspaper comic strip Little Orphan Annie. He is considered to be the first American cartoonist to use a comic strip to express a political philosophy.
 </p><p>
@@ -17,8 +35,7 @@ From 1921 to 1924, he did the lettering for Sidney Smith's The Gumps. After he c
 Gray's first wife, Doris C. Platt, died in late 1925. He married Winifred Frost in 1929, and the couple moved to Greens Farms, Connecticut, spending winters in La Jolla, California.
 </p><p>
 By the 1930s, Little Orphan Annie had evolved from a crudely drawn melodrama to a crisply rendered atmospheric story with novelistic plot threads. The dialogue consisted mainly of meditations on Gray's own deeply conservative political philosophy. Gray made no secret of his dislike for the New Deal ways of President Franklin Roosevelt and would often decry unions and other things he saw as impediments to the hard-working American way of life. 
-</p><p>
-<img src="AnnieColor.jpg">
+</p>
 
 </p>
 </body>
