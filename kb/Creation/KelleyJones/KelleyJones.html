@@ -2,17 +2,32 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../../../ZimStyles.css">
+<link rel="stylesheet" href="../slideshow.css">
+<script src="../slideshow.js"></script>
 <title>Kelley Jones</title>
 </head>
 <body>
-<h2>Kelley Jones</h2>
-<img src="KelleyJones.jpg">
-<img src="KelleyJonesArt1.jpg">
-<img src="KelleyJonesArt2.jpg">
+<img src="KelleyJones.jpg" title="Kelley Jones">
 <p>
-Publishers: Dark Horse, DC, Marvel<br>
-Biography:<br>
+<div class="row"><div class="column">
+<img src="../SlideshowButton.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</div> </div>
+
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<div class="mySlides" style="text-align: center;"><img src="KelleyJonesArt1.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="KelleyJonesArt2.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="KelleyJonesArt3.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="KelleyJonesArt4.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="KelleyJonesArt5.jpg"></div>
+<div class="mySlides" style="text-align: center;"><img src="KelleyJonesArt6.jpg"></div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div></div>
+</p><p>
 Born July 23, 1962 in Sacramento, California is an American comics artist, winner of the 2014 Ink Pot Award. Best known for his work on Batman with writer Doug Moench and on The Sandman with writer Neil Gaiman.
 </p><p>
 Titles:<br>
