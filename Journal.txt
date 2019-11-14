@@ -51,7 +51,7 @@ Jobs:
 
 Residences:
 -----------
-01) San Carlos, CA (1969-71?)house with Dad and Mom, first 2 years of my life. 
+01) San Carlos, CA (1969-71?) house with Dad and Mom, first 2 years of my life. 
 02) address unknown pre school, lived with Mom & Gina & Richard in apartments.
 03) Lakebird Ave., Sunnyvale, CA (1974-1979) Kindergarten to 4th grade with Mom & Gina &    Jim Pope & Solomon the dog.
 04) Balboa Court, Sunnyvale, CA (1979-1984) 4th to 9th with Mom & Gina & Bill De Wolf
@@ -73,9 +73,11 @@ Residences:
 20) Tijuana, a little 1 bdrm apt for a couple of months, then at Jose's house.
 21) Tijuana, B.C., Mexico Dec 2004 - March 2010 with Luz, rebuild the house up the hill of Jose's house.
 22) March 2010 - May 2010 @ Reiss Hotel 1432 First Ave #311 San Diego, CA.
-23) May 2010 – April 2011 @ Pruneyard Garden Apts (with Lorelei) Campbell, CA.
-24) April 2011 – Feb 2015 @ 186 N. 14th Street, San Jose, CA. Bought @ $325, paid off May 2014 @ $350 sold for $650 Feb 2015.
-25) April 2015 – Current @ 3062 Lemmon Court, Hollister, CA 95023 $150k mortgage.
+23) May 2010 - April 2011 @ Pruneyard Garden Apts (with Lorelei) Campbell, CA.
+24) April 2011 - Feb 2015 @ 186 N. 14th Street, San Jose, CA. Bought @ $325, paid off May 2014 @ $350 sold for $650 Feb 2015.
+25) April 2015 - Current @ 3062 Lemmon Court, Hollister, CA 95023 $150k mortgage.
+
+For Media I have read or listened to see https://blzimg.github.io/
 
 HOW MY PARENTS MET:
 -------------------
@@ -972,7 +974,7 @@ Something about Luz and me on my bicycle in a Mexican suburban neighborhood.
 I started listening to relaxation tapes.
 
 DREAM:
- I was working at a hotel, setting up laptops, projectors and sound for presentations. The guy whose system I set up had me take the equipment to his car and deliver it. He had an awesome Jaguar and the stereo had a bunch of great music. I get to the address and get out to find the building when I notice this moving truck come bumbling up the street. I rush back to the car to make sure I gave him enough space to park, when suddenly he hits the car (which is now a moving van also, and pushes it sideways to make room for him to park. I was very upset and swore to write down his license plate and report him, so I started searching for a pen…
+I was working at a hotel, setting up laptops, projectors and sound for presentations. The guy whose system I set up had me take the equipment to his car and deliver it. He had an awesome Jaguar and the stereo had a bunch of great music. I get to the address and get out to find the building when I notice this moving truck come bumbling up the street. I rush back to the car to make sure I gave him enough space to park, when suddenly he hits the car (which is now a moving van also, and pushes it sideways to make room for him to park. I was very upset and swore to write down his license plate and report him, so I started searching for a pen…
 
 
 ====================
@@ -2396,5 +2398,25 @@ I want to start taking it easy, but I can't afford to if we stay. If we are guar
 
 Lorelei gets a puppy from Mike. Her name is Sugar, she is a chocolate lab born from Mike's black police dog lab and some other yellow lab they got for mating. Their were 10 puppies born! They only wanted a few, which were taken to train as more police dogs. Summer kept one for her self, and Mike gave Lorelei one. So far, other than chewing up everything she can get her mouth on, she is doing alright and growing quickly. She gets scared easily and doesn't seem to be able to see very far, but she is a very nice dog, we get along pretty good.
 
-DellEMC is going full Agile/SCRUM business management style. This includes using Atlassian's Jira work flow web tool to micro-manage everything we work on. These "stories" (tasks) are included in 2 week "Sprints" (deadlines) that we report to the PO (Project Owner). Everyone is supposed to take any stories anyone needs help with. This concerns me as I don't know how to do most of the other people's jobs and I don't think they are going to train me. I also like my downtime, which we are no longer supposed to have. There is a chance that they will lay me off. IF we do not become Grace's guardians, I would like to get laid off (preferably with a few month's pay), sell the house and move to Connecticut.
+DellEMC is going full Agile/SCRUM business management style. This includes using Atlassian's Jira work flow web tool to micro-manage everything we work on. These "stories" (tasks) are included in 2 week "Sprints" (deadlines) that we report to Raja, the PO (Project Owner). Everyone is supposed to take any stories anyone needs help with. This concerns me as I don't know how to do most of the other people's jobs and I don't think they are going to train me. I also like my downtime, which we are no longer supposed to have. There is a chance that they will lay me off. IF we do not become Grace's guardians, I would like to get laid off (preferably with a few month's pay), sell the house and move to Connecticut.
+
+July 9 , 2019 = Temporary guardianship. 
+October ? 2019 = Permanent guardianship.
+
+We win the case, still have the restraining order in place. Bill says he is going to appeal, but we have not heard anything else about it, no idea what is left to do or fight for. I have asked HR to include Grace on my insurance, it is open enrollment, so she will have the same insurance that I do January 1, 2020.
+
+Nov 1 - 3 Lorelei and I took Grace with us to San Francisco, stayed at Zephyr hotel across the street from Pier 39, went to the aquarium there and took the hop on/off bus around the city and over the golden gate bridge.
+
+Mike and Summer have half way moved into the workshop. His dogs Olive and Koba have been moved also and get along with Sugar. Sugar is a little bit overly agressive with Olive, but nothing serious. Plumber has ordered a new float valve for the pump behing the workshop and will fix soon. 
+There was some problem with the water heater as well, but I think Mike fixed that. Mike also replaced the workshop light with LED light that works much better. Maybe I can talk him into replacing the florescent light above the car port with a strip LED light.
+
+At some point we will make a kennel for sugar as well, the cage in the garage is too small.
+
+At some point Mike is going to paint the good shipping container gray and have it moved over.
+
+I'm using blzim.github.com to move this journal between systems. Very insecure I know but the conveniance is worth it. Why should US intelligence be the only ones to know just about everything about me?
+
+Trying to learn about Flask, python web framework, especially how to use it to display sqlite database data. Finding it difficult to concentrate.
+Corey Shafer has a video series on YouTube that helps, but it is still confusing.
+
 
