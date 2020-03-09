@@ -2408,6 +2408,19 @@ I want to start taking it easy, but I can't afford to if we stay. If we are guar
 
 Lorelei gets a puppy from Mike. Her name is Sugar, she is a chocolate lab born from Mike's black police dog lab and some other yellow lab they got for mating. Their were 10 puppies born! They only wanted a few, which were taken to train as more police dogs. Summer kept one for her self, and Mike gave Lorelei one. So far, other than chewing up everything she can get her mouth on, she is doing alright and growing quickly. She gets scared easily and doesn't seem to be able to see very far, but she is a very nice dog, we get along pretty good.
 
+DellEMC is going full Agile/SCRUM business management style. This includes using Atlassian's Jira work flow web tool to micro-manage everything we work on. These "stories" (tasks) are included in 2 week "Sprints" (deadlines) that we report to the PO (Project Owner). Everyone is supposed to take any stories anyone needs help with. This concerns me as I don't know how to do most of the other people's jobs and I don't think they are going to train me. I also like my downtime, which we are no longer supposed to have. There is a chance that they will lay me off. If we do not become Grace's guardians, I would like to get laid off (preferably with a few month's pay), sell the house and move to Connecticut.
+
+9/29/2019
+The trip to Phoenix is next Thursday Oct 3 @ 12:30pm #639 to Tuesday Oct 7 @ 6:40pm #2417 for Mom's birthday. SWA # SYMYSJ. Also Juno T4 Pipecleaner was delayed last week, should be here Monday morning, oh joy. Got a raise recently, about an extra $200 a check, $5000 a year. Grace's 7th birthday party was at the hollister jump house I think it is called Happy Jumpy, next to the Hillcrest coin-op Car Wash, Hillcrest street and Industrial.
+
+OCTOBER 2019
+
+Did the Arizona trip Gina planned out. Georgia was thinking about moving back to the Phoenix area, so Gina made a list of places to see, but first she is meeting a lady from the title company to finish signing papers for her new house in Livermore. We saw some nice places, then took a visit to Sedona. Saw an informercial at a new age book shop movie theater that was freezing cold. Talked about the mystical power of Vertices. whatever, I was hoping for dolphins swiming in outerspace, but I guess they didn't have enough budget. We went shopping and Georgia got a psychic reading, asked about where to move to. The last day we just did some gift shopping and saw a cowboy in a bar sing and play guitar with his tablet of songs. That was fun. 
+
+Gina started getting annoyed with Georgia because she would not commit and pick a place or come up with a date for the move, which made her doubt if anything would happen at all. I don't know why she tries so hard, it almost always leads to disappointment. Georgia also mentioned visiting during Christmas. I told her she was welcome anytime, but haven't heard anything about it since, so I don't know if that will happen or not.
+
+Georgia also said that she was going to give whatever money she has left when she dies to Danny's girl that has been helping her out in Iowa since our Dad took such good care of us. You could feel the envy and resentment in her voice. Gina was also a little irritated at that, but I told her I don't expect anything from Georgia. I never did. I don't expect calls, or anything at all. Maybe that's why I'm not as frustrated as Gina gets. Georgia also said my father had a small dick and his balls were different sizes?!? I never put much into what she says and am always looking for psychological tricks and traps from her. The trust level is pretty low with her right now, so I said nothing in reply and am just trying to forget it. I will include it in this journal just in case she slips into full dimentia, I can trace it back to this starting point.
+
 DellEMC is going full Agile/SCRUM business management style. This includes using Atlassian's Jira work flow web tool to micro-manage everything we work on. These "stories" (tasks) are included in 2 week "Sprints" (deadlines) that we report to Raja, the PO (Project Owner). Everyone is supposed to take any stories anyone needs help with. This concerns me as I don't know how to do most of the other people's jobs and I don't think they are going to train me. I also like my downtime, which we are no longer supposed to have. There is a chance that they will lay me off. IF we do not become Grace's guardians, I would like to get laid off (preferably with a few month's pay), sell the house and move to Connecticut.
 
 October 14, 2019 = Permanent guardianship.
@@ -2417,11 +2430,21 @@ We win the case, still have the restraining order in place. Bill says he is goin
 Nov 1 - 3, 2019 Lorelei and I took Grace with us to San Francisco, stayed at Zephyr hotel across the street from Pier 39, went to the aquarium there and took the hop on/off bus around the city and over the golden gate bridge.
 
 Mike and Summer have half way moved into the workshop. His dogs Olive and Koba have been moved also and get along with Sugar. Sugar is a little bit overly agressive with Olive, but nothing serious. Plumber has ordered a new float valve for the pump behing the workshop and will fix soon. 
+
 There was some problem with the water heater as well, but I think Mike fixed that. Mike also replaced the workshop light with LED light that works much better. Maybe I can talk him into replacing the florescent light above the car port with a strip LED light.
 
 At some point we will make a kennel for sugar as well, the cage in the garage is too small. Mike is going to paint the good shipping container gray and have it moved over probably with the rest of his things.
 
 I'm using blzim.github.com to move this journal between systems. Very insecure I know but the conveniance is worth it. Why should US intelligence be the only ones to know just about everything about me?
 
-Trying to learn about Flask, python web framework, especially how to use it to display sqlite database data. Finding it difficult to concentrate.
-Corey Shafer has a video series on YouTube that helps, but it is still confusing.
+Trying to learn about Flask, python web framework, especially how to use it to display sqlite database data. Finding it difficult to concentrate. Corey Shafer has a video series on YouTube that helps, but it is still confusing. It is not worth it to use it for my video list. For one, you have to get it working on Github, but also it is more work than just static HTML. If I was going to ask other users to submit, it would be worth it, but for 1 person it is not. I can just link creator pages to titles with anchor tags. I would have to input all the data into the DB after creating it anyway.
+
+November 29: Had Thanksgiving with Lorelei, Grace, Mike and Summer. Watched the parade on TV. Waiting for a break in the weather to put the concrete in to build the dog kennel. I was able to clear out the horse shoe game, the center spike was over 4 foot buried and I could not dig it out, but got low enough to bend it below the surface level and bury it instead.
+
+Plumber fixed the workshop float valve for the sewage pump. Now our kitchen sink fawcett is dripping. At least we got the master bedroom bath tub fawcett fixed. Lorilei finished staining the master bath cabnets too. Looks great, now we just need to put the doors back on and it is done. Only took 3 months, not bad.
+
+Lorelei and Grace took down most of the Holloween decor and put up the Christmas tree and stockings. Looks nice, I like the days we use the tree as a night light. Very pretty.
+
+Lorelei has purchased airline tickets for her and Grace to Reno to see George before his surgery. Highway 80 was closed during the storm the other night and is expected to be snowing for the next two weeks so flying is the safest option. She was going to go alone, but I told her I am nervious to take care of Grace by myself and don't trust her Mom to cover for me while I go to work, so they are going together now. Costs more (about $600) but compared to all the potential problems it is worth it to me.
+
+
